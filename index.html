@@ -290,11 +290,10 @@ main{overflow-x:clip}
 .sv-photo{position:relative;margin:0;overflow:hidden}
 .sv-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 34%}
 .sv-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,11,14,.35),rgba(10,11,14,.1) 45%,var(--night-2) 99%),linear-gradient(0deg,rgba(10,11,14,.55),transparent 55%)}
-.sv-main{position:relative;padding:clamp(24px,2.8vw,36px)}
+.sv-main{position:relative;padding:clamp(24px,2.8vw,36px);display:flex;flex-direction:column}
+.sv-panel.is-on{margin-block:auto}
+.sv-progress{margin-top:auto}
 .stage-view .compass{position:absolute;width:420px;right:-150px;bottom:-170px;--c1:#15161B;--c2:#101115;--ring:rgba(213,176,113,.16);--d:rgba(213,176,113,.07)}
-.sv-mat{display:block;margin:0;font-size:.86rem;line-height:1.4;color:var(--on-night-2)}
-.sv-mat b{color:#E7E8EB;font-weight:600}
-.sv-mat .ico{width:17px;height:17px;display:inline-block;vertical-align:-3px;margin-right:9px;color:var(--bronze-lt)}
 .sv-top{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
 .sv-count{font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze-lt)}
 .sv-nav{display:flex;gap:8px}
@@ -307,10 +306,6 @@ main{overflow-x:clip}
 @keyframes panelIn{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
 .sv-body h3{font-size:clamp(1.45rem,1.15rem + 1vw,2rem);font-weight:800;letter-spacing:-.035em;line-height:1.1;margin-bottom:14px}
 .sv-body p{color:#C4C6CD;font-size:1.02rem}
-.sv-tools{margin-top:20px;padding-top:18px;border-top:1px solid var(--line-night)}
-.sv-tools small{display:block;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--on-night-2);margin-bottom:10px}
-.sv-tools li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;margin-top:8px}
-.sv-tools .ico{color:var(--bronze-lt);width:18px;height:18px;margin-top:3px;stroke-width:2}
 .sv-progress{position:relative;display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-top:28px}
 .sv-progress i{height:3px;border-radius:3px;background:rgba(255,255,255,.14);transition:background-color .4s}
 .sv-progress i.on{background:var(--bronze-lt)}
@@ -622,7 +617,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .stage-btn{grid-template-columns:38px 1fr;gap:10px;min-height:0;padding:10px 12px;font-size:.85rem;line-height:1.25}
   .stage-btn .num{width:38px;height:38px;font-size:.92rem}
   .stage-view{grid-template-columns:1fr}
-  .sv-photo img{height:220px;object-position:50% 30%}
+  .sv-photo img{height:330px;object-position:50% 64%}
   .sv-photo::after{background:linear-gradient(0deg,var(--night-2),transparent 70%)}
   .board{grid-template-columns:repeat(2,minmax(0,1fr))}
   .slot{min-height:58px;padding:10px 12px;gap:10px}
@@ -871,42 +866,34 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
         <article class="sv-panel is-on" role="tabpanel" id="st-1" aria-labelledby="tab-1">
           <div class="sv-body"><h3>Teoria geral dos contratos</h3><p>Tenha a base necessária para compreender princípios, limites e estruturas que orientam a análise e a construção dos contratos.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material de apoio: <b>Ponto Zero — Fundamentos Essenciais do Direito Contratual</b></p></div>
           </div>
         </article>
         <article class="sv-panel" role="tabpanel" id="st-2" aria-labelledby="tab-2">
           <div class="sv-body"><h3>Atendimento inicial estratégico</h3><p>Saiba o que perguntar, quais informações registrar e quais documentos solicitar para compreender a demanda antes de iniciar o trabalho.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material de apoio: <b>Guia Prático de Atendimento ao Cliente</b></p></div>
           </div>
         </article>
         <article class="sv-panel" role="tabpanel" id="st-3" aria-labelledby="tab-3">
           <div class="sv-body"><h3>Precificação de honorários</h3><p>Dimensione a complexidade da demanda, delimite o serviço e estruture seus honorários antes de apresentar a proposta ao cliente.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-listcheck"/></svg>Material de apoio: <b>Roteiro de precificação e delimitação do serviço</b></p></div>
           </div>
         </article>
         <article class="sv-panel" role="tabpanel" id="st-4" aria-labelledby="tab-4">
           <div class="sv-body"><h3>Diligências pré-contratuais</h3><p>Utilize checklists e roteiros de verificação para confrontar as informações recebidas com documentos, registros e dados concretos da operação.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material de apoio: <b>Manual de Diligências Pré-Contratuais</b></p></div>
           </div>
         </article>
         <article class="sv-panel" role="tabpanel" id="st-5" aria-labelledby="tab-5">
           <div class="sv-body"><h3>Parecer e orientação jurídica</h3><p>Organize riscos, alternativas e recomendações para que o cliente possa tomar decisões com maior consciência sobre a operação.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material de apoio: <b>Parecer Jurídico como ferramenta estratégica para tomada de decisões informadas</b></p></div>
           </div>
         </article>
         <article class="sv-panel" role="tabpanel" id="st-6" aria-labelledby="tab-6">
           <div class="sv-body"><h3>Estruturação e redação contratual</h3><p>Transforme a operação analisada em cláusulas coerentes com os interesses, riscos e obrigações identificados.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material de apoio: <b>Estruturação e redação contratual</b></p></div>
           </div>
         </article>
         <article class="sv-panel" role="tabpanel" id="st-7" aria-labelledby="tab-7">
           <div class="sv-body"><h3>Revisão contratual</h3><p>Aprenda a revisar não apenas o texto, mas a coerência entre a operação negociada e aquilo que foi efetivamente documentado.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material de apoio: <b>Técnicas para Revisão Contratual</b></p></div>
           </div>
         </article>
         <article class="sv-panel" role="tabpanel" id="st-8" aria-labelledby="tab-8">
           <div class="sv-body"><h3>Negociação e formalização</h3><p>Conduza ajustes finais, assinatura, documentos complementares e entrega do trabalho com organização profissional.</p>
-            <div class="sv-tools"><p class="sv-mat"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Material de apoio: <b>Apresentação e Assinatura de Contratos</b></p></div>
           </div>
         </article>
 

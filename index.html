@@ -10,8 +10,8 @@
   2. Onde fica cada parte: procure pelos comentários em caixa alta
      (1/7 · HERO, 2/7 · MÉTODO, 3/7 · ETAPAS, 4/7 · FERRAMENTAS,
      5/7 · LABORATÓRIO, 6/7 · RESULTADOS, 7/7 · OFERTA, DÚVIDAS, etc.).
-  3. Preço: procure por "297,90" — aparece no cartão da oferta, na barra de
-     compra do celular e no bloco de dados estruturados (SEO) no fim do <head>.
+  3. Preço: procure por "297,90" — aparece no cartão da oferta e no bloco de
+     dados estruturados (SEO), no fim do <head>.
   4. Links: procure por "pay.hub.la" (checkout), "wa.me" (WhatsApp) e
      "reclameaqui" (Reclame Aqui). Basta trocar o endereço entre aspas.
   5. Pixel e Clarity: bloco TRACKING no <head>. O ID do Pixel é 1024412929995875.
@@ -143,8 +143,8 @@ ul{margin:0;padding:0;list-style:none}
 .btn-block{width:100%}
 
 /* ---------- Compass (rosa dos ventos do carrossel) ---------- */
-.compass{--c1:#16171C;--c2:#0E0F13;--ring:rgba(213,176,113,.34);--d:rgba(213,176,113,.14);display:block;pointer-events:none;rotate:var(--sr,0deg)}
-.compass-light{--c1:#E4E3DF;--c2:#ECEBE7;--ring:rgba(155,118,53,.26);--d:rgba(155,118,53,.09)}
+.compass{--c1:#141519;--c2:#0D0E12;--ring:rgba(213,176,113,.18);--d:rgba(213,176,113,.07);display:block;pointer-events:none;rotate:var(--sr,0deg)}
+.compass-light{--c1:#E9E8E4;--c2:#EFEEEA;--ring:rgba(155,118,53,.16);--d:rgba(155,118,53,.06)}
 
 /* ---------- Header ---------- */
 .hdr{position:fixed;inset:0 0 auto 0;z-index:80;height:var(--hdr);color:#fff;transition:background-color .4s,color .4s,box-shadow .4s,backdrop-filter .4s}
@@ -186,13 +186,17 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden;background:var(--night);color:var(--on-night);min-height:max(660px,min(100svh,940px));display:flex;flex-direction:column;justify-content:center;padding:calc(var(--hdr) + 32px) 0 120px}
 .hero-media{position:absolute;inset:0 auto 0 0;width:min(60%,1120px);z-index:0}
+/* Tratamento fotográfico — malha fina + leve dessaturação (mesma da primeira seção) */
+.px{position:relative;isolation:isolate}
+.px>img{filter:saturate(.82) contrast(.94) brightness(.97)}
+.px::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(180deg,rgba(155,118,53,.12),rgba(0,0,0,.1));background-size:5px 5px,5px 5px,100% 100%;mix-blend-mode:soft-light}
+.bleed img,.covers img,.msg img,.slot img{filter:saturate(.88) contrast(.96)}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:56% 22%;filter:saturate(.8) contrast(.93) brightness(.94)}
 .hero-media::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(180deg,rgba(155,118,53,.14),rgba(0,0,0,.12));background-size:5px 5px,5px 5px,100% 100%;mix-blend-mode:soft-light;opacity:.9}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 52%,#000 99%),linear-gradient(0deg,#000 0%,transparent 26%)}
-.hero-compass{position:absolute;z-index:1;width:min(54vw,790px);right:-13vw;opacity:.78;top:50%;margin-top:calc(min(56vw,820px)/-2)}
+.hero-compass{position:absolute;z-index:1;width:min(52vw,760px);right:-15vw;opacity:.42;top:50%;margin-top:calc(min(56vw,820px)/-2)}
 .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)}
 .hero-copy{grid-column:2;max-width:640px}
-.hero-brand{width:clamp(210px,20vw,270px);margin-bottom:clamp(28px,3.4vw,44px)}
 .hero .h1{color:#fff}
 .hero-claim{margin:clamp(20px,2.4vw,30px) 0 0;font-weight:800;font-size:clamp(1.55rem,1rem + 2.1vw,2.7rem);line-height:1.22;padding-block:.06em;letter-spacing:-.03em;word-spacing:.08em;text-transform:uppercase;background:var(--grad-text);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s ease-in-out infinite}
 @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
@@ -251,7 +255,7 @@ main{overflow-x:clip}
 .desafio-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,96px);margin-top:clamp(40px,5vw,64px);align-items:start}
 .desafio-text p{font-size:clamp(1.05rem,1rem + .3vw,1.2rem);color:var(--ink-2);max-width:30em}
 .rotina{margin:0 0 clamp(26px,3vw,36px);position:relative}
-.rotina img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 50%;border-radius:18px;box-shadow:0 34px 60px -40px rgba(14,16,21,.7)}
+.rotina img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 50%;border-radius:18px;box-shadow:0 34px 60px -40px rgba(14,16,21,.7)}
 .rotina::after{content:"";position:absolute;inset:0;border-radius:18px;background:linear-gradient(180deg,rgba(14,16,21,.16),transparent 45%);pointer-events:none}
 .pains{display:grid;gap:0}
 .pains li{display:grid;grid-template-columns:48px 1fr;gap:4px 18px;padding:22px 0;border-top:1px solid var(--line)}
@@ -440,6 +444,7 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .autor-photo{position:relative;max-width:440px}
 .autor-photo::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(198,163,103,.55);border-radius:22px}
 .autor-photo img{position:relative;width:100%;border-radius:22px;aspect-ratio:427/547;object-fit:cover}
+.autor-photo::after{border-radius:22px}
 .autor .pena{position:absolute;right:-60px;top:50%;width:min(34vw,420px);transform:translateY(-50%) rotate(12deg);opacity:.07;z-index:0;pointer-events:none}
 .autor-body p{color:#C9CBD2;font-size:1.05rem;max-width:36em}
 .autor-body p strong{color:#fff}
@@ -519,8 +524,13 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .btn-wa:hover{transform:translateY(-2px)}
 
 /* ---------- Final CTA + Footer ---------- */
+.logo-break{display:flex;align-items:center;justify-content:center;gap:clamp(18px,3vw,34px);padding:clamp(34px,5vw,58px) var(--gut) 0;background:var(--stone)}
+.logo-break span{height:1px;flex:1;max-width:220px;background:linear-gradient(90deg,transparent,rgba(155,118,53,.45),transparent)}
+.logo-break img{width:clamp(128px,14vw,172px);opacity:.5;filter:invert(1) brightness(.35)}
+.final-logo{width:clamp(150px,16vw,190px);margin:0 auto clamp(22px,3vw,32px);opacity:.62;display:block}
 .final{position:relative;overflow:hidden;background:#000;color:#fff;text-align:center;padding:clamp(110px,13vw,190px) 0}
 .final-bg{position:absolute;inset:0;z-index:0}
+.final-bg::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:5px 5px;mix-blend-mode:soft-light}
 .final-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;opacity:.5}
 .final-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 65% at 50% 46%,rgba(0,0,0,.55),rgba(0,0,0,.88) 62%,#000 100%),linear-gradient(180deg,#000 0%,transparent 22%,transparent 74%,#000 100%)}
 .final::after{content:"";position:absolute;left:50%;top:50%;width:min(70vw,620px);height:min(70vw,620px);transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(188,150,86,.18),transparent 62%);z-index:0;pointer-events:none}
@@ -540,13 +550,6 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .wa-float{position:fixed;z-index:70;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#0B0C10;color:#fff;border:1.5px solid var(--bronze-lt);box-shadow:0 18px 40px -14px rgba(0,0,0,.6);text-decoration:none;transition:transform .35s var(--ease),opacity .35s}
 .wa-float .ico{width:26px;height:26px}
 .wa-float:hover{transform:translateY(-3px)}
-.buybar{position:fixed;z-index:75;left:0;right:0;bottom:0;display:none;align-items:center;gap:10px;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(11,12,16,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid rgba(198,163,103,.35);color:#fff;transform:translateY(110%);transition:transform .45s var(--ease)}
-.buybar.show{transform:none}
-.buybar-price{margin-right:auto;line-height:1.15}
-.buybar-price b{display:block;font-size:1.15rem;letter-spacing:-.02em}
-.buybar-price small{color:var(--on-night-2);font-size:.76rem}
-.buybar .btn{min-height:48px;padding:0 18px;font-size:.8rem}
-.buybar .icon-btn{width:48px;height:48px}
 
 dialog.prints{padding:0;border:0;border-radius:18px;max-width:min(92vw,720px);max-height:92svh;background:#0B0C10;box-shadow:0 60px 120px -40px rgba(0,0,0,.8)}
 dialog.prints::backdrop{background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
@@ -587,9 +590,15 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .board-head{grid-template-columns:1fr}
 }
 @media (max-width:899px){
-  .hero{display:block;min-height:0;padding:var(--hdr) 0 92px}
-  .hero-media{position:relative;inset:auto;width:100%;aspect-ratio:1250/984;max-height:64svh;margin-bottom:-22%}
-  .hero-media img{object-position:12% 20%}
+  .hero{display:block;min-height:0;padding:calc(var(--hdr) - 8px) 0 54px}
+  .hero-media{position:relative;inset:auto;width:100%;aspect-ratio:1250/1150;max-height:60svh;margin-bottom:-22%}
+  .hero-media img{object-position:48% 70%}
+  .hero .h1{font-size:clamp(1.8rem,8.1vw,2.25rem)}
+  .hero .h1 b{display:inline}
+  .hero-claim{font-size:clamp(1.22rem,5.4vw,1.6rem);margin-top:14px}
+  .hero-lead{font-size:1rem;margin-top:16px}
+  .hero-cta{margin-top:20px;gap:10px}
+  .hero-notes{margin-top:18px}
   .hero-media::after{background:linear-gradient(0deg,#000 6%,rgba(0,0,0,.35) 44%,transparent 70%)}
   .hero-in{grid-template-columns:1fr}
   .hero-copy{grid-column:1}
@@ -628,10 +637,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .faq summary{font-size:1rem}
   .faq-a p{padding-right:0}
   .wa-float{display:none}
-  .buybar{display:flex}
-  body{padding-bottom:0}
-  .foot{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
-  .proof-foot p{font-size:1rem}
+    .proof-foot p{font-size:1rem}
   .proof{columns:1;column-gap:0}
   .proof .msg{margin:0 0 14px}
 }
@@ -748,7 +754,6 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <svg class="compass hero-compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
   <div class="wrap hero-in">
     <div class="hero-copy hero-seq">
-      <img class="hero-brand" src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" decoding="async">
       <h1 class="h1" id="t-hero"><b>Advogado,</b> a demanda contratual chegou?</h1>
       <p class="hero-claim">Agora, você tem método.</p>
       <p class="hero-lead">Aprenda a analisar operações, estruturar contratos e conduzir a atuação do primeiro atendimento à formalização do negócio.</p>
@@ -777,8 +782,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <p>Você não precisa conhecer antecipadamente todos os contratos que podem chegar. Precisa de uma estrutura que mostre por onde começar.</p>
       </div>
       <div class="desafio-side">
-      <figure class="rotina rv">
-        <img src="assets/rotina.webp" width="1000" height="1052" alt="Mesa de trabalho do advogado com contratos impressos" loading="lazy" decoding="async">
+      <figure class="rotina px rv">
+        <img src="assets/rotina.webp" width="900" height="1200" alt="Mesa de trabalho do advogado com contratos impressos" loading="lazy" decoding="async">
       </figure>
       <ul class="pains rv">
         <li><svg class="ico" aria-hidden="true"><use href="#i-signpost"/></svg><h3>Falta de direcionamento</h3><p>Sem saber o que perguntar, quais documentos solicitar e quais informações levantar antes de iniciar o trabalho.</p></li>
@@ -828,6 +833,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   </div>
 </section>
 
+<!-- Transição: assinatura do método -->
+<div class="logo-break" aria-hidden="true"><span></span><img src="assets/metodo-logo.webp" width="852" height="282" alt="" loading="lazy" decoding="async"><span></span></div>
+
 <!-- 3/7 · ETAPAS -->
 <section class="sec etapas" id="etapas" data-ch="3" data-label="Etapas" aria-labelledby="t-etapas">
   <div class="wrap">
@@ -850,7 +858,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </div>
 
       <div class="stage-view" id="stageView">
-        <figure class="sv-photo"><img src="assets/etapas-foto.webp" width="780" height="1040" alt="Advogado assinando um contrato sobre a mesa do escritório" loading="lazy" decoding="async"></figure>
+        <figure class="sv-photo px"><img src="assets/etapas-foto.webp" width="780" height="1040" alt="Advogado assinando um contrato sobre a mesa do escritório" loading="lazy" decoding="async"></figure>
         <div class="sv-main">
         <svg class="compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
         <div class="sv-top">
@@ -918,7 +926,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 <section class="sec dark" id="ferramentas" data-ch="4" data-label="Ferramentas" aria-labelledby="t-tools">
   <div class="wrap">
     <div class="tools-grid">
-      <div class="tools-photo rv">
+      <div class="tools-photo px rv">
         <img src="assets/materiais.webp" width="819" height="1024" alt="Questionário para atendimento ao cliente do Arquivo Contratual sendo preenchido sobre a mesa" loading="lazy" decoding="async">
         <div class="formats" aria-label="Formatos disponíveis"><span>PDF</span><span>CANVA</span><span>DOCX</span></div>
       </div>
@@ -1117,7 +1125,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 <section class="sec dark autor" id="autor" data-ch="6" data-label="Resultados" aria-labelledby="t-autor">
   <img class="pena" src="assets/pena.webp" width="493" height="732" alt="" aria-hidden="true" loading="lazy" decoding="async">
   <div class="wrap autor-grid">
-    <div class="autor-photo rv"><img src="assets/gabriel.webp" width="427" height="547" alt="Gabriel, criador do Arquivo Contratual e do Método Jornada Contratual" loading="lazy" decoding="async"></div>
+    <div class="autor-photo px rv"><img src="assets/gabriel.webp" width="427" height="547" alt="Gabriel, criador do Arquivo Contratual e do Método Jornada Contratual" loading="lazy" decoding="async"></div>
     <div class="autor-body rv">
       <span class="eyebrow">Quem criou tudo isso</span>
       <h2 class="h2" id="t-autor"><b>Eu sou o Gabriel</b></h2>
@@ -1157,7 +1165,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </div>
 
       <aside class="ticket rv" aria-labelledby="t-price">
-        <figure class="area-shot">
+        <figure class="area-shot px">
           <img src="assets/area-membros.webp" width="1100" height="973" alt="Área de membros do Método Jornada Contratual aberta no computador" loading="lazy" decoding="async">
         </figure>
         <p class="fan-cap">Tudo reunido em uma única área de membros.</p>
@@ -1239,6 +1247,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 <section class="final" data-ch="7" data-label="Oferta" aria-labelledby="t-final">
   <div class="final-bg" aria-hidden="true"><img src="assets/final-bg.webp" width="1600" height="1244" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap rv">
+    <img class="final-logo" src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
     <h2 class="h2" id="t-final"><b>Tenha onde consultar</b> quando uma nova demanda chegar.</h2>
     <p>Um processo para saber por onde começar, o que investigar, como organizar a análise e quais ferramentas usar em cada etapa.</p>
     <div class="final-cta">
@@ -1265,11 +1274,6 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
 <a class="wa-float" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg></a>
 
-<div class="buybar" id="buybar" aria-hidden="true">
-  <div class="buybar-price"><b>R$ 297,90</b><small>ou 12x de R$ 30,27</small></div>
-  <a class="icon-btn" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="WhatsApp" tabindex="-1"><svg class="ico"><use href="#i-whats"/></svg></a>
-  <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno" tabindex="-1">Quero acessar</a>
-</div>
 
 <dialog class="prints" id="prints" aria-label="Prints originais dos depoimentos">
   <div class="dlg-bar"><span>Prints originais recebidos por WhatsApp e Instagram</span><button type="button" id="closePrints" aria-label="Fechar"><svg class="ico"><use href="#i-close"/></svg></button></div>
@@ -1294,13 +1298,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   var yr=$('#yr'); if(yr) yr.textContent=new Date().getFullYear();
 
   /* Header sólido após o hero */
-  var hdr=$('#hdr'), hero=$('#inicio'), buybar=$('#buybar');
-  var heroOut=false, offerIn=false, footIn=false;
-  function syncBar(){ if(!buybar) return; var show=heroOut&&!offerIn&&!footIn; buybar.classList.toggle('show',show); buybar.setAttribute('aria-hidden',show?'false':'true'); $$('a',buybar).forEach(function(a){a.tabIndex=show?0:-1}); }
+  var hdr=$('#hdr'), hero=$('#inicio');
   if('IntersectionObserver' in window){
-    new IntersectionObserver(function(e){var out=!e[0].isIntersecting; hdr.classList.toggle('is-solid',out); heroOut=out; syncBar();},{rootMargin:'-'+(hdr.offsetHeight)+'px 0px 0px 0px',threshold:0}).observe(hero);
-    var tk=$('.ticket'); if(tk) new IntersectionObserver(function(e){offerIn=e[0].isIntersecting;syncBar()},{threshold:.15}).observe(tk);
-    var ft=$('.final'); if(ft) new IntersectionObserver(function(e){footIn=e[0].isIntersecting;syncBar()},{threshold:0}).observe(ft);
+    new IntersectionObserver(function(e){hdr.classList.toggle('is-solid',!e[0].isIntersecting);},{rootMargin:'-'+(hdr.offsetHeight)+'px 0px 0px 0px',threshold:0}).observe(hero);
   } else { hdr.classList.add('is-solid'); }
 
   /* Indicador de capítulo 1/7 — o carrossel virando navegação */

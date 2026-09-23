@@ -435,7 +435,7 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 /* Prints originais em destaque */
 .prints-feature{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:clamp(24px,3.4vw,52px);align-items:center;margin:clamp(30px,4vw,46px) 0 clamp(26px,3vw,36px);padding:clamp(22px,2.6vw,34px);border-radius:22px;background:var(--paper);border:1px solid var(--line);box-shadow:0 30px 60px -44px rgba(14,16,21,.5)}
 .prints-shot{position:relative;display:block;padding:0;border:0;border-radius:16px;overflow:hidden;background:#0B0C10;cursor:zoom-in;line-height:0;box-shadow:0 22px 44px -28px rgba(14,16,21,.7)}
-.prints-shot img{width:100%;height:auto;display:block;transition:transform .7s var(--ease)}
+.prints-shot img{width:100%;height:auto;aspect-ratio:847/1024;display:block;transition:transform .7s var(--ease)}
 .prints-shot:hover img{transform:scale(1.02)}
 .prints-zoom{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(11,12,16,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1}
 .prints-zoom .ico{width:15px;height:15px}
@@ -585,13 +585,13 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 @media (max-width:980px){
   .with-bleed .col{max-width:none}
   .bleed{position:relative;width:auto;height:auto;margin:0}
-  .bleed img{height:auto;aspect-ratio:auto;max-height:620px;width:auto;max-width:100%;margin-inline:auto;object-fit:contain;object-position:center;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%)}
+  .bleed img{height:auto;aspect-ratio:652/736;max-height:620px;width:auto;max-width:100%;margin-inline:auto;object-fit:contain;object-position:center;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%)}
   .with-bleed .bleed{order:2}
   .covers-bleed{-webkit-mask-image:none;mask-image:none;margin-top:clamp(28px,4vw,40px)}
   .covers{padding:0 var(--gut);transform:none;gap:12px}
   .covers-bleed .covers img:nth-child(3n+1),.covers-bleed .covers img:nth-child(3n+3){transform:none}
   .bleed-top{top:0}
-  .bleed-top img{aspect-ratio:auto}
+  .bleed-top img{aspect-ratio:652/736}
   .with-bleed .wrap{display:flex;flex-direction:column}
   .desafio-grid,.tools-grid,.autor-grid,.faq-grid,.assist{grid-template-columns:1fr}
   .faq-side{position:relative;top:auto}
@@ -774,10 +774,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <a class="btn btn-line" href="#metodo">Conheça o Método Jornada Contratual</a>
       </div>
       <ul class="hero-notes">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>8 Módulos de Conteúdo - Do Atendimento à Assinatura</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>24 Coleções Contratuais Com Manual</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Documentos Operacionais Editáveis</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Inteligência Artificial Treinada Com o Método</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>8 Módulos de Conteúdo</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>24 Contratos Fundamentados + IA</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Documentos Editáveis</li>
       </ul>
     </div>
   </div>
@@ -829,7 +828,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="col">
       <div class="rv">
         <span class="eyebrow">O que é o método?</span>
-        <h2 class="h2" id="t-metodo"><b>Uma estrutura</b> para dominar qualquer demanda contratual</h2>
+        <h2 class="h2" id="t-metodo"><b>Uma estrutura</b> para atender qualquer demanda contratual</h2>
         <p class="lead">O Método Jornada Contratual organiza a atuação em uma sequência lógica para que você saiba o que fazer antes, durante e depois da redação de qualquer contrato.</p>
       </div>
       <ul class="pillars rv">
@@ -1071,7 +1070,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="proof-head rv">
       <div class="sec-head">
         <span class="eyebrow">Quem já entrou, percebeu</span>
-        <h2 class="h2" id="t-res"><b>Resultados reais</b> de quem já utiliza</h2>
+        <h2 class="h2" id="t-res"><b>O que dizem</b> nossos alunos</h2>
         <p class="lead">Advogados de todo o Brasil recomendam e confiam no Arquivo Contratual.</p>
       </div>
     </div>
@@ -1171,14 +1170,14 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <div>
         <div class="rv">
           <span class="eyebrow">Toda a entrega</span>
-          <h2 class="h2" id="t-oferta"><b>Tenha uma atuação contratual</b> mais estruturada</h2>
+          <h2 class="h2" id="t-oferta"><b>A sua atuação contratual</b> começa agora</h2>
         </div>
         <ul class="deliver rv">
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Método Jornada Contratual</strong><span>A estrutura que organiza sua atuação em uma sequência lógica, do atendimento à formalização.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>8 módulos completos de conteúdo</strong><span>Fundamentos, atendimento, precificação, diligências, parecer, redação, revisão e formalização.</span></li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Método Jornada Contratual</strong><span>A estrutura completa que organiza e facilita sua atuação em uma sequência lógica, do atendimento à formalização.</span></li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>8 módulos completos de conteúdo</strong><span>Fundamentos jurídicos, atendimento, precificação, diligências, parecer, redação, revisão e formalização.</span></li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Ferramentas e documentos profissionais</strong><span>Questionários, checklists, roteiros e documentos editáveis em PDF, Canva e DOCX.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Laboratório com 24 coleções contratuais</strong><span>Cada contrato acompanha um manual prático com legislação aplicável, cláusulas essenciais e riscos.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>14 coleções disponíveis imediatamente</strong><span>As demais serão liberadas até completar as 24 previstas.</span></li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Laboratório com 24 coleções contratuais</strong><span>Cada contrato acompanha um manual prático fundamentado com legislação aplicável, cláusulas essenciais e riscos.</span></li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>14 coleções disponíveis imediatamente</strong><span>As demais serão sugeridas pelos alunos dendro da área de membros.</span></li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Assistente Virtual da Jornada</strong><span>IA treinada com os materiais do método, disponível 24 horas por dia.</span></li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>2 anos de acesso e atualizações</strong><span>Consulte conteúdo e ferramentas sempre que uma nova demanda chegar.</span></li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Suporte pelo WhatsApp</strong><span>Para dúvidas sobre acesso, materiais e utilização da plataforma.</span></li>
@@ -1397,6 +1396,36 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       else{d.open=true;var h2=a.scrollHeight;a.animate([{height:'0px',opacity:0},{height:h2+'px',opacity:1}],{duration:340,easing:'cubic-bezier(.2,.7,.2,1)'})}
     });
   });
+
+  /* Rolagem por âncora com correção — a página pode crescer enquanto rola */
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function anchorTop(el){ return el.getBoundingClientRect().top + window.pageYOffset - (hdr?hdr.offsetHeight:0) - 8; }
+  function goToAnchor(el){
+    if(!el) return;
+    window.scrollTo({top:anchorTop(el),behavior:reduce?'auto':'smooth'});
+    var tries=0;
+    var fix=setInterval(function(){
+      tries++;
+      var target=anchorTop(el), diff=Math.abs(window.pageYOffset-target);
+      if(tries>=2 && diff>6){ window.scrollTo({top:target,behavior:'auto'}); }
+      if(tries>=8 || (tries>=3 && diff<=6)) clearInterval(fix);
+    },260);
+  }
+  if(location.hash && location.hash.length>1){
+    var alvo=document.querySelector(location.hash);
+    if(alvo) window.addEventListener('load',function(){setTimeout(function(){goToAnchor(alvo)},60)});
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(!a) return;
+    var id=a.getAttribute('href');
+    if(!id || id==='#' || a.hasAttribute('data-no-scroll')) return;
+    var el=document.querySelector(id);
+    if(!el) return;
+    e.preventDefault();
+    goToAnchor(el);
+    if(history.replaceState) history.replaceState(null,'',id);
+  },false);
 
   /* Prints originais */
   var dlg=$('#prints');

@@ -8,7 +8,7 @@
   1. Textos: altere apenas o que está ENTRE as tags (ex.: <h3>texto aqui</h3>).
      Nunca apague os sinais < > nem o que vem dentro deles.
   2. Onde fica cada parte: procure pelos comentários em caixa alta
-     (1/7 · HERO, 2/7 · MÉTODO, 3/7 · ETAPAS, 4/7 · FERRAMENTAS,
+     (1/7 · HERO, 2/7 · MÉTODO, 3/7 · MÓDULOS, 4/7 · FERRAMENTAS,
      5/7 · LABORATÓRIO, 6/7 · RESULTADOS, 7/7 · OFERTA, DÚVIDAS, etc.).
   3. Preço: procure por "297,90" — aparece no cartão da oferta e no bloco de
      dados estruturados (SEO), no fim do <head>.
@@ -26,7 +26,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Método Jornada Contratual | Arquivo Contratual</title>
-<meta name="description" content="Método em 8 etapas para conduzir demandas contratuais do atendimento à formalização, com documentos editáveis, Laboratório de Contratos e Assistente Virtual. 2 anos de acesso.">
+<meta name="description" content="Método em 8 módulos para conduzir demandas contratuais do atendimento à formalização, com documentos editáveis, Laboratório de Contratos e Assistente Virtual. 2 anos de acesso.">
 <link rel="canonical" href="https://arquivocontratual.com.br/">
 <meta name="theme-color" content="#000000">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -35,7 +35,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Arquivo Contratual">
 <meta property="og:title" content="Método Jornada Contratual | Arquivo Contratual">
-<meta property="og:description" content="Advogado, a demanda contratual chegou? Agora, você tem método. 8 etapas, ferramentas profissionais e Laboratório com 24 coleções.">
+<meta property="og:description" content="Advogado, a demanda contratual chegou? Agora, você tem método. 8 módulos, ferramentas profissionais e Laboratório com 24 coleções.">
 <meta property="og:url" content="https://arquivocontratual.com.br/">
 <meta property="og:image" content="https://arquivocontratual.com.br/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -254,7 +254,7 @@ main{overflow-x:clip}
 .desafio .h2{max-width:15ch}
 .desafio-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,96px);margin-top:clamp(40px,5vw,64px);align-items:start}
 .desafio-text p{font-size:clamp(1.05rem,1rem + .3vw,1.2rem);color:var(--ink-2);max-width:30em}
-.rotina{margin:0 0 clamp(26px,3vw,36px);position:relative}
+.rotina{margin:0 0 clamp(26px,3vw,36px);position:relative;border-radius:18px}
 .rotina img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 50%;border-radius:18px;box-shadow:0 34px 60px -40px rgba(14,16,21,.7)}
 .rotina::after{content:"";position:absolute;inset:0;border-radius:18px;background:linear-gradient(180deg,rgba(14,16,21,.16),transparent 45%);pointer-events:none}
 .pains{display:grid;gap:0}
@@ -286,10 +286,10 @@ main{overflow-x:clip}
 .stage-btn:hover{background:#EFEEEA}
 .stage-btn .num{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:800;font-size:1.28rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .stage-btn[aria-selected="true"]{background:#fff;border-color:rgba(142,107,50,.55);box-shadow:0 18px 36px -22px rgba(14,16,21,.45)}
-.stage-view{position:sticky;top:calc(var(--hdr) + 20px);background:var(--night-2);color:var(--on-night);border-radius:22px;overflow:hidden;min-height:100%;display:grid;grid-template-columns:minmax(0,.46fr) minmax(0,1fr)}
+.stage-view{position:sticky;top:calc(var(--hdr) + 20px);background:var(--night-2);color:var(--on-night);border-radius:22px;overflow:hidden;min-height:100%;display:grid;grid-template-rows:auto 1fr}
 .sv-photo{position:relative;margin:0;overflow:hidden}
-.sv-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 34%}
-.sv-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,11,14,.35),rgba(10,11,14,.1) 45%,var(--night-2) 99%),linear-gradient(0deg,rgba(10,11,14,.55),transparent 55%)}
+.sv-photo img{width:100%;height:clamp(320px,30vw,470px);object-fit:cover;object-position:50% 38%}
+.sv-photo::after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(0deg,var(--night-2),rgba(10,11,14,.22) 42%,rgba(10,11,14,.05) 70%)}
 .sv-main{position:relative;padding:clamp(24px,2.8vw,36px);display:flex;flex-direction:column}
 .sv-panel.is-on{margin-block:auto}
 .sv-progress{margin-top:auto}
@@ -314,7 +314,7 @@ main{overflow-x:clip}
 
 /* ---------- Ferramentas (dark) ---------- */
 .tools-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(40px,6vw,90px);align-items:center}
-.tools-photo{position:relative}
+.tools-photo{position:relative;border-radius:20px}
 .tools-photo img{border-radius:20px;width:100%;aspect-ratio:819/1024;object-fit:cover;box-shadow:0 50px 90px -40px rgba(0,0,0,.9)}
 .formats{position:absolute;left:clamp(16px,2vw,24px);bottom:clamp(16px,2vw,24px);display:flex;gap:8px}
 .formats span{padding:9px 14px;border-radius:999px;background:rgba(11,12,16,.78);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(198,163,103,.45);font-size:.72rem;font-weight:700;letter-spacing:.2em;color:#E9E3D6}
@@ -380,12 +380,17 @@ main{overflow-x:clip}
 .slot .ico{width:34px;height:34px;padding:7px;border-radius:9px;background:#F4EEE3;color:var(--bronze);stroke-width:1.7}
 .slot b{display:block;font-weight:600;font-size:.93rem;line-height:1.25;letter-spacing:-.01em}
 .slot small{display:block;font-size:.74rem;color:var(--muted);margin-top:2px}
-.slot.soon{background:transparent;border-style:dashed;border-color:rgba(14,16,21,.2);color:var(--muted)}
-.slot.soon .ico{background:transparent;border:1px dashed rgba(14,16,21,.25);color:#9A9CA3}
+.slot.soon{background:rgba(47,110,79,.055);border-style:dashed;border-color:rgba(47,110,79,.34);color:#4A6B59}
+.slot.soon .ico{background:rgba(47,110,79,.08);border:1px dashed rgba(47,110,79,.4);color:#2F6E4F}
+.slot.soon b{color:#2F6E4F}
+.slot.soon small{color:#6B8A78}
 .slot.dim{opacity:.28}
-.board-open{display:flex;gap:14px;align-items:flex-start;margin:22px 0 0;padding:16px 18px;border-radius:14px;background:rgba(142,107,50,.07);border:1px dashed rgba(142,107,50,.4);font-size:.95rem;line-height:1.5;color:var(--ink-2)}
+.board-open{display:flex;gap:14px;align-items:flex-start;margin:22px 0 0;padding:18px 20px;border-radius:14px;background:rgba(47,110,79,.07);border:1px solid rgba(47,110,79,.3);font-size:.95rem;line-height:1.5;color:var(--ink-2)}
 .board-open b{color:var(--ink)}
-.board-open .ico{width:22px;height:22px;flex:none;margin-top:2px;color:var(--bronze)}
+.board-open .ico{width:24px;height:24px;flex:none;margin-top:2px;color:#2F6E4F}
+.board-open b{color:#2A5F45}
+.open-tag{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:7px 14px;border-radius:999px;background:rgba(47,110,79,.1);border:1px solid rgba(47,110,79,.3);color:#2F6E4F;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.open-tag .ico{width:15px;height:15px;color:#2F6E4F}
 .board-note{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
 .board-note p{margin:0;max-width:40em;color:var(--ink-2)}
 .board-note p b{color:var(--ink)}
@@ -427,6 +432,17 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .bub .t{display:block;text-align:right;font-size:.7rem;opacity:.55;margin-top:2px}
 .react{display:inline-grid;place-items:center;width:30px;height:24px;border-radius:12px;background:#fff;box-shadow:0 2px 8px rgba(14,16,21,.15);margin:-6px 0 0 44px}
 .react .hrt{width:14px;height:14px;fill:#E4405F;stroke:none}
+/* Prints originais em destaque */
+.prints-feature{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:clamp(24px,3.4vw,52px);align-items:center;margin:clamp(30px,4vw,46px) 0 clamp(26px,3vw,36px);padding:clamp(22px,2.6vw,34px);border-radius:22px;background:var(--paper);border:1px solid var(--line);box-shadow:0 30px 60px -44px rgba(14,16,21,.5)}
+.prints-shot{position:relative;display:block;padding:0;border:0;border-radius:16px;overflow:hidden;background:#0B0C10;cursor:zoom-in;line-height:0;box-shadow:0 22px 44px -28px rgba(14,16,21,.7)}
+.prints-shot img{width:100%;height:auto;display:block;transition:transform .7s var(--ease)}
+.prints-shot:hover img{transform:scale(1.02)}
+.prints-zoom{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(11,12,16,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.prints-zoom .ico{width:15px;height:15px}
+.prints-copy h3{margin:14px 0 0;font-size:clamp(1.35rem,1.1rem + .9vw,1.85rem);font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.prints-copy p{margin:12px 0 0;color:var(--ink-2);font-size:1.02rem;line-height:1.55}
+.prints-copy .btn{margin-top:22px}
+.proof-sub{margin:0 0 18px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .proof-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:clamp(20px,3vw,34px);padding-top:26px;border-top:1px solid var(--line)}
 .proof-foot p{margin:0;display:flex;align-items:center;gap:18px;font-size:1.08rem;color:var(--ink-2);line-height:1.4}
 .proof-foot .gold-rule{width:64px;flex:none}
@@ -436,7 +452,7 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 /* ---------- Autor ---------- */
 .autor{overflow:hidden}
 .autor-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,96px);align-items:center}
-.autor-photo{position:relative;max-width:440px}
+.autor-photo{position:relative;max-width:440px;border-radius:22px}
 .autor-photo::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(198,163,103,.55);border-radius:22px}
 .autor-photo img{position:relative;width:100%;border-radius:22px;aspect-ratio:427/547;object-fit:cover}
 .autor-photo::after{border-radius:22px}
@@ -616,9 +632,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .stage-list{grid-template-columns:1fr 1fr;grid-auto-flow:row;gap:8px}
   .stage-btn{grid-template-columns:38px 1fr;gap:10px;min-height:0;padding:10px 12px;font-size:.85rem;line-height:1.25}
   .stage-btn .num{width:38px;height:38px;font-size:.92rem}
-  .stage-view{grid-template-columns:1fr}
-  .sv-photo img{height:330px;object-position:50% 64%}
-  .sv-photo::after{background:linear-gradient(0deg,var(--night-2),transparent 70%)}
+  .sv-photo img{height:clamp(280px,82vw,340px);object-position:50% 38%}
+
   .board{grid-template-columns:repeat(2,minmax(0,1fr))}
   .slot{min-height:58px;padding:10px 12px;gap:10px}
   .slot .ico{display:none}
@@ -627,6 +642,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .board-wrap{padding:22px 18px}
   .chips{flex-wrap:wrap;gap:7px}
   .chip{padding:8px 13px;font-size:.82rem}
+  .prints-feature{grid-template-columns:1fr;gap:22px}
+  .prints-shot{max-width:420px;margin:0 auto}
   .contact-grid{grid-template-columns:1fr}
   .guarantee{grid-template-columns:1fr;text-align:left}
   .faq summary{font-size:1rem}
@@ -648,7 +665,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Course","name":"Método Jornada Contratual","description":"Método em 8 etapas para conduzir demandas contratuais do atendimento à formalização, com ferramentas profissionais editáveis, Laboratório de Contratos e Assistente Virtual.","inLanguage":"pt-BR","provider":{"@type":"Organization","name":"Arquivo Contratual","url":"https://arquivocontratual.com.br/"},"offers":{"@type":"Offer","price":"297.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno","category":"Paid"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"P2Y"}}
+{"@context":"https://schema.org","@type":"Course","name":"Método Jornada Contratual","description":"Método em 8 módulos para conduzir demandas contratuais do atendimento à formalização, com ferramentas profissionais editáveis, Laboratório de Contratos e Assistente Virtual.","inLanguage":"pt-BR","provider":{"@type":"Organization","name":"Arquivo Contratual","url":"https://arquivocontratual.com.br/"},"offers":{"@type":"Offer","price":"297.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno","category":"Paid"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"P2Y"}}
 </script>
 </head>
 <body>
@@ -709,7 +726,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     </a>
     <nav class="nav" aria-label="Seções da página">
       <a href="#metodo" data-ch="2">Método</a>
-      <a href="#etapas" data-ch="3">Etapas</a>
+      <a href="#etapas" data-ch="3">Módulos</a>
       <a href="#ferramentas" data-ch="4">Ferramentas</a>
       <a href="#laboratorio" data-ch="5">Laboratório</a>
       <a href="#resultados" data-ch="6">Resultados</a>
@@ -721,7 +738,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
       <span class="sr-only">Abrir índice da página</span>
     </button>
-    <a class="btn btn-gold btn-sm" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero acessar</a>
+    <a class="btn btn-gold btn-sm" href="#oferta">Quero acessar</a>
   </div>
 </header>
 
@@ -729,14 +746,14 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <ol>
     <li><a href="#inicio" data-ch="1"><span class="n">1</span><strong>Início</strong><small>A demanda contratual chegou?</small></a></li>
     <li><a href="#metodo" data-ch="2"><span class="n">2</span><strong>O método</strong><small>Uma estrutura para conduzir a demanda</small></a></li>
-    <li><a href="#etapas" data-ch="3"><span class="n">3</span><strong>8 etapas</strong><small>Conduza a demanda passo a passo</small></a></li>
+    <li><a href="#etapas" data-ch="3"><span class="n">3</span><strong>8 módulos</strong><small>Conduza a demanda passo a passo</small></a></li>
     <li><a href="#ferramentas" data-ch="4"><span class="n">4</span><strong>Ferramentas</strong><small>Documentos para aplicar o método na rotina</small></a></li>
     <li><a href="#laboratorio" data-ch="5"><span class="n">5</span><strong>Laboratório</strong><small>24 coleções para ampliar seu repertório</small></a></li>
     <li><a href="#resultados" data-ch="6"><span class="n">6</span><strong>Resultados</strong><small>De quem já utiliza</small></a></li>
     <li><a href="#oferta" data-ch="7"><span class="n">7</span><strong>Toda a entrega</strong><small>Oferta, garantia e dúvidas</small></a></li>
   </ol>
   <div class="chmenu-foot">
-    <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero acessar agora</a>
+    <a class="btn btn-gold" href="#oferta">Quero acessar agora</a>
     <a class="icon-btn" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg class="ico"><use href="#i-whats"/></svg></a>
   </div>
 </div>
@@ -753,13 +770,14 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <p class="hero-claim">Agora, você tem método.</p>
       <p class="hero-lead">Aprenda a analisar operações, estruturar contratos e conduzir a atuação do primeiro atendimento à entrega do contrato final.</p>
       <div class="hero-cta">
-        <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="#oferta">Quero começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-line" href="#metodo">Conheça o Método Jornada Contratual</a>
       </div>
       <ul class="hero-notes">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>8 Módulos de Formação</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>24 Contratos Fundamentados + IA</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Documentos Editáveis</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>8 Módulos de Conteúdo - Do Atendimento à Assinatura</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>24 Coleções Contratuais Com Manual</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Documentos Operacionais Editáveis</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Inteligência Artificial Treinada Com o Método</li>
       </ul>
     </div>
   </div>
@@ -831,17 +849,17 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 <!-- Transição: assinatura do método -->
 <div class="logo-break" aria-hidden="true"><span></span><img src="assets/metodo-logo.webp" width="852" height="282" alt="" loading="lazy" decoding="async"><span></span></div>
 
-<!-- 3/7 · ETAPAS -->
-<section class="sec etapas" id="etapas" data-ch="3" data-label="Etapas" aria-labelledby="t-etapas">
+<!-- 3/7 · MÓDULOS -->
+<section class="sec etapas" id="etapas" data-ch="3" data-label="Módulos" aria-labelledby="t-etapas">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">8 etapas</span>
+      <span class="eyebrow">8 módulos</span>
       <h2 class="h2" id="t-etapas"><b>Domine a atuação contratual</b> passo a passo</h2>
-      <p class="lead">Saiba o que fazer, por que fazer e em qual momento fazer. Selecione uma etapa para ver o que ela entrega.</p>
+      <p class="lead">Saiba o que fazer, por que fazer e em qual momento fazer. Selecione um módulo para ver o que ele entrega.</p>
     </div>
 
     <div class="etapas-grid">
-      <div class="stage-list" role="tablist" aria-label="Etapas do Método Jornada Contratual">
+      <div class="stage-list" role="tablist" aria-label="Módulos do Método Jornada Contratual">
         <button class="stage-btn" role="tab" id="tab-1" aria-controls="st-1" aria-selected="true"><span class="num">01</span>Teoria geral dos contratos</button>
         <button class="stage-btn" role="tab" id="tab-2" aria-controls="st-2" aria-selected="false" tabindex="-1"><span class="num">02</span>Atendimento inicial estratégico</button>
         <button class="stage-btn" role="tab" id="tab-3" aria-controls="st-3" aria-selected="false" tabindex="-1"><span class="num">03</span>Precificação de honorários</button>
@@ -853,14 +871,14 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </div>
 
       <div class="stage-view" id="stageView">
-        <figure class="sv-photo px"><img src="assets/etapas-foto.webp" width="780" height="1040" alt="Advogado assinando um contrato sobre a mesa do escritório" loading="lazy" decoding="async"></figure>
+        <figure class="sv-photo px"><img src="assets/etapas-foto.webp" width="980" height="1067" alt="Advogado assinando um contrato sobre a mesa do escritório" loading="lazy" decoding="async"></figure>
         <div class="sv-main">
         <svg class="compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
         <div class="sv-top">
-          <span class="sv-count" id="svCount" aria-live="polite">Etapa 01 de 08</span>
+          <span class="sv-count" id="svCount" aria-live="polite">Módulo 01 de 08</span>
           <div class="sv-nav">
-            <button type="button" id="svPrev" aria-label="Etapa anterior"><svg class="ico"><use href="#i-arrow-l"/></svg></button>
-            <button type="button" id="svNext" aria-label="Próxima etapa"><svg class="ico"><use href="#i-arrow"/></svg></button>
+            <button type="button" id="svPrev" aria-label="Módulo anterior"><svg class="ico"><use href="#i-arrow-l"/></svg></button>
+            <button type="button" id="svNext" aria-label="Próximo módulo"><svg class="ico"><use href="#i-arrow"/></svg></button>
           </div>
         </div>
 
@@ -903,8 +921,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     </div>
 
     <div class="etapas-foot rv">
-      <p class="kicker">Cada etapa prepara a próxima.</p>
-      <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero acessar o métoddo agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="kicker">Cada módulo prepara o próximo.</p>
+      <a class="btn btn-gold" href="#oferta">Quero acessar o método agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -921,10 +939,10 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <div class="rv">
           <span class="eyebrow">Ferramentas profissionais</span>
           <h2 class="h2" id="t-tools"><b>Documentos</b> para aplicar o método na rotina</h2>
-          <p class="lead">Materiais desenvolvidos para levar o raciocínio contratual para a prática profissional, em cada etapa da demanda.</p>
+          <p class="lead">Materiais desenvolvidos para levar o raciocínio contratual para a prática profissional, em cada módulo da demanda.</p>
         </div>
         <ul class="tool-list rv">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg><strong>Roteiros de atuação</strong><span>Para orientar a condução das diferentes etapas da demanda contratual.</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg><strong>Roteiros de atuação</strong><span>Para orientar a condução dos diferentes módulos da demanda contratual.</span></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><strong>Questionário estratégico de atendimento</strong><span>Para saber o que perguntar e compreender a operação antes da redação.</span></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><strong>Checklist de diligências pré-contratuais</strong><span>Para organizar documentos, verificações e pontos a analisar antes do contrato.</span></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-parecer"/></svg><strong>Modelo de parecer jurídico</strong><span>Para estruturar riscos, conclusões, alternativas e recomendações ao cliente.</span></li>
@@ -991,7 +1009,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <div class="board-head">
         <div>
           <h3>14 coleções já disponíveis</h3>
-          <p>Novas coleções serão liberadas até completar as 24 previstas no Laboratório.</p>
+          <p>São 24 coleções previstas: 14 já disponíveis e <b>10 vagas em aberto que os alunos escolhem</b>.</p>
+          <span class="open-tag"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>Você indica os próximos contratos</span>
         </div>
         <div class="meter" aria-label="14 de 24 coleções liberadas">
           <div class="meter-row"><span>Coleções liberadas</span><span><strong id="meterNum">14</strong> de 24</span></div>
@@ -1024,23 +1043,23 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <li class="slot" data-s="com"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Cessão de crédito</b><small>Comercial</small></div></li>
         <li class="slot" data-s="pi"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Cessão de direitos autorais</b><small>Propriedade intelectual</small></div></li>
         <li class="slot" data-s="com"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Representação comercial</b><small>Comercial</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Coleção em aberto</b><small>Você pode sugerir</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Vaga em aberto</b><small>Você escolhe o contrato</small></div></li>
       </ul>
 
-      <p class="board-open"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><span><b>As 10 coleções em aberto são definidas com os alunos.</b> Você pode sugerir os contratos que estão chegando ao seu escritório e que fazem sentido para a sua advocacia — as sugestões orientam as próximas liberações.</span></p>
+      <p class="board-open"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><span><b>10 das 24 coleções são escolhidas pelos alunos.</b> Dentro da plataforma você indica quais contratos quer ver produzidos — aqueles que estão chegando ao seu escritório e que fazem sentido para a sua advocacia. As indicações definem a ordem das próximas liberações, e cada coleção nova entra no seu acesso sem custo adicional.</span></p>
 
       <div class="board-note">
         <p><b>Você não recebe apenas um documento pronto para copiar.</b> Recebe uma base para compreender a operação, adaptar o instrumento e conduzir demandas que talvez ainda não façam parte da sua rotina.</p>
-        <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero acessar o laboratório <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="#oferta">Quero acessar o laboratório <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
@@ -1056,6 +1075,21 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <p class="lead">Advogados de todo o Brasil recomendam e confiam no Arquivo Contratual.</p>
       </div>
     </div>
+
+    <div class="prints-feature rv">
+      <button type="button" class="prints-shot js-prints" aria-label="Ampliar os prints originais">
+        <img src="assets/depoimentos-prints.webp" width="847" height="1024" alt="Prints de mensagens de alunos elogiando o Método Jornada Contratual" loading="lazy" decoding="async">
+        <span class="prints-zoom"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Ampliar</span>
+      </button>
+      <div class="prints-copy">
+        <span class="eyebrow">Prints originais</span>
+        <h3>As mensagens exatamente como chegaram.</h3>
+        <p>Comentários no Instagram, conversas no WhatsApp e mensagens no direct, sem edição e sem montagem. Amplie a imagem para ler cada uma delas.</p>
+        <button type="button" class="btn btn-line js-prints">Ver os prints em tamanho real <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+
+    <p class="proof-sub">Transcrição das mensagens, para leitura mais confortável:</p>
 
     <div class="proof">
       <figure class="msg msg-ig">
@@ -1103,7 +1137,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
     <div class="proof-foot rv">
       <p><span class="gold-rule" aria-hidden="true"></span>Conteúdo prático. Aplicação real. Confiança de quem vive o Direito.</p>
-      <button class="link-btn" type="button" id="openPrints"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Ver os prints originais</button>
+      <button class="link-btn js-prints" type="button" id="openPrints"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Ver os prints originais</button>
     </div>
   </div>
 </section>
@@ -1141,7 +1175,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         </div>
         <ul class="deliver rv">
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Método Jornada Contratual</strong><span>A estrutura que organiza sua atuação em uma sequência lógica, do atendimento à formalização.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>8 etapas completas de formação</strong><span>Fundamentos, atendimento, precificação, diligências, parecer, redação, revisão e formalização.</span></li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>8 módulos completos de conteúdo</strong><span>Fundamentos, atendimento, precificação, diligências, parecer, redação, revisão e formalização.</span></li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Ferramentas e documentos profissionais</strong><span>Questionários, checklists, roteiros e documentos editáveis em PDF, Canva e DOCX.</span></li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Laboratório com 24 coleções contratuais</strong><span>Cada contrato acompanha um manual prático com legislação aplicável, cláusulas essenciais e riscos.</span></li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>14 coleções disponíveis imediatamente</strong><span>As demais serão liberadas até completar as 24 previstas.</span></li>
@@ -1200,7 +1234,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <a class="link-btn" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>Perguntar pelo WhatsApp</a>
     </div>
     <div class="faq rv">
-      <details><summary>O método é apenas uma biblioteca de contratos prontos?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Não. O Laboratório faz parte da entrega, mas a Jornada é organizada em 8 etapas que acompanham a demanda do atendimento à formalização. Os modelos funcionam como apoio à análise, e não como substitutos dela.</p></div></details>
+      <details><summary>O método é apenas uma biblioteca de contratos prontos?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Não. O Laboratório faz parte da entrega, mas a Jornada é organizada em 8 módulos que acompanham a demanda do atendimento à formalização. Os modelos funcionam como apoio à análise, e não como substitutos dela.</p></div></details>
       <details><summary>Contratos ainda não fazem parte da minha rotina. O conteúdo serve para mim?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Sim. A Jornada foi organizada de forma lógica, didática e progressiva para quem precisa saber por onde começar: o que perguntar, quais documentos solicitar, o que investigar e como estruturar a operação. Quem já atua com contratos utiliza o método para organizar e acelerar a própria rotina.</p></div></details>
       <details><summary>Em que se baseia o conteúdo?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Os módulos são construídos a partir do Código Civil, das legislações especiais pertinentes, da jurisprudência e das práticas de mercado, com exemplos e exercícios práticos.</p></div></details>
       <details><summary>Quantas coleções do Laboratório estão disponíveis?<i aria-hidden="true"></i></summary><div class="faq-a"><p>O Laboratório prevê 24 coleções contratuais. Hoje, 14 já estão liberadas, e novas coleções serão disponibilizadas até completar as 24 previstas.</p></div></details>
@@ -1236,9 +1270,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <div class="wrap rv">
     <img class="final-logo" src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
     <h2 class="h2" id="t-final"><b>Tenha onde consultar</b> quando uma nova demanda chegar.</h2>
-    <p>Um processo para saber por onde começar, o que investigar, como organizar a análise e quais ferramentas usar em cada etapa.</p>
+    <p>Um processo para saber por onde começar, o que investigar, como organizar a análise e quais ferramentas usar em cada módulo.</p>
     <div class="final-cta">
-      <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-gold" href="#oferta">Quero acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="btn btn-line" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
     </div>
   </div>
@@ -1334,7 +1368,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     tabs.forEach(function(t,k){var on=k===idx;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1});
     panels.forEach(function(p,k){p.classList.toggle('is-on',k===idx)});
     prog.forEach(function(p,k){p.classList.toggle('on',k<=idx)});
-    count.textContent='Etapa '+pad(idx+1)+' de 08';
+    count.textContent='Módulo '+pad(idx+1)+' de 08';
     if(focus)tabs[idx].focus();
     if(list.scrollWidth>list.clientWidth){var t=tabs[idx];list.scrollTo({left:t.offsetLeft-list.offsetLeft-20,behavior:reduce?'auto':'smooth'})}
   }
@@ -1366,7 +1400,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
   /* Prints originais */
   var dlg=$('#prints');
-  $('#openPrints').addEventListener('click',function(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')});
+  $$('.js-prints').forEach(function(b){b.addEventListener('click',function(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')})});
   $('#closePrints').addEventListener('click',function(){dlg.close?dlg.close():dlg.removeAttribute('open')});
   dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
 })();

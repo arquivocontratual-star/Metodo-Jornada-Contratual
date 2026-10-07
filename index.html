@@ -18,7 +18,10 @@
      Google tag (Google Ads AW-18483884729): logo após a abertura do <head>.
   6. Imagens: troque o arquivo dentro de /assets mantendo o mesmo nome, ou
      mude o src="assets/nome.webp" para o novo nome.
-  7. Faça uma cópia do arquivo antes de editar. Se algo sair errado, é só
+  7. Mockups dos módulos: cada botão de módulo carrega o seu livro pelo
+     atributo data-mock="assets/mod-N.webp" (N de 1 a 8), na seção MÓDULOS.
+     Para trocar o livro de um módulo, basta mudar o número nesse atributo.
+  8. Faça uma cópia do arquivo antes de editar. Se algo sair errado, é só
      voltar a cópia.
   ===========================================================================
 -->
@@ -200,7 +203,6 @@ ul{margin:0;padding:0;list-style:none}
 .px{position:relative;isolation:isolate}
 .px>img{filter:saturate(.82) contrast(.94) brightness(.97)}
 .px::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(180deg,rgba(155,118,53,.12),rgba(0,0,0,.1));background-size:5px 5px,5px 5px,100% 100%;mix-blend-mode:soft-light}
-.bleed img,.covers img,.msg img,.slot img{filter:saturate(.88) contrast(.96)}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:56% 22%;filter:saturate(.8) contrast(.93) brightness(.94)}
 .hero-media::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(180deg,rgba(155,118,53,.14),rgba(0,0,0,.12));background-size:5px 5px,5px 5px,100% 100%;mix-blend-mode:soft-light;opacity:.9}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 52%,#000 99%),linear-gradient(0deg,#000 0%,transparent 26%)}
@@ -251,14 +253,34 @@ main{overflow-x:clip}
 .with-bleed .wrap{position:relative;z-index:1}
 .bleed-top{bottom:auto;top:clamp(20px,3vw,48px)}
 .bleed-top img{height:auto;aspect-ratio:652/736;object-position:50% 50%}
-.covers-bleed{display:grid;place-items:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%),linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 8%),linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
-.covers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);width:100%;padding:0 clamp(18px,2.4vw,44px) 0 clamp(40px,4vw,76px);transform:rotate(-2.2deg)}
-.covers-bleed .covers img{width:100%;height:auto;max-height:none;aspect-ratio:424/600;-webkit-mask-image:none;mask-image:none;object-fit:cover;border-radius:3px 8px 8px 3px;box-shadow:0 30px 48px -26px rgba(14,16,21,.8),inset 0 0 0 1px rgba(255,255,255,.35);transition:transform .7s var(--ease)}
-.covers-bleed .covers img:nth-child(3n+1){transform:translateY(-18px)}
-.covers-bleed .covers img:nth-child(3n+3){transform:translateY(18px)}
-.with-bleed:hover .covers img:nth-child(3n+1){transform:translateY(-26px)}
-.with-bleed:hover .covers img:nth-child(3n+3){transform:translateY(26px)}
 .with-bleed .col{max-width:560px}
+
+/* ---------- Método: topo em duas colunas ---------- */
+.metodo-top{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(30px,5vw,76px);align-items:start}
+.metodo-top .lead{max-width:none}
+.metodo-top .pillars{margin:0}
+.metodo-close{margin-top:clamp(44px,5vw,66px);max-width:46em}
+
+/* ---------- Jornada: as seis etapas ---------- */
+.jornada{position:relative;z-index:1;margin-top:clamp(52px,6.5vw,88px);background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:clamp(26px,3.4vw,48px) clamp(18px,3.2vw,46px) clamp(22px,2.8vw,34px);box-shadow:0 40px 80px -60px rgba(14,16,21,.5)}
+.jornada-head{text-align:center;max-width:52ch;margin:0 auto clamp(36px,4.6vw,58px)}
+.jornada-head .eyebrow{margin-bottom:16px;padding-bottom:13px}
+.jornada-head .eyebrow::after{left:50%;transform:translateX(-50%);width:calc(100% + 10px)}
+.jornada-head h3{font-size:clamp(1.28rem,1.02rem + .95vw,1.78rem);font-weight:800;letter-spacing:-.035em;line-height:1.16;text-wrap:balance}
+
+.jornada-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.jornada-step{position:relative;text-align:center;padding:0 5px}
+.jornada-step::before{content:"";position:absolute;left:0;right:0;top:28px;height:1px;background:rgba(155,118,53,.42);z-index:0}
+.jornada-step:first-child::before{left:50%}
+.jornada-step:last-child::before{right:50%}
+.jornada-step:not(:last-child)::after{content:"";position:absolute;right:-5px;top:23px;width:10px;height:10px;border-radius:1px;transform:rotate(45deg);background:var(--grad);z-index:1}
+.js-num{position:relative;z-index:2;display:grid;place-items:center;width:56px;height:56px;margin:0 auto;border-radius:50%;background:var(--night-2);color:var(--bronze-lt);font-weight:800;font-size:1.12rem;font-variant-numeric:tabular-nums;box-shadow:0 0 0 5px var(--paper),0 0 0 6.5px rgba(155,118,53,.42),0 14px 26px -14px rgba(14,16,21,.75)}
+.js-txt{margin-top:22px}
+.js-txt strong{display:block;font-size:.73rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);line-height:1.3}
+.js-txt span{display:block;margin-top:3px;font-size:.84rem;line-height:1.35;color:var(--muted)}
+.js-txt em{display:block;margin-top:12px;font-style:italic;font-size:.9rem;color:var(--bronze)}
+.jornada-loop{display:block;width:100%;height:auto;margin-top:14px;color:var(--bronze);overflow:visible}
+.jornada-note{margin:4px 0 0;text-align:center;font-style:italic;font-size:.92rem;color:var(--muted)}
 
 /* ---------- Desafio ---------- */
 .desafio .h2{max-width:15ch}
@@ -277,7 +299,7 @@ main{overflow-x:clip}
 .desafio-close b{color:var(--ink)}
 
 /* ---------- Método ---------- */
-.metodo .compass{position:absolute;width:340px;left:36%;top:-40px;z-index:0}
+.metodo .compass{position:absolute;width:min(34vw,430px);right:-6vw;left:auto;top:-70px;z-index:0;opacity:.75}
 .pillars{display:grid;gap:14px;margin:clamp(30px,3.4vw,42px) 0}
 .pillars li{display:flex;align-items:center;gap:20px}
 .pillars .ico{width:64px;height:64px;padding:16px;border-radius:50%;background:var(--grad);color:#fff;stroke-width:1.6;box-shadow:0 10px 24px -12px rgba(104,76,31,.8)}
@@ -297,9 +319,10 @@ main{overflow-x:clip}
 .stage-btn .num{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:800;font-size:1.28rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .stage-btn[aria-selected="true"]{background:#fff;border-color:rgba(142,107,50,.55);box-shadow:0 18px 36px -22px rgba(14,16,21,.45)}
 .stage-view{position:sticky;top:calc(var(--hdr) + 20px);background:var(--night-2);color:var(--on-night);border-radius:22px;overflow:hidden;min-height:100%;display:grid;grid-template-rows:auto 1fr}
-.sv-photo{position:relative;margin:0;overflow:hidden}
-.sv-photo img{width:100%;height:clamp(320px,30vw,470px);object-fit:cover;object-position:50% 38%}
-.sv-photo::after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(0deg,var(--night-2),rgba(10,11,14,.22) 42%,rgba(10,11,14,.05) 70%)}
+.sv-photo{position:relative;margin:0;overflow:hidden;background:#F0EFEA;padding:clamp(6px,.8vw,12px)}
+.sv-photo img{display:block;width:100%;height:clamp(282px,30vw,436px);object-fit:contain;object-position:50% 50%;transition:opacity .4s var(--ease)}
+.sv-photo img.is-swap{opacity:0}
+.sv-photo::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(0deg,rgba(11,12,16,.17),rgba(11,12,16,.03) 34%,transparent 62%)}
 .sv-main{position:relative;padding:clamp(24px,2.8vw,36px);display:flex;flex-direction:column}
 .sv-panel.is-on{margin-block:auto}
 .sv-progress{margin-top:auto}
@@ -582,25 +605,37 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 @media (min-width:981px) and (max-width:1220px){
   .with-bleed .col{max-width:46%}
   .bleed{width:min(44vw,640px)}
-  .covers{padding-left:clamp(28px,3vw,48px)}
-}
+  }
 @media (max-width:1100px){
   .nav{display:none}
   .etapas-grid{grid-template-columns:1fr}
   .stage-view{position:relative;top:auto}
+  .sv-photo img{height:clamp(300px,42vw,430px)}
   .offer{grid-template-columns:1fr}
   .ticket{position:relative;top:auto;max-width:560px}
   .board{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (max-width:980px){
+  .metodo-top{grid-template-columns:1fr}
+  .jornada{padding-inline:clamp(18px,4vw,30px)}
+  .jornada-head{text-align:left;margin-inline:0}
+  .jornada-head .eyebrow::after{left:0;transform:none;width:calc(100% + 28px)}
+  .jornada-steps{grid-template-columns:1fr}
+  .jornada-step{display:grid;grid-template-columns:52px minmax(0,1fr);gap:0 18px;text-align:left;padding:0 0 clamp(22px,3.4vw,30px)}
+  .jornada-step:last-child{padding-bottom:0}
+  .jornada-step::before{left:25px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .jornada-step:first-child::before{left:25px;top:26px}
+  .jornada-step:last-child::before{bottom:calc(100% - 26px)}
+  .jornada-step:not(:last-child)::after{left:20px;right:auto;top:68px;bottom:auto}
+  .js-num{width:52px;height:52px;font-size:1.02rem}
+  .js-txt{margin-top:0;padding-top:5px}
+  .js-txt em{margin-top:7px}
+  .jornada-loop{display:none}
+  .jornada-note{text-align:left;margin-top:clamp(24px,3.4vw,30px);padding:14px 16px;border:1px dashed rgba(155,118,53,.45);border-radius:14px;background:rgba(155,118,53,.05)}
   .with-bleed .col{max-width:none}
   .bleed{position:relative;width:auto;height:auto;margin:0}
   .bleed img{height:auto;aspect-ratio:652/736;max-height:620px;width:auto;max-width:100%;margin-inline:auto;object-fit:contain;object-position:center;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%)}
   .with-bleed .bleed{order:2}
-  .covers-bleed{-webkit-mask-image:none;mask-image:none;margin-top:clamp(28px,4vw,40px)}
-  .covers{padding:0 var(--gut);transform:none;gap:12px}
-  .covers-bleed .covers img:nth-child(3n+1),.covers-bleed .covers img:nth-child(3n+3){transform:none}
-  .bleed-top{top:0}
   .bleed-top img{aspect-ratio:652/736}
   .with-bleed .wrap{display:flex;flex-direction:column}
   .desafio-grid,.tools-grid,.autor-grid,.faq-grid,.assist{grid-template-columns:1fr}
@@ -642,7 +677,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .stage-list{grid-template-columns:1fr 1fr;grid-auto-flow:row;gap:8px}
   .stage-btn{grid-template-columns:38px 1fr;gap:10px;min-height:0;padding:10px 12px;font-size:.85rem;line-height:1.25}
   .stage-btn .num{width:38px;height:38px;font-size:.92rem}
-  .sv-photo img{height:clamp(280px,82vw,340px);object-position:50% 38%}
+  .sv-photo img{height:clamp(230px,62vw,300px)}
 
   .board{grid-template-columns:repeat(2,minmax(0,1fr))}
   .slot{min-height:58px;padding:10px 12px;gap:10px}
@@ -806,7 +841,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </div>
       <div class="desafio-side">
       <figure class="rotina px rv">
-        <img src="assets/rotina.webp" width="900" height="1200" alt="Mesa de trabalho do advogado com contratos impressos" loading="lazy" decoding="async">
+        <img src="assets/assinatura.webp" width="840" height="1120" alt="Advogado assinando um contrato sobre a mesa do escritório" loading="lazy" decoding="async">
       </figure>
       <ul class="pains rv">
         <li><svg class="ico" aria-hidden="true"><use href="#i-signpost"/></svg><h3>Identificar o serviço</h3><p>Reconhecer o que a operação exige: análise de documentos, orientação, elaboração, revisão ou uma combinação dessas entregas.</p></li>
@@ -820,23 +855,10 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 </section>
 
 <!-- 2/7 · MÉTODO -->
-<section class="sec sec-stone metodo with-bleed" id="metodo" data-ch="2" data-label="Método" aria-labelledby="t-metodo">
+<section class="sec sec-stone metodo" id="metodo" data-ch="2" data-label="Método" aria-labelledby="t-metodo">
   <svg class="compass compass-light" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
-  <div class="bleed covers-bleed">
-    <div class="covers">
-      <img src="assets/capa-ponto-zero.webp" alt="Capa do material Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async">
-      <img src="assets/capa-conectam.webp" alt="Capa do material Contratos que se Conectam" loading="lazy" decoding="async">
-      <img src="assets/capa-checklist.webp" alt="Capa do material Checklist Contratual" loading="lazy" decoding="async">
-      <img src="assets/capa-atendimento.webp" alt="Capa do material Guia Prático de Atendimento ao Cliente" loading="lazy" decoding="async">
-      <img src="assets/capa-diligencias.webp" alt="Capa do material Manual de Diligências Pré-Contratuais" loading="lazy" decoding="async">
-      <img src="assets/capa-parecer.webp" alt="Capa do material Parecer Jurídico como ferramenta estratégica" loading="lazy" decoding="async">
-      <img src="assets/capa-estruturacao.webp" alt="Capa do material Estruturação e Redação Contratual" loading="lazy" decoding="async">
-      <img src="assets/capa-revisao.webp" alt="Capa do material Técnicas para Revisão Contratual" loading="lazy" decoding="async">
-      <img src="assets/capa-assinatura.webp" alt="Capa do material Apresentação e Assinatura de Contratos" loading="lazy" decoding="async">
-    </div>
-  </div>
   <div class="wrap">
-    <div class="col">
+    <div class="metodo-top">
       <div class="rv">
         <span class="eyebrow">O que é o método?</span>
         <h2 class="h2" id="t-metodo"><b>Um método para analisar o negócios</b> e conduzir a atuação contratual</h2>
@@ -847,11 +869,35 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><div><strong>Orientar as decisões do cliente</strong><span>Apresentar riscos e alternativas, com recomendações que o cliente consiga compreender.</span></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><strong>Documentar o que foi decidido</strong><span>Definir quem faz o quê, em qual prazo, com qual prova e o que acontece se algo falhar.</span></div></li>
       </ul>
-      <div class="rv">
-        <p class="kicker">Seu trabalho começa quando você entende a operação.</p>
-        <p>E ganha forma na orientação, nas cláusulas e na entrega ao cliente.</p>
-        <p class="basis"><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg><span><b>Os materiais trabalham fundamentos do Código Civil, legislação especial e pesquisa jurídica, com casos, exemplos e exercícios. O processo é ajustado aos riscos e à complexidade de cada demanda.</b></span></p>
+    </div>
+
+    <!-- A sequência das seis etapas -->
+    <div class="jornada rv">
+      <div class="jornada-head">
+        <span class="eyebrow">A sequência do trabalho</span>
+        <h3>Seis etapas, do primeiro atendimento à entrega do contrato</h3>
       </div>
+      <ol class="jornada-steps">
+        <li class="jornada-step"><span class="js-num">1</span><div class="js-txt"><strong>Atendimento</strong><span>inicial</span><em>compreender</em></div></li>
+        <li class="jornada-step"><span class="js-num">2</span><div class="js-txt"><strong>Diligências</strong><span>pré-contratuais</span><em>verificar</em></div></li>
+        <li class="jornada-step"><span class="js-num">3</span><div class="js-txt"><strong>Diagnóstico</strong><span>ou parecer</span><em>orientar</em></div></li>
+        <li class="jornada-step"><span class="js-num">4</span><div class="js-txt"><strong>Estruturação</strong><span>e redação</span><em>estruturar</em></div></li>
+        <li class="jornada-step"><span class="js-num">5</span><div class="js-txt"><strong>Revisão</strong><span>do instrumento</span><em>testar</em></div></li>
+        <li class="jornada-step"><span class="js-num">6</span><div class="js-txt"><strong>Apresentação</strong><span>e formalização</span><em>implementar</em></div></li>
+      </ol>
+      <svg class="jornada-loop" viewBox="0 0 1200 86" role="img" aria-label="Uma etapa pode ser retomada quando uma premissa relevante muda">
+        <defs>
+          <marker id="jl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        </defs>
+        <path d="M900 4 C900 58 580 70 508 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 7" stroke-linecap="round" opacity=".75" marker-end="url(#jl-arrow)"/>
+      </svg>
+      <p class="jornada-note">Voltar uma etapa quando uma premissa relevante muda.</p>
+    </div>
+
+    <div class="rv metodo-close">
+      <p class="kicker">Seu trabalho começa quando você entende a operação.</p>
+      <p>E ganha forma na orientação, nas cláusulas e na entrega ao cliente.</p>
+      <p class="basis"><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg><span><b>Os materiais trabalham fundamentos do Código Civil, legislação especial e pesquisa jurídica, com casos, exemplos e exercícios. O processo é ajustado aos riscos e à complexidade de cada demanda.</b></span></p>
     </div>
   </div>
 </section>
@@ -870,18 +916,18 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
     <div class="etapas-grid">
       <div class="stage-list" role="tablist" aria-label="Módulos do Método Jornada Contratual">
-        <button class="stage-btn" role="tab" id="tab-1" aria-controls="st-1" aria-selected="true"><span class="num">01</span>Fundamentos e diagnóstico</button>
-        <button class="stage-btn" role="tab" id="tab-2" aria-controls="st-2" aria-selected="false" tabindex="-1"><span class="num">02</span>Método de atuação contratual</button>
-        <button class="stage-btn" role="tab" id="tab-3" aria-controls="st-3" aria-selected="false" tabindex="-1"><span class="num">03</span>Atendimento, escopo e honorários</button>
-        <button class="stage-btn" role="tab" id="tab-4" aria-controls="st-4" aria-selected="false" tabindex="-1"><span class="num">04</span>Diligências pré-contratuais</button>
-        <button class="stage-btn" role="tab" id="tab-5" aria-controls="st-5" aria-selected="false" tabindex="-1"><span class="num">05</span>Parecer e orientação jurídica</button>
-        <button class="stage-btn" role="tab" id="tab-6" aria-controls="st-6" aria-selected="false" tabindex="-1"><span class="num">06</span>Estruturação e redação contratual</button>
-        <button class="stage-btn" role="tab" id="tab-7" aria-controls="st-7" aria-selected="false" tabindex="-1"><span class="num">07</span>Revisão contratual</button>
-        <button class="stage-btn" role="tab" id="tab-8" aria-controls="st-8" aria-selected="false" tabindex="-1"><span class="num">08</span>Entrega e formalização</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-1.webp" data-mockalt="Material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" id="tab-1" aria-controls="st-1" aria-selected="true"><span class="num">01</span>Fundamentos e diagnóstico</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-2.webp" data-mockalt="Material do módulo 02: Contratos que Conectam" id="tab-2" aria-controls="st-2" aria-selected="false" tabindex="-1"><span class="num">02</span>Método de atuação contratual</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-3.webp" data-mockalt="Material do módulo 03: Guia Prático de Atendimento ao Cliente" id="tab-3" aria-controls="st-3" aria-selected="false" tabindex="-1"><span class="num">03</span>Atendimento, escopo e honorários</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-4.webp" data-mockalt="Material do módulo 04: Manual de Diligências Pré-Contratuais" id="tab-4" aria-controls="st-4" aria-selected="false" tabindex="-1"><span class="num">04</span>Diligências pré-contratuais</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-5.webp" data-mockalt="Material do módulo 05: Parecer Jurídico como ferramenta estratégica" id="tab-5" aria-controls="st-5" aria-selected="false" tabindex="-1"><span class="num">05</span>Parecer e orientação jurídica</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-6.webp" data-mockalt="Material do módulo 06: Estruturação e Redação Contratual" id="tab-6" aria-controls="st-6" aria-selected="false" tabindex="-1"><span class="num">06</span>Estruturação e redação contratual</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-7.webp" data-mockalt="Material do módulo 07: Técnicas para Revisão Contratual" id="tab-7" aria-controls="st-7" aria-selected="false" tabindex="-1"><span class="num">07</span>Revisão contratual</button>
+        <button class="stage-btn" role="tab" data-mock="assets/mod-8.webp" data-mockalt="Material do módulo 08: Apresentação e Assinatura de Contratos" id="tab-8" aria-controls="st-8" aria-selected="false" tabindex="-1"><span class="num">08</span>Entrega e formalização</button>
       </div>
 
       <div class="stage-view" id="stageView">
-        <figure class="sv-photo px"><img src="assets/etapas-foto.webp" width="980" height="1067" alt="Advogado assinando um contrato sobre a mesa do escritório" loading="lazy" decoding="async"></figure>
+        <figure class="sv-photo"><img id="svMock" src="assets/mod-1.webp" width="920" height="727" alt="Material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async"></figure>
         <div class="sv-main">
         <svg class="compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
         <div class="sv-top">
@@ -1366,6 +1412,27 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
   /* Etapas */
   var tabs=$$('.stage-btn'), panels=$$('.sv-panel'), prog=$$('#svProg i'), count=$('#svCount'), idx=0, list=$('.stage-list');
+  var mock=$('#svMock');
+  if(mock){
+    mock.addEventListener('load',function(){mock.classList.remove('is-swap')});
+    mock.addEventListener('error',function(){mock.classList.remove('is-swap')});
+  }
+  function setMock(i){
+    if(!mock) return;
+    var b=tabs[i], src=b.getAttribute('data-mock');
+    if(!src || mock.getAttribute('src')===src) return;
+    mock.classList.add('is-swap');
+    mock.setAttribute('src',src);
+    mock.setAttribute('alt',b.getAttribute('data-mockalt')||'');
+  }
+  /* pré-carrega os mockups quando a seção se aproxima da tela */
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e,o){
+      if(!e[0].isIntersecting) return;
+      o.disconnect();
+      tabs.forEach(function(t){var u=t.getAttribute('data-mock'); if(u){var im=new Image(); im.src=u}});
+    },{rootMargin:'700px 0px'}).observe($('#etapas'));
+  }
   function pad(n){return (n<10?'0':'')+n}
   function select(i,focus){
     idx=(i+tabs.length)%tabs.length;
@@ -1373,6 +1440,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     panels.forEach(function(p,k){p.classList.toggle('is-on',k===idx)});
     prog.forEach(function(p,k){p.classList.toggle('on',k<=idx)});
     count.textContent='Módulo '+pad(idx+1)+' de 08';
+    setMock(idx);
     if(focus)tabs[idx].focus();
     if(list.scrollWidth>list.clientWidth){var t=tabs[idx];list.scrollTo({left:t.offsetLeft-list.offsetLeft-20,behavior:reduce?'auto':'smooth'})}
   }

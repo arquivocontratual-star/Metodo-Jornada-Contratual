@@ -19,9 +19,13 @@
   6. Imagens: troque o arquivo dentro de /assets mantendo o mesmo nome, ou
      mude o src="assets/nome.webp" para o novo nome.
   7. Mockups dos módulos: cada botão de módulo carrega o seu livro pelo
-     atributo data-mock="assets/mod-N.webp" (N de 1 a 8), na seção MÓDULOS.
+     atributo data-mock="assets/miolo-N.webp" (N de 1 a 8), na seção MÓDULOS.
      Para trocar o livro de um módulo, basta mudar o número nesse atributo.
-  8. Faça uma cópia do arquivo antes de editar. Se algo sair errado, é só
+  8. Carrossel das ferramentas: as imagens são assets/ferramenta-1.webp a
+     ferramenta-6.webp, listadas em sequência dentro de <div class="tc-stage">.
+     Para trocar a ordem, troque a ordem das linhas; para incluir outra,
+     copie uma linha e acrescente um botão em <div class="tc-dots">.
+  9. Faça uma cópia do arquivo antes de editar. Se algo sair errado, é só
      voltar a cópia.
   ===========================================================================
 -->
@@ -256,9 +260,7 @@ main{overflow-x:clip}
 .with-bleed .col{max-width:560px}
 
 /* ---------- Método: topo em duas colunas ---------- */
-.metodo-top{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(30px,5vw,76px);align-items:start}
-.metodo-top .lead{max-width:none}
-.metodo-top .pillars{margin:0}
+.metodo .col .pillars{margin:clamp(30px,3.4vw,42px) 0 0}
 .metodo-close{margin-top:clamp(44px,5vw,66px);max-width:46em}
 
 /* ---------- Jornada: as seis etapas ---------- */
@@ -282,8 +284,24 @@ main{overflow-x:clip}
 .jornada-loop{display:block;width:100%;height:auto;margin-top:14px;color:var(--bronze);overflow:visible}
 .jornada-note{margin:4px 0 0;text-align:center;font-style:italic;font-size:.92rem;color:var(--muted)}
 
+/* ---------- Marca do método no topo da seção 2 ---------- */
+.metodo-marca{display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,34px);margin:0 0 16px}
+.metodo-marca img{width:clamp(190px,21vw,258px);height:auto;filter:invert(1) brightness(.35)}
+.metodo-marca .lb-rule{display:block;height:1px;flex:1;max-width:210px;background:linear-gradient(90deg,transparent,rgba(155,118,53,.5),transparent)}
+.metodo-marca-sub{text-align:center;margin:0 auto clamp(42px,5.4vw,70px);max-width:46ch;font-size:.76rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);line-height:1.7}
+
+/* ---------- Capas na lateral do método ---------- */
+.covers-bleed{position:absolute;top:50%;transform:translateY(-50%);bottom:auto;right:calc(-1 * max(var(--gut), (100vw - var(--wrap)) / 2));width:min(47vw,740px);z-index:0;display:grid;place-items:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%),linear-gradient(180deg,transparent 0%,#000 9%,#000 91%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 14%),linear-gradient(180deg,transparent 0%,#000 9%,#000 91%,transparent 100%);mask-composite:intersect}
+.capas{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(10px,1.3vw,18px);width:100%;padding:0 clamp(16px,2.2vw,40px) 0 clamp(34px,3.6vw,64px);transform:rotate(-2.2deg)}
+.covers-bleed .capas img{width:calc(33.333% - clamp(10px,1.3vw,18px));height:auto;aspect-ratio:424/600;object-fit:cover;border-radius:3px 7px 7px 3px;box-shadow:0 26px 44px -24px rgba(14,16,21,.8),inset 0 0 0 1px rgba(255,255,255,.35);transition:transform .7s var(--ease)}
+.covers-bleed .capas img:nth-child(odd){transform:translateY(-14px)}
+.covers-bleed .capas img:nth-child(even){transform:translateY(14px)}
+.with-bleed:hover .capas img:nth-child(odd){transform:translateY(-22px) rotate(-2.5deg)}
+.with-bleed:hover .capas img:nth-child(even){transform:translateY(22px) rotate(2.5deg)}
+
+
 /* ---------- Desafio ---------- */
-.desafio .h2{max-width:15ch}
+.desafio .h2{max-width:22ch}
 .desafio-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,96px);margin-top:clamp(40px,5vw,64px);align-items:start}
 .desafio-text p{font-size:clamp(1.05rem,1rem + .3vw,1.2rem);color:var(--ink-2);max-width:30em}
 .rotina{margin:0 0 clamp(26px,3vw,36px);position:relative;border-radius:18px}
@@ -299,12 +317,13 @@ main{overflow-x:clip}
 .desafio-close b{color:var(--ink)}
 
 /* ---------- Método ---------- */
-.metodo .compass{position:absolute;width:min(34vw,430px);right:-6vw;left:auto;top:-70px;z-index:0;opacity:.75}
+.metodo .compass{position:absolute;width:min(30vw,390px);right:-8vw;left:auto;top:-40px;z-index:0;opacity:.45}
 .pillars{display:grid;gap:14px;margin:clamp(30px,3.4vw,42px) 0}
-.pillars li{display:flex;align-items:center;gap:20px}
+.pillars li{display:flex;align-items:flex-start;gap:20px}
+.pillars li>div{padding-top:4px}
 .pillars .ico{width:64px;height:64px;padding:16px;border-radius:50%;background:var(--grad);color:#fff;stroke-width:1.6;box-shadow:0 10px 24px -12px rgba(104,76,31,.8)}
 .pillars strong{display:block;font-size:1.2rem;font-weight:600;letter-spacing:-.02em}
-.pillars span{display:block;color:var(--muted);font-size:.95rem;line-height:1.4}
+.pillars span{display:block;color:var(--muted);font-size:.95rem;line-height:1.45;max-width:42ch}
 .metodo .kicker{margin-top:8px;max-width:15em}
 .metodo .kicker+p{margin-top:12px;color:var(--ink-2);font-size:1.08rem}
 .basis{display:flex;gap:16px;align-items:flex-start;margin-top:clamp(34px,4vw,48px);padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem;max-width:34em}
@@ -320,7 +339,7 @@ main{overflow-x:clip}
 .stage-btn[aria-selected="true"]{background:#fff;border-color:rgba(142,107,50,.55);box-shadow:0 18px 36px -22px rgba(14,16,21,.45)}
 .stage-view{position:sticky;top:calc(var(--hdr) + 20px);background:var(--night-2);color:var(--on-night);border-radius:22px;overflow:hidden;min-height:100%;display:grid;grid-template-rows:auto 1fr}
 .sv-photo{position:relative;margin:0;overflow:hidden;background:#F0EFEA;padding:clamp(6px,.8vw,12px)}
-.sv-photo img{display:block;width:100%;height:clamp(282px,30vw,436px);object-fit:contain;object-position:50% 50%;transition:opacity .4s var(--ease)}
+.sv-photo img{display:block;width:100%;height:clamp(250px,25vw,370px);object-fit:contain;object-position:50% 50%;transition:opacity .4s var(--ease)}
 .sv-photo img.is-swap{opacity:0}
 .sv-photo::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(0deg,rgba(11,12,16,.17),rgba(11,12,16,.03) 34%,transparent 62%)}
 .sv-main{position:relative;padding:clamp(24px,2.8vw,36px);display:flex;flex-direction:column}
@@ -347,9 +366,16 @@ main{overflow-x:clip}
 
 /* ---------- Ferramentas (dark) ---------- */
 .tools-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(40px,6vw,90px);align-items:center}
+.tc-stage{position:relative;aspect-ratio:800/1000}
+.tc-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .7s var(--ease);-webkit-mask-image:radial-gradient(74% 70% at 50% 48%,#000 56%,transparent 100%);mask-image:radial-gradient(74% 70% at 50% 48%,#000 56%,transparent 100%)}
+.tc-slide.is-on{opacity:1}
+.tc-dots{display:flex;justify-content:center;gap:9px;margin-top:20px}
+.tc-dot{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;cursor:pointer;transition:background-color .35s,border-color .35s,transform .35s}
+.tc-dot.is-on{background:var(--bronze-lt);border-color:var(--bronze-lt);transform:scale(1.25)}
+.tc-dot:hover{border-color:var(--bronze-lt)}
 .tools-photo{position:relative;border-radius:20px}
 .tools-photo img{border-radius:20px;width:100%;aspect-ratio:819/1024;object-fit:cover;box-shadow:0 50px 90px -40px rgba(0,0,0,.9)}
-.formats{position:absolute;left:clamp(16px,2vw,24px);bottom:clamp(16px,2vw,24px);display:flex;gap:8px}
+.formats{position:absolute;z-index:2;left:clamp(16px,2vw,24px);bottom:calc(29px + clamp(16px,2vw,24px));display:flex;gap:8px}
 .formats span{padding:9px 14px;border-radius:999px;background:rgba(11,12,16,.78);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(198,163,103,.45);font-size:.72rem;font-weight:700;letter-spacing:.2em;color:#E9E3D6}
 .tool-list{margin-top:clamp(28px,3vw,38px);display:grid;gap:0}
 .tool-list li{display:grid;grid-template-columns:52px 1fr;gap:3px 18px;padding:16px 0;border-top:1px solid var(--line-night)}
@@ -610,13 +636,19 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .nav{display:none}
   .etapas-grid{grid-template-columns:1fr}
   .stage-view{position:relative;top:auto}
-  .sv-photo img{height:clamp(300px,42vw,430px)}
+  .sv-photo img{height:clamp(240px,34vw,350px)}
   .offer{grid-template-columns:1fr}
   .ticket{position:relative;top:auto;max-width:560px}
   .board{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (max-width:980px){
-  .metodo-top{grid-template-columns:1fr}
+  .with-bleed .covers-bleed{position:relative;top:auto;right:auto;transform:none;width:auto;order:2;margin:clamp(40px,5.5vw,60px) 0 0;-webkit-mask-image:none;mask-image:none}
+  .metodo .col{order:1}
+  .with-bleed .capas{padding:0;transform:none}
+  .capas{padding:0;transform:none;gap:clamp(10px,2vw,16px)}
+  .covers-bleed .capas img{width:calc(25% - clamp(10px,2vw,16px))}
+  .covers-bleed .capas img:nth-child(odd){transform:rotate(-3.4deg) translateY(-7px)}
+  .covers-bleed .capas img:nth-child(even){transform:rotate(3.4deg) translateY(7px)}
   .jornada{padding-inline:clamp(18px,4vw,30px)}
   .jornada-head{text-align:left;margin-inline:0}
   .jornada-head .eyebrow::after{left:0;transform:none;width:calc(100% + 28px)}
@@ -677,7 +709,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .stage-list{grid-template-columns:1fr 1fr;grid-auto-flow:row;gap:8px}
   .stage-btn{grid-template-columns:38px 1fr;gap:10px;min-height:0;padding:10px 12px;font-size:.85rem;line-height:1.25}
   .stage-btn .num{width:38px;height:38px;font-size:.92rem}
-  .sv-photo img{height:clamp(230px,62vw,300px)}
+  .sv-photo img{height:clamp(190px,48vw,250px)}
 
   .board{grid-template-columns:repeat(2,minmax(0,1fr))}
   .slot{min-height:58px;padding:10px 12px;gap:10px}
@@ -829,51 +861,72 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <a class="hero-scroll" href="#desafio">Deslize para ver mais <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
 </section>
 
-<!-- Desafio -->
+<!-- Seção 2 · O QUE O MÉTODO RESOLVE -->
 <section class="sec sec-paper desafio" id="desafio" data-ch="1" data-label="Início" aria-labelledby="t-desafio">
   <div class="wrap">
-    <h2 class="h2 rv" id="t-desafio"><b>Por trás de um pedido de contrato</b> há um negócio a ser estruturado.</h2>
+    <div class="metodo-marca rv">
+      <span class="lb-rule" aria-hidden="true"></span>
+      <img src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
+      <span class="lb-rule" aria-hidden="true"></span>
+    </div>
+    <p class="metodo-marca-sub rv">Um método para conduzir a atuação contratual, do atendimento à assinatura</p>
+
+    <h2 class="h2 rv" id="t-desafio"><b>Por que alguns advogados cobram R$ 5.000 ou mais por um contrato</b> e outros não passam de R$ 500.</h2>
     <div class="desafio-grid">
       <div class="desafio-text rv">
-        <p>Demandas de diferentes setores chegam ao escritório e trazem dúvidas: qual legislação se aplica, o que perguntar ao cliente, quais documentos solicitar, o que investigar e como estruturar juridicamente a operação.</p>
-        <p>A dificuldade nem sempre é falta de conhecimento jurídico. Muitas vezes, falta um processo claro para organizar a análise e saber como avançar diante de uma nova demanda.</p>
+        <p>A resposta não está no documento. Está nas oportunidades de negócio e nas camadas de atuação que vêm antes dele — e que a maioria nunca aprendeu a enxergar, cobrar ou explicar ao cliente.</p>
+        <p>Ninguém conta que a redação é apenas a parte final de um ecossistema maior: o da formalização consciente de um negócio que precisa ser viável e seguro para o cliente. Quem enxerga só a minuta entrega um documento. Quem enxerga a operação conduz o negócio.</p>
       </div>
       <div class="desafio-side">
       <figure class="rotina px rv">
         <img src="assets/assinatura.webp" width="840" height="1120" alt="Advogado assinando um contrato sobre a mesa do escritório" loading="lazy" decoding="async">
       </figure>
       <ul class="pains rv">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-signpost"/></svg><h3>Como identificar o serviço?</h3><p>Reconhecer o que a operação exige: análise de documentos, orientação, elaboração, revisão ou uma combinação dessas entregas.</p></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><h3>Como explicar a complexidade?</h3><p>Mostrar ao cliente quais decisões precisam ser tomadas, quais riscos merecem atenção e o que o seu trabalho vai entregar.</p></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><h3>Como dimensionar os honorários?</h3><p>Delimitar etapas, responsabilidades e revisões para apresentar uma proposta coerente com o trabalho e a complexidade da demanda.</p></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg><h3>Falta de repertório jurídico</h3><p>Sem base para se posicionar como especialista, cada nova demanda começa do zero e o trabalho fica inseguro e inconsistente.</p></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg><h3>Honorários desvalorizados</h3><p>Atuação genérica e facilmente substituível não sustenta proposta. O cliente compara preço porque não consegue comparar entrega.</p></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><h3>Clientes perdidos para concorrentes</h3><p>Quem demonstra profissionalismo e segurança no atendimento leva a demanda, mesmo cobrando mais.</p></li>
       </ul>
       </div>
     </div>
-    <p class="desafio-close rv"><b>Sim, a atuação contratual pode gerar grandes receitas para o advogado.</b> Mas exige compreender o negócio, dominar os fundamentos jurídicos e saber conduzir a jornada do cliente no escritório com técnica e estratégia.</p>
+    <p class="desafio-close rv"><b>Ao final da Jornada você conduz o cliente de outro jeito</b> — ele entende a importância e a profundidade do seu trabalho. Isso volta em valorização, em demandas maiores e em indicações.</p>
   </div>
 </section>
 
-<!-- 2/7 · MÉTODO -->
-<section class="sec sec-stone metodo" id="metodo" data-ch="2" data-label="Método" aria-labelledby="t-metodo">
+<!-- Seção 3 · COMO O MÉTODO RESOLVE -->
+<section class="sec sec-stone metodo with-bleed" id="metodo" data-ch="2" data-label="Método" aria-labelledby="t-metodo">
   <svg class="compass compass-light" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
-  <div class="wrap">
-    <div class="metodo-top">
+  <div class="wrap wrap-a">
+    <div class="bleed covers-bleed" aria-label="Materiais que acompanham o método">
+    <div class="capas">
+      <img src="assets/capa-ponto-zero.webp" width="424" height="600" alt="Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async">
+      <img src="assets/capa-conectam.webp" width="424" height="600" alt="Contratos que se Conectam" loading="lazy" decoding="async">
+      <img src="assets/capa-atendimento.webp" width="424" height="600" alt="Guia Prático de Atendimento ao Cliente" loading="lazy" decoding="async">
+      <img src="assets/capa-diligencias.webp" width="424" height="600" alt="Manual de Diligências Pré-Contratuais" loading="lazy" decoding="async">
+      <img src="assets/capa-parecer.webp" width="424" height="600" alt="Parecer Jurídico como ferramenta estratégica" loading="lazy" decoding="async">
+      <img src="assets/capa-estruturacao.webp" width="424" height="600" alt="Estruturação e Redação Contratual" loading="lazy" decoding="async">
+      <img src="assets/capa-revisao.webp" width="424" height="600" alt="Técnicas para Revisão Contratual" loading="lazy" decoding="async">
+      <img src="assets/capa-assinatura.webp" width="424" height="600" alt="Apresentação e Assinatura de Contratos" loading="lazy" decoding="async">
+    </div>
+    </div>
+    <div class="col">
       <div class="rv">
-        <span class="eyebrow">método jornada contratual</span>
-        <h2 class="h2" id="t-metodo"><b>Uma estrutura completa para analisar negócios</b> e conduzir a atuação contratual</h2>
-        <p class="lead">A Jornada Contratual organiza sua atuação em seis etapas: atendimento, diligências, parecer, estruturação, revisão e entrega. Essa sequência ajuda a analisar operações de diferentes nichos, identificar o que precisa ser investigado e orientar decisões, inclusive quando a melhor recomendação é não contratar.</p>
+        <span class="eyebrow">Base jurídica</span>
+        <h2 class="h2" id="t-metodo"><b>Cada contrato tem a sua legislação,</b> a sua interpretação e a sua prática de mercado.</h2>
+        <p class="lead">Direito contratual não é um bloco único. Uma promessa de compra e venda de imóvel rural, uma parceria agrícola e uma cessão de direitos autorais partem do mesmo Código Civil e terminam em legislações especiais, exigências e cláusulas completamente diferentes. Enxergar essa diferença antes de redigir é o que separa o contrato que se sustenta do que apenas existe.</p>
       </div>
       <ul class="pillars rv">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-analyze"/></svg><div><strong>Entender o que está em jogo</strong><span>Identificar objetivos, patrimônio, obrigações e condições para o negócio acontecer.</span></div></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><div><strong>Orientar as decisões do cliente</strong><span>Apresentar riscos e alternativas, com recomendações que o cliente consiga compreender.</span></div></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><strong>Documentar o que foi decidido</strong><span>Definir quem faz o quê, em qual prazo, com qual prova e o que acontece se algo falhar.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg><div><strong>Código Civil e legislação especial</strong><span>Além das regras gerais que valem para todo contrato, você estuda as normas específicas que incidem sobre cada operação — e que mudam o que pode ser pactuado, exigido e formalizado.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-parecer"/></svg><div><strong>Jurisprudência e prática de mercado</strong><span>Você aprende a interpretar as decisões dos tribunais e os usos de cada setor, e a transformar isso em cláusula — com mais estratégia e menos exposição a risco.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-listcheck"/></svg><div><strong>Exemplos e exercícios aplicados</strong><span>Casos para treinar a análise durante o curso e chegar na próxima demanda com o raciocínio já praticado.</span></div></li>
       </ul>
     </div>
+  </div>
 
+  <div class="wrap wrap-b">
     <!-- A sequência das seis etapas -->
     <div class="jornada rv">
       <div class="jornada-head">
-        <span class="eyebrow">A sequência do trabalho</span>
+        <span class="eyebrow">A Jornada Contratual</span>
         <h3>Seis etapas, do primeiro atendimento à entrega do contrato</h3>
       </div>
       <ol class="jornada-steps">
@@ -894,39 +947,35 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     </div>
 
     <div class="rv metodo-close">
-      <p class="kicker">Seu trabalho começa quando você entende a operação.</p>
-      <p>E ganha forma na orientação, nas cláusulas e na entrega ao cliente.</p>
-      <p class="basis"><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg><span><b>Os materiais trabalham fundamentos do Código Civil, legislação especial e pesquisa jurídica, com casos, exemplos e exercícios. O processo é ajustado aos riscos e à complexidade de cada demanda.</b></span></p>
+      <p class="kicker">É assim que se conduz a jornada do cliente no escritório.</p>
+      <p>Com técnica e estratégia em cada etapa. O cliente não precisa entender de Direito para perceber a diferença — ele percebe na condução.</p>
     </div>
   </div>
 </section>
-
-<!-- Transição: assinatura do método -->
-<div class="logo-break" aria-hidden="true"><span></span><img src="assets/metodo-logo.webp" width="852" height="282" alt="" loading="lazy" decoding="async"><span></span></div>
 
 <!-- 3/7 · MÓDULOS -->
 <section class="sec etapas" id="etapas" data-ch="3" data-label="Módulos" aria-labelledby="t-etapas">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">8 módulos</span>
-      <h2 class="h2" id="t-etapas"><b>O que você aprende</b> em cada módulo da Jornada Contratual</h2>
+      <h2 class="h2" id="t-etapas"><b>O que você aprende</b> em cada módulo do método</h2>
       <p class="lead">São oito módulos de conteúdo que conectam fundamentos jurídicos, decisões e prática profissional. Selecione um módulo para ver como ele ajuda a conduzir uma demanda real.</p>
     </div>
 
     <div class="etapas-grid">
       <div class="stage-list" role="tablist" aria-label="Módulos do Método Jornada Contratual">
-        <button class="stage-btn" role="tab" data-mock="assets/mod-1.webp" data-mockalt="Material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" id="tab-1" aria-controls="st-1" aria-selected="true"><span class="num">01</span>Fundamentos e diagnóstico</button>
-        <button class="stage-btn" role="tab" data-mock="assets/mod-2.webp" data-mockalt="Material do módulo 02: Contratos que Conectam" id="tab-2" aria-controls="st-2" aria-selected="false" tabindex="-1"><span class="num">02</span>Método de atuação contratual</button>
-        <button class="stage-btn" role="tab" data-mock="assets/mod-3.webp" data-mockalt="Material do módulo 03: Guia Prático de Atendimento ao Cliente" id="tab-3" aria-controls="st-3" aria-selected="false" tabindex="-1"><span class="num">03</span>Atendimento, escopo e honorários</button>
-        <button class="stage-btn" role="tab" data-mock="assets/mod-4.webp" data-mockalt="Material do módulo 04: Manual de Diligências Pré-Contratuais" id="tab-4" aria-controls="st-4" aria-selected="false" tabindex="-1"><span class="num">04</span>Diligências pré-contratuais</button>
-        <button class="stage-btn" role="tab" data-mock="assets/mod-5.webp" data-mockalt="Material do módulo 05: Parecer Jurídico como ferramenta estratégica" id="tab-5" aria-controls="st-5" aria-selected="false" tabindex="-1"><span class="num">05</span>Parecer e orientação jurídica</button>
-        <button class="stage-btn" role="tab" data-mock="assets/mod-6.webp" data-mockalt="Material do módulo 06: Estruturação e Redação Contratual" id="tab-6" aria-controls="st-6" aria-selected="false" tabindex="-1"><span class="num">06</span>Estruturação e redação contratual</button>
-        <button class="stage-btn" role="tab" data-mock="assets/mod-7.webp" data-mockalt="Material do módulo 07: Técnicas para Revisão Contratual" id="tab-7" aria-controls="st-7" aria-selected="false" tabindex="-1"><span class="num">07</span>Revisão contratual</button>
-        <button class="stage-btn" role="tab" data-mock="assets/mod-8.webp" data-mockalt="Material do módulo 08: Apresentação e Assinatura de Contratos" id="tab-8" aria-controls="st-8" aria-selected="false" tabindex="-1"><span class="num">08</span>Entrega e formalização</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-1.webp" data-mockalt="Trecho do material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" id="tab-1" aria-controls="st-1" aria-selected="true"><span class="num">01</span>Fundamentos e diagnóstico</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-2.webp" data-mockalt="Trecho do material do módulo 02: Contratos que Conectam" id="tab-2" aria-controls="st-2" aria-selected="false" tabindex="-1"><span class="num">02</span>Método de atuação contratual</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-3.webp" data-mockalt="Trecho do material do módulo 03: Guia Prático de Atendimento ao Cliente" id="tab-3" aria-controls="st-3" aria-selected="false" tabindex="-1"><span class="num">03</span>Atendimento, escopo e honorários</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-4.webp" data-mockalt="Trecho do material do módulo 04: Manual de Diligências Pré-Contratuais" id="tab-4" aria-controls="st-4" aria-selected="false" tabindex="-1"><span class="num">04</span>Diligências pré-contratuais</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-5.webp" data-mockalt="Trecho do material do módulo 05: Parecer Jurídico como ferramenta estratégica" id="tab-5" aria-controls="st-5" aria-selected="false" tabindex="-1"><span class="num">05</span>Parecer e orientação jurídica</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-6.webp" data-mockalt="Trecho do material do módulo 06: Estruturação e Redação Contratual" id="tab-6" aria-controls="st-6" aria-selected="false" tabindex="-1"><span class="num">06</span>Estruturação e redação contratual</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-7.webp" data-mockalt="Trecho do material do módulo 07: Técnicas para Revisão Contratual" id="tab-7" aria-controls="st-7" aria-selected="false" tabindex="-1"><span class="num">07</span>Revisão contratual</button>
+        <button class="stage-btn" role="tab" data-mock="assets/miolo-8.webp" data-mockalt="Trecho do material do módulo 08: Apresentação e Assinatura de Contratos" id="tab-8" aria-controls="st-8" aria-selected="false" tabindex="-1"><span class="num">08</span>Entrega e formalização</button>
       </div>
 
       <div class="stage-view" id="stageView">
-        <figure class="sv-photo"><img id="svMock" src="assets/mod-1.webp" width="920" height="727" alt="Material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async"></figure>
+        <figure class="sv-photo"><img id="svMock" src="assets/miolo-1.webp" width="900" height="600" alt="Trecho do material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async"></figure>
         <div class="sv-main">
         <svg class="compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
         <div class="sv-top">
@@ -986,14 +1035,29 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 <section class="sec dark" id="ferramentas" data-ch="4" data-label="Ferramentas" aria-labelledby="t-tools">
   <div class="wrap">
     <div class="tools-grid">
-      <div class="tools-photo px rv">
-        <img src="assets/materiais.webp" width="819" height="1024" alt="Questionário para atendimento ao cliente do Arquivo Contratual sendo preenchido sobre a mesa" loading="lazy" decoding="async">
-        <div class="formats" aria-label="Formatos disponíveis"><span>PDF</span><span>CANVA</span><span>DOCX</span></div>
+      <div class="tools-photo rv" id="toolsCar">
+        <div class="tc-stage">
+        <img class="tc-slide is-on" src="assets/ferramenta-1.webp" width="800" height="1000" alt="Ficha Estratégica de Atendimento" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-2.webp" width="800" height="1000" alt="Checklist de Diligências Pré-Contratuais" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-3.webp" width="800" height="1000" alt="Modelo de Parecer Jurídico" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-4.webp" width="800" height="1000" alt="Guia de Estruturação e Redação Contratual" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-5.webp" width="800" height="1000" alt="Checklist de Revisão Contratual" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-6.webp" width="800" height="1000" alt="Checklist de Entrega e Formalização" loading="lazy" decoding="async">
+        </div>
+        <div class="formats" aria-label="Formatos disponíveis"><span>PDF</span><span>DOCX</span></div>
+        <div class="tc-dots" role="tablist" aria-label="Ferramentas do método">
+        <button type="button" class="tc-dot is-on" data-i="0" aria-label="Ver Ficha Estratégica de Atendimento" aria-current="true"></button>
+        <button type="button" class="tc-dot" data-i="1" aria-label="Ver Checklist de Diligências Pré-Contratuais"></button>
+        <button type="button" class="tc-dot" data-i="2" aria-label="Ver Modelo de Parecer Jurídico"></button>
+        <button type="button" class="tc-dot" data-i="3" aria-label="Ver Guia de Estruturação e Redação Contratual"></button>
+        <button type="button" class="tc-dot" data-i="4" aria-label="Ver Checklist de Revisão Contratual"></button>
+        <button type="button" class="tc-dot" data-i="5" aria-label="Ver Checklist de Entrega e Formalização"></button>
+        </div>
       </div>
       <div>
         <div class="rv">
           <span class="eyebrow">Ferramentas profissionais</span>
-          <h2 class="h2" id="t-tools"><b>Ferramentas para transformar</b> o estudo em trabalho organizado</h2>
+          <h2 class="h2" id="t-tools"><b>Ferramentas validadas</b> para uma atuação estratégica e profissional</h2>
           <p class="lead">Do registro da primeira conversa à conferência do contrato final, você encontra documentos que ajudam a organizar informações, decisões e entregas ao cliente.</p>
         </div>
         <ul class="tool-list rv">
@@ -1498,6 +1562,31 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     goToAnchor(el);
     if(history.replaceState) history.replaceState(null,'',id);
   },false);
+
+  /* Carrossel das ferramentas */
+  var tcar=$('#toolsCar');
+  if(tcar){
+    var tsl=$$('.tc-slide',tcar), tdt=$$('.tc-dot',tcar), ti=0, ttimer=null;
+    function tgo(n){
+      ti=(n+tsl.length)%tsl.length;
+      tsl.forEach(function(el,k){el.classList.toggle('is-on',k===ti)});
+      tdt.forEach(function(el,k){el.classList.toggle('is-on',k===ti); if(k===ti){el.setAttribute('aria-current','true')}else{el.removeAttribute('aria-current')}});
+    }
+    function tplay(){ if(reduce||ttimer) return; ttimer=setInterval(function(){tgo(ti+1)},4200) }
+    function tstop(){ if(ttimer){clearInterval(ttimer); ttimer=null} }
+    tdt.forEach(function(d,k){d.addEventListener('click',function(){tstop();tgo(k)})});
+    tcar.addEventListener('mouseenter',tstop);
+    tcar.addEventListener('mouseleave',tplay);
+    var tx0=null,ty0=null;
+    tcar.addEventListener('touchstart',function(e){tx0=e.touches[0].clientX;ty0=e.touches[0].clientY;tstop()},{passive:true});
+    tcar.addEventListener('touchend',function(e){if(tx0===null)return;var dx=e.changedTouches[0].clientX-tx0,dy=e.changedTouches[0].clientY-ty0;if(Math.abs(dx)>42&&Math.abs(dx)>Math.abs(dy)*1.3)tgo(ti+(dx<0?1:-1));tx0=null},{passive:true});
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(e){ e[0].isIntersecting ? tplay() : tstop() },{threshold:.25}).observe(tcar);
+      new IntersectionObserver(function(e,o){ if(!e[0].isIntersecting) return; o.disconnect();
+        tsl.forEach(function(el){var u=el.getAttribute('src'); if(u){var im=new Image(); im.src=u}});
+      },{rootMargin:'700px 0px'}).observe(tcar);
+    } else { tplay() }
+  }
 
   /* Prints originais */
   var dlg=$('#prints');

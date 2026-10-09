@@ -291,13 +291,25 @@ main{overflow-x:clip}
 .metodo-marca-sub{text-align:center;margin:0 auto clamp(42px,5.4vw,70px);max-width:46ch;font-size:.76rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);line-height:1.7}
 
 /* ---------- Capas na lateral do método ---------- */
-.covers-bleed{position:absolute;top:50%;transform:translateY(-50%);bottom:auto;right:calc(-1 * max(var(--gut), (100vw - var(--wrap)) / 2));width:min(47vw,740px);z-index:0;display:grid;place-items:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%),linear-gradient(180deg,transparent 0%,#000 9%,#000 91%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 14%),linear-gradient(180deg,transparent 0%,#000 9%,#000 91%,transparent 100%);mask-composite:intersect}
-.capas{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(10px,1.3vw,18px);width:100%;padding:0 clamp(16px,2.2vw,40px) 0 clamp(34px,3.6vw,64px);transform:rotate(-2.2deg)}
-.covers-bleed .capas img{width:calc(33.333% - clamp(10px,1.3vw,18px));height:auto;aspect-ratio:424/600;object-fit:cover;border-radius:3px 7px 7px 3px;box-shadow:0 26px 44px -24px rgba(14,16,21,.8),inset 0 0 0 1px rgba(255,255,255,.35);transition:transform .7s var(--ease)}
-.covers-bleed .capas img:nth-child(odd){transform:translateY(-14px)}
-.covers-bleed .capas img:nth-child(even){transform:translateY(14px)}
-.with-bleed:hover .capas img:nth-child(odd){transform:translateY(-22px) rotate(-2.5deg)}
-.with-bleed:hover .capas img:nth-child(even){transform:translateY(22px) rotate(2.5deg)}
+.covers-bleed{position:absolute;top:50%;transform:translateY(-50%);bottom:auto;right:calc(-1 * max(var(--gut), (100vw - var(--wrap)) / 2));width:min(47vw,740px);z-index:0;display:grid;place-items:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 5%),linear-gradient(180deg,transparent 0%,#000 4%,#000 96%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 5%),linear-gradient(180deg,transparent 0%,#000 4%,#000 96%,transparent 100%);mask-composite:intersect}
+.capas{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(12px,1.5vw,20px);width:100%;padding:0 clamp(16px,2.2vw,40px) 0 clamp(34px,3.6vw,64px)}
+.covers-bleed .capas img:nth-child(1){transform:rotate(-2.4deg)}
+.covers-bleed .capas img:nth-child(2){transform:rotate(1.5deg)}
+.covers-bleed .capas img:nth-child(3){transform:rotate(-1.2deg)}
+.covers-bleed .capas img:nth-child(4){transform:rotate(2.1deg)}
+.covers-bleed .capas img:nth-child(5){transform:rotate(-1.7deg)}
+.covers-bleed .capas img:nth-child(6){transform:rotate(1.2deg)}
+.covers-bleed .capas img:nth-child(7){transform:rotate(-2.6deg)}
+.covers-bleed .capas img:nth-child(8){transform:rotate(1.9deg)}
+.with-bleed:hover .capas img:nth-child(1){transform:rotate(-4.56deg) translateY(-9px)}
+.with-bleed:hover .capas img:nth-child(2){transform:rotate(2.85deg) translateY(9px)}
+.with-bleed:hover .capas img:nth-child(3){transform:rotate(-2.28deg) translateY(-9px)}
+.with-bleed:hover .capas img:nth-child(4){transform:rotate(3.99deg) translateY(9px)}
+.with-bleed:hover .capas img:nth-child(5){transform:rotate(-3.23deg) translateY(-9px)}
+.with-bleed:hover .capas img:nth-child(6){transform:rotate(2.28deg) translateY(9px)}
+.with-bleed:hover .capas img:nth-child(7){transform:rotate(-4.94deg) translateY(-9px)}
+.with-bleed:hover .capas img:nth-child(8){transform:rotate(3.61deg) translateY(9px)}
+.covers-bleed .capas img{width:calc(33.333% - clamp(12px,1.5vw,20px));height:auto;aspect-ratio:424/600;object-fit:cover;border-radius:3px 7px 7px 3px;box-shadow:0 26px 44px -24px rgba(14,16,21,.8),inset 0 0 0 1px rgba(255,255,255,.35);transition:transform .7s var(--ease)}
 
 
 /* ---------- Desafio ---------- */
@@ -645,10 +657,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   .with-bleed .covers-bleed{position:relative;top:auto;right:auto;transform:none;width:auto;order:2;margin:clamp(40px,5.5vw,60px) 0 0;-webkit-mask-image:none;mask-image:none}
   .metodo .col{order:1}
   .with-bleed .capas{padding:0;transform:none}
-  .capas{padding:0;transform:none;gap:clamp(10px,2vw,16px)}
   .covers-bleed .capas img{width:calc(25% - clamp(10px,2vw,16px))}
-  .covers-bleed .capas img:nth-child(odd){transform:rotate(-3.4deg) translateY(-7px)}
-  .covers-bleed .capas img:nth-child(even){transform:rotate(3.4deg) translateY(7px)}
+  .capas{padding:0;transform:none;gap:clamp(10px,2vw,16px)}
   .jornada{padding-inline:clamp(18px,4vw,30px)}
   .jornada-head{text-align:left;margin-inline:0}
   .jornada-head .eyebrow::after{left:0;transform:none;width:calc(100% + 28px)}

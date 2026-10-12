@@ -367,9 +367,9 @@ main{overflow-x:clip}
 .etapas-foot .kicker{padding-bottom:12px;border-bottom:2px solid var(--bronze);background-clip:text}
 
 /* ---------- Ferramentas (dark) ---------- */
-.tools-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(40px,6vw,90px);align-items:center}
-.tc-stage{position:relative;aspect-ratio:800/1000}
-.tc-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .7s var(--ease);-webkit-mask-image:radial-gradient(74% 70% at 50% 48%,#000 56%,transparent 100%);mask-image:radial-gradient(74% 70% at 50% 48%,#000 56%,transparent 100%)}
+.tools-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(40px,6vw,90px);align-items:center}
+.tc-stage{position:relative;aspect-ratio:1000/987}
+.tc-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .7s var(--ease);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(180deg,transparent 0,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(180deg,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}
 .tc-slide.is-on{opacity:1}
 .tc-dots{display:flex;justify-content:center;gap:9px;margin-top:20px}
 .tc-dot{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;cursor:pointer;transition:background-color .35s,border-color .35s,transform .35s}
@@ -550,6 +550,17 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .price .cur{font-size:clamp(1.6rem,1.2rem + 1.2vw,2.3rem);margin-top:.35em;letter-spacing:-.03em}
 .price .val{font-size:clamp(4rem,2.4rem + 4.8vw,5.9rem)}
 .inst{margin:0 0 24px;color:var(--muted)}
+.roi{margin:0 0 20px;padding:14px 16px;border-left:2px solid var(--bronze);border-radius:0 10px 10px 0;background:linear-gradient(90deg,rgba(155,118,53,.09),rgba(155,118,53,.02));font-size:.92rem;line-height:1.56;color:var(--ink-2)}
+.roi b{color:var(--bronze-dk)}
+.was-ok{display:block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze-dk);margin-bottom:6px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.stack li{padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--stone);font-size:.78rem;color:var(--ink-2);letter-spacing:.01em}
+.stack b{color:var(--bronze-dk);font-weight:800}
+.tquote{margin:22px 0 0;padding:16px 0 0;border-top:1px solid var(--line)}
+.tquote blockquote{margin:0;font-size:1.02rem;line-height:1.5;font-weight:600;color:var(--ink)}
+.tquote blockquote::before{content:"\201C"}
+.tquote blockquote::after{content:"\201D"}
+.tquote figcaption{margin-top:7px;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .inst b{color:var(--ink)}
 .ticket-meta{display:grid;gap:9px;margin-top:20px;font-size:.88rem;color:var(--muted)}
 .ticket-meta li{display:flex;gap:10px;align-items:center}
@@ -1038,12 +1049,12 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="tools-grid">
       <div class="tools-photo rv" id="toolsCar">
         <div class="tc-stage">
-        <img class="tc-slide is-on" src="assets/ferramenta-1.webp" width="800" height="1000" alt="Ficha Estratégica de Atendimento" loading="lazy" decoding="async">
-        <img class="tc-slide" src="assets/ferramenta-2.webp" width="800" height="1000" alt="Checklist de Diligências Pré-Contratuais" loading="lazy" decoding="async">
-        <img class="tc-slide" src="assets/ferramenta-3.webp" width="800" height="1000" alt="Modelo de Parecer Jurídico" loading="lazy" decoding="async">
-        <img class="tc-slide" src="assets/ferramenta-4.webp" width="800" height="1000" alt="Guia de Estruturação e Redação Contratual" loading="lazy" decoding="async">
-        <img class="tc-slide" src="assets/ferramenta-5.webp" width="800" height="1000" alt="Checklist de Revisão Contratual" loading="lazy" decoding="async">
-        <img class="tc-slide" src="assets/ferramenta-6.webp" width="800" height="1000" alt="Checklist de Entrega e Formalização" loading="lazy" decoding="async">
+        <img class="tc-slide is-on" src="assets/ferramenta-1.webp" width="1000" height="987" alt="Ficha Estratégica de Atendimento" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-2.webp" width="1000" height="987" alt="Checklist de Diligências Pré-Contratuais" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-3.webp" width="1000" height="987" alt="Modelo de Parecer Jurídico" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-4.webp" width="1000" height="987" alt="Guia de Estruturação e Redação Contratual" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-5.webp" width="1000" height="987" alt="Checklist de Revisão Contratual" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-6.webp" width="1000" height="987" alt="Checklist de Entrega e Formalização" loading="lazy" decoding="async">
         </div>
         <div class="formats" aria-label="Formatos disponíveis"><span>PDF</span><span>DOCX</span></div>
         <div class="tc-dots" role="tablist" aria-label="Ferramentas do método">
@@ -1311,15 +1322,31 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
           <img src="assets/area-membros.webp" width="1100" height="973" alt="Área de membros do Método Jornada Contratual aberta no computador" loading="lazy" decoding="async">
         </figure>
         <p class="fan-cap">Estudo, consulta e ferramentas na mesma área de membros.</p>
-        <p class="price-lbl" id="t-price"><span class="was">De <s>R$ 997,90</s></span>Acesse agora por</p>
+        <div class="roi">
+          <b>Em perspectiva.</b> Esta página começou com uma pergunta: por que alguns advogados cobram R$ 5.000 ou mais por um contrato e outros não passam de R$ 500? A diferença entre as duas respostas é o conteúdo deste curso — e o acesso custa menos do que ela vale em uma única demanda.
+        </div>
+        <!-- ÂNCORA DE PREÇO: se houver um motivo real (preço de lançamento, reajuste em data definida),
+             reative a linha abaixo e troque o texto. Sem justificativa, preço riscado reduz credibilidade.
+        <span class="was">De <s>R$ 997,90</s></span> -->
+        <p class="price-lbl" id="t-price"><span class="was-ok">2 anos de acesso incluídos</span>Acesse agora por</p>
         <p class="price" aria-label="497 reais e 90 centavos"><span class="cur">R$</span><span class="val">497,90</span></p>
         <p class="inst">à vista ou <b>12x de R$ 50,59</b></p>
+        <ul class="stack" aria-label="O que está incluído">
+          <li><b>8</b> módulos de conteúdo</li>
+          <li><b>24</b> coleções contratuais</li>
+          <li>Ferramentas em <b>PDF</b> e <b>DOCX</b></li>
+          <li>Assistente de <b>IA</b> treinado</li>
+        </ul>
         <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <ul class="ticket-meta">
           <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato após a confirmação do pagamento</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>2 anos de acesso e atualizações</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Pagamento processado no checkout seguro da Hubla</li>
         </ul>
+        <figure class="tquote">
+          <blockquote>Vale muito mais que o preço que foi pago.</blockquote>
+          <figcaption>Aluna da Jornada &middot; mensagem recebida no direct</figcaption>
+        </figure>
       </aside>
     </div>
 
@@ -1338,8 +1365,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <text x="80" y="106" text-anchor="middle" font-size="11" font-weight="600" fill="#E9E3D6" letter-spacing="3">DIAS</text>
       </svg>
       <div>
-        <h3>Conheça os materiais por dentro.</h3>
-        <p>Após a compra, você terá acesso à Jornada Contratual para conhecer o método, os materiais e o Laboratório. Caso entenda que o produto não atende às suas expectativas, poderá exercer o <b>direito de arrependimento dentro do prazo legal de 7 dias contado da contratação</b>, conforme aplicável às compras realizadas pela internet.</p>
+        <h3>Entre, veja tudo por dentro. Se não for para você, o valor volta.</h3>
+        <p>Você acessa a Jornada completa — os 8 módulos, as ferramentas e o Laboratório — e decide com o material na mão, não com uma descrição dele. Se concluir que não é para o seu momento, basta avisar <b>em até 7 dias contados da compra</b> e o reembolso é processado integralmente pela Hubla. Você não precisa justificar. O risco dessa decisão é meu, não seu.</p>
       </div>
     </div>
   </div>

@@ -533,18 +533,18 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .oferta{overflow:clip}
 .oferta .compass{position:absolute;width:520px;left:-200px;top:40px}
 .offer{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:clamp(36px,5vw,80px);align-items:start}
-.deliver{display:grid;gap:0;margin-top:clamp(28px,3vw,40px)}
-.deliver li{display:grid;grid-template-columns:34px 1fr;gap:2px 16px;padding:15px 0;border-top:1px solid var(--line)}
-.deliver li:last-child{border-bottom:1px solid var(--line)}
-.deliver .ck{grid-row:span 2;width:32px;height:32px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff}
-.deliver .ck .ico{width:17px;height:17px;stroke-width:2.4}
-.deliver strong{font-weight:600;font-size:1.08rem;letter-spacing:-.015em}
-.deliver span{color:var(--muted);font-size:.93rem;line-height:1.45}
+
+
+
+
+
+
+
 .ticket{position:sticky;top:calc(var(--hdr) + 20px);background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(24px,3vw,36px);box-shadow:var(--shadow)}
-.area-shot{margin:0 0 14px;border-radius:16px;overflow:hidden;box-shadow:0 26px 48px -28px rgba(14,16,21,.75)}
-.area-shot img{display:block;width:100%;height:auto;aspect-ratio:1024/906;object-fit:contain;transition:transform .8s var(--ease)}
-.ticket:hover .area-shot img{transform:scale(1.03)}
-.fan-cap{text-align:center;font-size:.82rem;color:var(--muted);margin:0 0 20px}
+
+
+.ticket:hover 
+
 .price-lbl{margin:0;color:var(--ink-2);font-size:1.12rem}
 .price-lbl .was{display:block;font-size:.84rem;color:var(--muted);margin-bottom:4px;letter-spacing:.01em}
 .price-lbl s{text-decoration-thickness:1px;text-decoration-color:rgba(142,107,50,.7)}
@@ -552,12 +552,76 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .price .cur{font-size:clamp(1.6rem,1.2rem + 1.2vw,2.3rem);margin-top:.35em;letter-spacing:-.03em}
 .price .val{font-size:clamp(4rem,2.4rem + 4.8vw,5.9rem)}
 .inst{margin:0 0 24px;color:var(--muted)}
-.roi{margin:0 0 20px;padding:14px 16px;border-left:2px solid var(--bronze);border-radius:0 10px 10px 0;background:linear-gradient(90deg,rgba(155,118,53,.09),rgba(155,118,53,.02));font-size:.92rem;line-height:1.56;color:var(--ink-2)}
-.roi b{color:var(--bronze-dk)}
+
+/* ============ OFERTA — recapitulação, preço e retorno ============ */
+.offer{display:block}
+.offer-head{max-width:none}
+.offer-head .h2{max-width:19ch}
+.offer-head .lead{margin-top:16px;max-width:56ch}
+
+.recap{margin-top:clamp(34px,4.4vw,56px);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.recap-hd{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(16px,2.6vw,42px);
+  padding:16px clamp(18px,2.6vw,34px);background:var(--stone);border-bottom:1px solid var(--line)}
+.recap-hd span{font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.recap-hd span:last-child{text-align:right}
+.recap-list{list-style:none;margin:0;padding:0}
+.recap-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px clamp(16px,2.6vw,42px);
+  align-items:start;padding:17px clamp(18px,2.6vw,34px);border-top:1px solid var(--line)}
+.recap-list li:first-child{border-top:0}
+.ri{display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:start}
+.ri .ck{width:28px;height:28px;margin-top:1px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff}
+.ri .ck .ico{width:15px;height:15px;stroke-width:2.6}
+.ri strong{display:block;font-weight:700;font-size:1.04rem;letter-spacing:-.016em;line-height:1.3;color:var(--ink)}
+.rd{display:block;margin-top:5px;font-size:.92rem;line-height:1.5;color:var(--muted)}
+.rvl{text-align:right;white-space:nowrap;font-size:1.04rem;font-weight:700;letter-spacing:-.01em;color:var(--ink-2);padding-top:2px}
+.rvl s{text-decoration-thickness:1.5px;text-decoration-color:rgba(155,118,53,.9);opacity:.72}
+.rvl em{font-style:normal;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze-dk)}
+.recap-total{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding:19px clamp(18px,2.6vw,34px);background:var(--night-2);color:var(--on-night)}
+.recap-total span{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(233,227,214,.62)}
+.recap-total b{font-size:clamp(1.3rem,1.1rem + .9vw,1.75rem);font-weight:800;letter-spacing:-.025em;color:var(--bronze-lt)}
+.recap-total b s{text-decoration-thickness:2px;text-decoration-color:rgba(213,176,113,.9)}
+
+.offer-turn{max-width:30ch;margin:clamp(34px,4.4vw,52px) auto 0;text-align:center;
+  font-size:clamp(1.1rem,1rem + .5vw,1.34rem);line-height:1.4;letter-spacing:-.015em;color:var(--ink)}
+
+.ticket{margin:clamp(20px,2.6vw,28px) auto 0}
+.permes{margin:12px 0 0;font-size:.95rem;line-height:1.5;color:var(--ink-2)}
+.permes b{color:var(--bronze-dk);font-weight:700}
+.pay{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 22px;padding:0;list-style:none}
+.pay li{display:flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid var(--line);border-radius:10px;
+  background:var(--stone);font-size:.78rem;font-weight:600;color:var(--ink-2)}
+.pay .ico{width:15px;height:15px;color:var(--bronze)}
+
+.payback{margin-top:clamp(40px,5vw,64px);padding:clamp(26px,3.4vw,42px);border-radius:24px;
+  border:1px solid rgba(155,118,53,.3);background:linear-gradient(135deg,rgba(155,118,53,.08),rgba(155,118,53,.02))}
+.payback .pb-k{display:block;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze-dk)}
+.payback .pb-lead{margin:14px 0 0;font-size:clamp(1.15rem,1rem + .7vw,1.5rem);line-height:1.38;letter-spacing:-.02em;
+  font-weight:600;color:var(--ink);max-width:40ch;text-wrap:balance}
+.payback p+p{margin-top:12px}
+.payback p:not(.pb-lead){font-size:1.02rem;line-height:1.6;color:var(--ink-2);max-width:62ch}
+.payback b{color:var(--ink);font-weight:700}
+
+.final-price{max-width:62ch;margin:0 auto 20px;font-size:1.04rem;color:#D8D9DE}
+.final-price b{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:#fff}
+.final-price i{font-style:normal;color:rgba(216,217,222,.7)}
+
+@media (max-width:820px){
+  .recap-hd{display:none}
+  .recap-list li{gap:4px 12px}
+  .ri{grid-template-columns:26px 1fr;gap:11px}
+  .ri .ck{width:24px;height:24px}
+  .ri strong{font-size:.98rem}
+  .rvl{font-size:.94rem}
+  .recap-total b{font-size:1.3rem}
+}
+
+
+
 .was-ok{display:block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze-dk);margin-bottom:6px}
-.stack{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
-.stack li{padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--stone);font-size:.78rem;color:var(--ink-2);letter-spacing:.01em}
-.stack b{color:var(--bronze-dk);font-weight:800}
+
+
+
 .tquote{margin:22px 0 0;padding:16px 0 0;border-top:1px solid var(--line)}
 .tquote blockquote{margin:0;font-size:1.02rem;line-height:1.5;font-weight:600;color:var(--ink)}
 .tquote blockquote::before{content:"\201C"}
@@ -828,7 +892,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
       <span class="sr-only">Abrir índice da página</span>
     </button>
-    <a class="btn btn-gold btn-sm" href="#oferta">Quero acessar</a>
+    <a class="btn btn-gold btn-sm" href="#oferta">acessar agora</a>
   </div>
 </header>
 
@@ -860,14 +924,14 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <p class="hero-claim">MÉTODO, REPERTÓRIO JURÍDICO, MODELOS E IA.</p>
       <p class="hero-lead">Aprenda a atuar em demandas contratuais de diferentes setores: analisar negócios, avaliar riscos, orientar decisões e estruturar contratos com técnica e estratégia.</p>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="#oferta">Quero COMEÇAR AGORA <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="#oferta">Quero atuar como especialista <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-line" href="#metodo">Conhecer o curso</a>
       </div>
       <ul class="hero-notes">
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>8 módulos de formação jurídica</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>24 coleções contratuais</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>IA treinada no método</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Ferramentas para cada etapa</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>IA treinada para contratos</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>documentos para cada etapa</li>
       </ul>
     </div>
   </div>
@@ -1073,7 +1137,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="op-teia-head">
       <div>
         <span class="op-tag">Neste momento, perto de você</span>
-        <h3><b>Negócios acontecem todos os dias.</b> Todos eles passam por um contrato.</h3>
+        <h3><b>Negócios acontecem todos os dias ao seu redor.</b> Todos eles precisam de contrato.</h3>
       </div>
       <p>Imóveis, empresas, fazendas, marcas, obras, crédito. Cada operação movimenta dinheiro e patrimônio — e cada setor tem a sua lógica, os seus riscos e as suas práticas de mercado. Repare no que cada uma exige antes da primeira cláusula.</p>
     </div>
@@ -1169,7 +1233,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <p><b>É exatamente essa base que o Método Jornada Contratual entrega.</b></p>
     </blockquote>
     <div class="op-acoes">
-      <a class="btn btn-gold" href="#oferta">Quero construir meu repertório <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      <a class="btn btn-gold" href="#oferta">Quero parar de perder oportunidades <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       <a class="op-link" href="#metodo">Veja como o método funciona <svg class="ico" aria-hidden="true"><use href="#i-down"></use></svg></a>
     </div>
   </div>
@@ -1239,7 +1303,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="col">
       <div class="rv">
         <span class="eyebrow">Base jurídica · onde o repertório começa</span>
-        <h2 class="h2" id="t-metodo"><b>Domine a atuação contratual,</b> para qualquer negócio que você precise formalizar.</h2>
+        <h2 class="h2" id="t-metodo"><b>Tenha domínio da atuação contratual,</b> para qualquer negócio que você precise formalizar.</h2>
         <p class="lead">Direito contratual não é um bloco único. Uma promessa de compra e venda de imóvel rural, uma parceria agrícola e uma cessão de direitos autorais partem do mesmo Código Civil e terminam em legislações especiais, exigências e práticas de mercado completamente diferentes. Enxergar essa diferença antes de redigir é o que separa o contrato que se sustenta do que apenas existe — e o advogado que é procurado pelo que sabe daquele que é comparado pelo preço.</p>
       </div>
       <ul class="pillars rv">
@@ -1286,7 +1350,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">O MÉTODO JORNADA CONTRATUAL</span>
-      <h2 class="h2" id="t-etapas"><b>Oito módulos de conteúdo</b> para guiar uma atuação estratégica e profissional</h2>
+      <h2 class="h2" id="t-etapas"><b>São oito módulos de conteúdo</b> para guiar uma atuação estratégica e profissional</h2>
       <p class="lead">Oito módulos que conectam fundamento jurídico, método e prática profissional. Cada um corresponde a uma parte do trabalho que vem antes, durante e depois da redação — a parte que a maioria dos advogados não executa, ou executa sem conseguir mostrar. Selecione um módulo para ver o que ele muda na sua atuação.</p>
     </div>
 
@@ -1411,33 +1475,33 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="assist rv" id="assistente">
       <figure class="assist-media">
         <div class="ai-chat">
-          <div class="ai-head"><img src="assets/ac-emblem.webp" width="512" height="512" alt="" loading="lazy" decoding="async"><div><strong>Assistente Virtual da Jornada</strong><span>Treinado nos materiais do método</span></div></div>
+          <div class="ai-head"><img src="assets/ac-emblem.webp" width="512" height="512" alt="" loading="lazy" decoding="async"><div><strong>JARVIS - Assistente de IA da Jornada</strong><span>Treinado nos materiais do método</span></div></div>
           <div class="ai-thread">
-            <p class="ai-q">Em uma parceria pecuária, o que preciso definir antes de redigir o contrato?</p>
+            <p class="ai-q">Quais diligências eu preciso fazer antes de redigir uma promessa de compra e venda de imóvel rural?</p>
             <div class="ai-a">
-              <p>Comece pelas decisões da operação:</p>
+              <p>Antes da minuta, confirme:</p>
               <ul>
-                <li>o que cada parte aporta e quais despesas assume</li>
-                <li>como distinguir o rebanho de capital dos resultados</li>
-                <li>como registrar pesagens, perdas e prestação de contas</li>
-                <li>como fazer a partilha e a liquidação ao encerrar</li>
+                <li>matrícula atualizada e cadeia dominial</li>
+                <li>CAR, ITR e certidões do imóvel</li>
+                <li>certidões pessoais dos vendedores</li>
+                <li>ônus, penhoras e ações em curso</li>
               </ul>
-              <p class="ai-ref">Exemplo baseado no manual de parceria pecuária.</p>
+              <p class="ai-ref">Conteúdo do Manual de Diligências Pré-Contratuais</p>
             </div>
             <div class="ai-typing" aria-hidden="true"><i></i><i></i><i></i></div>
           </div>
         </div>
-        <figcaption class="ai-cap">Simulação ilustrativa de consulta ao Assistente Virtual da Jornada.</figcaption>
+        <figcaption class="ai-cap">Exemplo de consulta ao Assistente Virtual da Jornada.</figcaption>
       </figure>
       <div class="assist-body">
         <span class="eyebrow">Assistente Virtual da Jornada</span>
-        <h2 class="h2"><b>Uma IA a favor da sua análise,</b> não no lugar dela</h2>
+        <h2 class="h2"><b>Uma IA treinada em contratos</b> para te auxiniar 24H</h2>
         <ul class="assist-facts">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Treinada com os materiais da Jornada: responde com o raciocínio do método, não com modelos genéricos da internet.</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Disponível 24 horas por dia para apoiar o estudo e a organização do raciocínio contratual.</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Atendimento humano pelo WhatsApp para dúvidas de acesso, materiais e uso da plataforma.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Treinada com os materiais e a metodologia do Arquivo Contratual para apoiar consultas e a aplicação do conteúdo.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Disponível 24 horas por dia para auxiliar sua rotina contratual.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Suporte humano pelo WhatsApp para dúvidas sobre acesso, materiais e utilização da plataforma.</li>
         </ul>
-        <p class="assist-note">Use a IA como apoio. A análise do caso, a conferência das fontes e as decisões jurídicas continuam sob responsabilidade do profissional.</p>
+        <p class="assist-note">A IA é uma ferramenta de apoio e não substitui a análise jurídica do profissional responsável pela demanda.</p>
       </div>
     </div>
   </div>
@@ -1514,7 +1578,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
       <div class="board-note">
         <p><b>O Laboratório amplia seu repertório. O método amplia sua capacidade de análise.</b> Aplique as etapas a contratos de diferentes nichos, inclusive aos que ainda não estão nas coleções, e investigue as particularidades de cada operação.</p>
-        <a class="btn btn-gold" href="#oferta">Quero estudar essas operações <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="#oferta">Quero aumentar meu repertório jurídico <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
@@ -1525,9 +1589,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <div class="wrap">
     <div class="proof-head rv">
       <div class="sec-head">
-        <span class="eyebrow">Quem já entrou, percebeu</span>
-        <h2 class="h2" id="t-res"><b>Como os alunos descrevem</b> a experiência com a Jornada</h2>
-        <p class="lead">Relatos espontâneos sobre a profundidade dos materiais, a organização do trabalho e a segurança para atender as primeiras demandas.</p>
+        <span class="eyebrow">Pare de perder tempo, Doutor(a)</span>
+        <h2 class="h2" id="t-res"><b>A cada hora que se passa,</b> seus colegas estão um passo à sua frente</h2>
+        <p class="lead">Relatos espontâneos sobre a profundidade dos materiais, a organização do trabalho e a segurança para atender as demandas.</p>
       </div>
     </div>
 
@@ -1623,55 +1687,72 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <svg class="compass compass-light" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
   <div class="wrap">
     <div class="offer">
-      <div>
-        <div class="rv">
-          <span class="eyebrow">Toda a entrega</span>
-          <h2 class="h2" id="t-oferta"><b>Repertório e método</b> para atuar com negócios de alto valor</h2>
-          <p class="lead">Uma formação completa para atender operações de diferentes setores: reconhecer oportunidades, conduzir a demanda do atendimento à assinatura e dimensionar seus honorários pelo escopo e pela complexidade real do trabalho — não pelo preço de uma minuta.</p>
-        </div>
-        <ul class="deliver rv">
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Método Jornada Contratual</strong><span>Um processo de trabalho para analisar o negócio, orientar decisões e conduzir a demanda do atendimento à formalização — com cada camada de atuação definida na proposta.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>8 módulos de formação jurídica</strong><span>Fundamentos, método de atuação, atendimento e honorários, diligências, parecer, redação, revisão e entrega.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Ferramentas e documentos operacionais</strong><span>Ficha de atendimento, proposta e contrato de honorários, roteiros, checklists e bases para parecer e redação — o trabalho que vem antes do contrato, documentado e apresentável ao cliente.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Laboratório com 24 coleções contratuais</strong><span>Manuais e modelos editáveis para construir repertório sobre decisões, riscos e cláusulas de operações de diferentes setores — e para produzir conteúdo com profundidade sobre elas.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>14 contratos disponíveis no primeiro acesso</strong><span>Outras 10 serão produzidas com sugestões dos alunos e incluídas durante o seu período de acesso.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Assistente Virtual da Jornada</strong><span>IA treinada com os materiais do método, disponível 24 horas por dia para apoiar consultas e estudo.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>2 anos de acesso e atualizações</strong><span>Retome os módulos, consulte as ferramentas e acesse as novas coleções liberadas durante esse período.</span></li>
-          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><strong>Atendimento pelo WhatsApp</strong><span>Ajuda com acesso, materiais e utilização da plataforma.</span></li>
-        </ul>
+      <div class="offer-head rv">
+        <span class="eyebrow">comece agora</span>
+        <h2 class="h2" id="t-oferta"><b>Em uma semana você estará pronto(a)</b> para se posicionar e atuar com negócios de alto valor</h2>
+        <p class="lead">Atender operações de diferentes setores, reconhecer oportunidades, conduzir a demanda do atendimento à assinatura e dimensionar seus honorários pelo escopo e pela complexidade real do trabalho — não pelo preço de uma minuta.</p>
       </div>
 
-      <aside class="ticket rv" aria-labelledby="t-price">
-        <figure class="area-shot px">
-          <img src="assets/area-membros.webp" width="1100" height="973" alt="Área de membros do Método Jornada Contratual aberta no computador" loading="lazy" decoding="async">
-        </figure>
-        <p class="fan-cap">Estudo, consulta e ferramentas na mesma área de membros.</p>
-        <div class="roi">
-          <b>Em perspectiva.</b> Esta página começou com uma pergunta: por que alguns advogados cobram R$ 5.000 ou mais por um contrato e outros não passam de R$ 500? A diferença entre as duas respostas é o conteúdo deste curso — e o acesso custa menos do que ela vale em uma única demanda.
-        </div>
-        <!-- ÂNCORA DE PREÇO: se houver um motivo real (preço de lançamento, reajuste em data definida),
-             reative a linha abaixo e troque o texto. Sem justificativa, preço riscado reduz credibilidade.
-        <span class="was">De <s>R$ 997,90</s></span> -->
-        <p class="price-lbl" id="t-price"><span class="was-ok">2 anos de acesso incluídos</span>Acesse agora por</p>
-        <p class="price" aria-label="29 reais e 26 centavos"><span class="cur">12 x R$</span><span class="val">29,26</span></p>
-        <p class="inst">ou <b> R$ 287,90 à vista</b></p>
-        <ul class="stack" aria-label="O que está incluído">
-          <li><b>8</b> módulos de formação</li>
-          <li><b>24</b> coleções contratuais</li>
-          <li>Ferramentas em <b>PDF</b> e <b>DOCX</b></li>
-          <li>Assistente de <b>IA</b> treinado</li>
+      <div class="recap rv">
+        <div class="recap-hd"><span>Tudo o que você recebe</span><span>Valor</span></div>
+        <ul class="recap-list">
+          <li>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Método Jornada Contratual &mdash; 8 módulos de formação jurídica</strong><span class="rd">Uma formação completa que aborda desde os fundamentos do direito contratual até cada etapa do trabalho: atendimento e honorários, diligências, parecer, estruturação e redação, revisão e entrega.</span></div></div>
+            <div class="rvl"><s>R$ 997,90</s></div>
+          </li>
+          <li>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Laboratório de Contratos com 24 coleções contratuais</strong><span class="rd">Cada contrato acompanha um manual prático fundamentado com legislação aplicável, cláusulas essenciais e riscos — o repertório que permite conversar com o cliente sobre o negócio dele e se posicionar como especialista.</span></div></div>
+            <div class="rvl"><s>R$ 997,90</s></div>
+          </li>
+          <li>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Questionários, checklists e documentos prontos para a atuação contratual</strong><span class="rd">Ferramentas para facilidar a sua rotina e tornar visível — e cobrável — o trabalho que acontece antes do contrato. Editáveis em PDF e DOCX, prontos para utilizar.</span></div></div>
+            <div class="rvl"><s>R$ 297,90</s></div>
+          </li>
+          <li>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Uma inteligência artificial treinada para contratos</strong><span class="rd">Treinada com o método para te auxiliar 24 horas por dia nas demandas mais simples às mais complexas.</span></div></div>
+            <div class="rvl"><s>R$ 147,90</s></div>
+          </li>
+          <li>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>2 anos de acesso, atualizações e suporte pelo WhatsApp</strong><span class="rd">Tempo para aplicar em demandas reais, com as novas coleções liberadas durante o período e atendimento humano para dúvidas de acesso e uso.</span></div></div>
+            <div class="rvl"><em>Incluído</em></div>
+          </li>
         </ul>
-        <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero entrar na Jornada <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <div class="recap-total">
+          <span>Valor total</span>
+          <b><s>R$ 2.441,60</s></b>
+        </div>
+      </div>
+
+      <p class="offer-turn rv">Mas o acesso a tudo isso, hoje, não custa esse valor.</p>
+
+      <aside class="ticket rv" aria-labelledby="t-price">
+        <p class="price-lbl" id="t-price"><span class="was-ok">Acesso completo &middot; 2 anos</span>Hoje o acesso custa</p>
+        <p class="price" aria-label="12 parcelas de 29 reais e 26 centavos"><span class="cur">12 x R$</span><span class="val">29,26</span></p>
+        <p class="inst">ou <b>R$ 287,90 à vista</b></p>
+        <p class="permes">Menos de <b>R$ 12 por mês</b> ao longo dos 2 anos de acesso.</p>
+        <!-- Para exibir as bandeiras oficiais, troque os itens abaixo pelos SVG das marcas. -->
+        <ul class="pay" aria-label="Formas de pagamento e segurança">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Checkout seguro da Hubla</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Cartão em até 12x</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
+        </ul>
+        <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero cobrar como especialista <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <ul class="ticket-meta">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato após a confirmação do pagamento</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>2 anos de acesso e atualizações</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Pagamento processado no checkout seguro da Hubla</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Liberação logo após a confirmação do pagamento</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>7 dias para desistir e receber o valor de volta</li>
         </ul>
         <figure class="tquote">
           <blockquote>Vale muito mais que o preço que foi pago.</blockquote>
           <figcaption>Aluna da Jornada &middot; mensagem recebida no direct</figcaption>
         </figure>
       </aside>
+
+      <div class="payback rv">
+        <span class="pb-k">Em quanto tempo isso se paga</span>
+        <p class="pb-lead">Esta página começou com uma pergunta: por que alguns advogados cobram R$&nbsp;5.000 ou mais por um contrato e outros não passam de R$&nbsp;500?</p>
+        <p>A diferença entre as duas respostas é exatamente o conteúdo deste curso. Uma única demanda conduzida pelo método — com a diligência cobrada em separado e o honorário dimensionado pela complexidade da operação — pode devolver o valor do acesso muitas vezes.</p>
+        <p>E o acesso não vale por uma demanda. <b>São dois anos, aplicados em todas as que chegarem.</b></p>
+      </div>
     </div>
 
     <div class="guarantee rv" id="garantia">
@@ -1716,7 +1797,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <details><summary>Como a IA e o atendimento pelo WhatsApp ajudam?<i aria-hidden="true"></i></summary><div class="faq-a"><p>A IA é treinada com os materiais da Jornada e fica disponível 24 horas por dia para apoiar consultas e estudo. As respostas precisam ser conferidas pelo profissional responsável pelo caso. O atendimento humano pelo WhatsApp ajuda com acesso, materiais e uso da plataforma.</p></div></details>
       <details><summary>Por quanto tempo terei acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>São dois anos de acesso ao curso, às ferramentas, à IA e às atualizações incluídas nesse período. Você pode retomar os materiais conforme surgirem dúvidas e demandas na sua rotina.</p></div></details>
       <details><summary>Como funciona o pagamento e a liberação do acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>O pagamento é realizado pelo checkout da Hubla: R$ 287,90 à vista ou 12 parcelas de R$ 29,26. O acesso é liberado após a confirmação do pagamento, para começar pelos módulos e consultar os materiais já disponíveis.</p></div></details>
-      <details><summary>E se o conteúdo não atender às minhas expectativas?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Você poderá exercer o direito de arrependimento dentro do prazo legal de 7 dias contado da contratação, conforme aplicável às compras realizadas pela internet.</p></div></details>
+      <details><summary>E se o conteúdo não atender às minhas expectativas?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Você entra, vê todo o material por dentro e decide com ele na mão. Se concluir que não é para o seu momento, basta avisar em até 7 dias contados da compra: o reembolso é integral e processado pela Hubla, sem que você precise justificar.</p></div></details>
     </div>
   </div>
 </section>
@@ -1739,8 +1820,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <img class="final-logo" src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
     <h2 class="h2" id="t-final"><b>Os negócios continuam acontecendo.</b> A questão é quem vai conduzi-los.</h2>
     <p>Todos os dias, imóveis, empresas, fazendas e marcas mudam de mãos — e cada operação passa por um contrato. Com repertório jurídico e método, você deixa de disputar o preço da minuta e passa a ser procurado para conduzir o negócio. Sem eles, essas operações continuam passando — para outro advogado.</p>
+    <p class="final-price rv"><b>12x R$ 29,26</b> <i>ou R$ 287,90 à vista &middot; 2 anos de acesso &middot; 7 dias de garantia</i></p>
     <div class="final-cta">
-      <a class="btn btn-gold" href="#oferta">Quero entrar na Jornada <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="btn btn-line" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
     </div>
   </div>

@@ -1,8 +1,38 @@
-<!DOCTYPE html>
-<!-- saved from url=(0039)https://metodojornadacontratual.com.br/ -->
-<html lang="pt-BR" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<!--
+  ===========================================================================
+  MÉTODO JORNADA CONTRATUAL — Arquivo Contratual
+  Página única. Tudo o que ela precisa está neste arquivo + a pasta /assets.
+
+  COMO EDITAR SEM QUEBRAR NADA
+  1. Textos: altere apenas o que está ENTRE as tags (ex.: <h3>texto aqui</h3>).
+     Nunca apague os sinais < > nem o que vem dentro deles.
+  2. Onde fica cada parte: procure pelos comentários em caixa alta
+     (1/7 · HERO, 2/7 · MÉTODO, 3/7 · MÓDULOS, 4/7 · FERRAMENTAS,
+     5/7 · LABORATÓRIO, 6/7 · RESULTADOS, 7/7 · OFERTA, DÚVIDAS, etc.).
+  3. Preço: procure por "497,90" — aparece no cartão da oferta e no bloco de
+     dados estruturados (SEO), no fim do <head>.
+  4. Links: procure por "pay.hub.la" (checkout), "wa.me" (WhatsApp) e
+     "reclameaqui" (Reclame Aqui). Basta trocar o endereço entre aspas.
+  5. Pixel e Clarity: bloco TRACKING no <head>. O ID do Pixel é 1024412929995875.
+     Google tag (Google Ads AW-18483884729): logo após a abertura do <head>.
+  6. Imagens: troque o arquivo dentro de /assets mantendo o mesmo nome, ou
+     mude o src="assets/nome.webp" para o novo nome.
+  7. Mockups dos módulos: cada botão de módulo carrega o seu livro pelo
+     atributo data-mock="assets/miolo-N.webp" (N de 1 a 8), na seção MÓDULOS.
+     Para trocar o livro de um módulo, basta mudar o número nesse atributo.
+  8. Carrossel das ferramentas: as imagens são assets/ferramenta-1.webp a
+     ferramenta-6.webp, listadas em sequência dentro de <div class="tc-stage">.
+     Para trocar a ordem, troque a ordem das linhas; para incluir outra,
+     copie uma linha e acrescente um botão em <div class="tc-dots">.
+  9. Faça uma cópia do arquivo antes de editar. Se algo sair errado, é só
+     voltar a cópia.
+  ===========================================================================
+-->
+<html lang="pt-BR" class="no-js">
+<head>
 <!-- Google tag (gtag.js) — Google Ads AW-18483884729 -->
-<script async="" src="./Método Jornada Contratual _ Arquivo Contratual_files/clarity.js.transferir"></script><script async="" src="./Método Jornada Contratual _ Arquivo Contratual_files/t2zdqaeoh0"></script><script src="./Método Jornada Contratual _ Arquivo Contratual_files/1024412929995875" async=""></script><script async="" src="./Método Jornada Contratual _ Arquivo Contratual_files/fbevents.js.transferir"></script><script async="" src="./Método Jornada Contratual _ Arquivo Contratual_files/js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18483884729"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -10,7 +40,7 @@
 
   gtag('config', 'AW-18483884729');
 </script>
-
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Método Jornada Contratual | Arquivo Contratual</title>
 <meta name="description" content="Por que alguns advogados cobram R$ 5.000 ou mais por um contrato e outros não passam de R$ 500? Repertório jurídico e método para conduzir operações de diferentes setores, do atendimento à assinatura: 8 módulos, ferramentas, Laboratório de contratos e IA.">
@@ -29,12 +59,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://connect.facebook.net/" crossorigin="">
-<link rel="preconnect" href="https://www.clarity.ms/" crossorigin="">
-<link rel="icon" href="https://metodojornadacontratual.com.br/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="https://metodojornadacontratual.com.br/assets/favicon-192.png">
-<link rel="preload" href="https://metodojornadacontratual.com.br/assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="./Método Jornada Contratual _ Arquivo Contratual_files/hero-man.webp" as="image" fetchpriority="high">
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon-192.png">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/hero-man.webp" as="image" fetchpriority="high">
 
 <script>document.documentElement.className=document.documentElement.className.replace('no-js','js')</script>
 
@@ -573,17 +603,6 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .payback b{color:var(--ink);font-weight:700}
 
 .final-price{max-width:62ch;margin:0 auto 20px;font-size:1.04rem;color:#D8D9DE}
-.roi{display:grid;gap:16px;margin-top:clamp(22px,2.8vw,32px);padding:clamp(18px,2.6vw,28px);border-radius:18px;background:#fff;border:1px solid var(--line)}
-.roi label{font-weight:700;font-size:1.02rem;line-height:1.4;color:var(--ink)}
-.roi-row{display:flex;align-items:center;gap:16px}
-.roi input[type=range]{flex:1;min-width:0;height:28px;accent-color:var(--bronze)}
-.roi output{min-width:120px;text-align:right;font-weight:800;font-size:1.4rem;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums}
-.roi-res{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
-.roi-res div{padding:14px 16px;border-radius:12px;background:var(--stone)}
-.roi-res span{display:block;font-size:.78rem;line-height:1.4;color:var(--muted)}
-.roi-res strong{display:block;font-size:1.65rem;font-weight:800;letter-spacing:-.03em;color:var(--bronze-dk);font-variant-numeric:tabular-nums}
-.payback .roi-fine{margin:0;font-size:.76rem;line-height:1.45;color:var(--muted)}
-@media (max-width:520px){.roi-res{grid-template-columns:1fr}.roi output{min-width:96px;font-size:1.2rem}}
 .final-price b{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:#fff}
 .final-price i{font-style:normal;color:rgba(216,217,222,.7)}
 
@@ -802,94 +821,94 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Course","url":"https://metodojornadacontratual.com.br/","name":"Método Jornada Contratual","description":"Método em 8 módulos para conduzir demandas contratuais do atendimento à formalização, com ferramentas profissionais editáveis, Laboratório de Contratos e Assistente Virtual.","inLanguage":"pt-BR","provider":{"@type":"Organization","name":"Arquivo Contratual","url":"https://metodojornadacontratual.com.br/"},"offers":{"@type":"Offer","price":"497.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno","category":"Paid"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"P2Y"}}
 </script>
-<script type="text/javascript" async="" src="./Método Jornada Contratual _ Arquivo Contratual_files/f.txt"></script></head>
+</head>
 <body>
-<a class="skip" href="https://metodojornadacontratual.com.br/#conteudo">Pular para o conteúdo</a>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- Ícones -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></symbol>
-  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"></path></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15M6 13l6 6 6-6"></path></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"></path></symbol><symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h11"></path></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></symbol>
-  <symbol id="i-analyze" viewBox="0 0 24 24"><path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5M13 3v5h5v2.5M8 12h4M8 16h2"></path><circle cx="16.5" cy="16.5" r="3.2"></circle><path d="M18.9 18.9 21 21"></path></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.3 19.5c.6-3.1 2.9-5 5.7-5s5.1 1.9 5.7 5"></path><circle cx="17.2" cy="9" r="2.4"></circle><path d="M16.4 14.4c2.3.2 3.9 1.9 4.4 4.3"></path></symbol>
-  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v5h5M8.5 12.5h7M8.5 16h7"></path></symbol>
-  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="5.5" r="2.2"></circle><circle cx="18" cy="18.5" r="2.2"></circle><path d="M8.2 5.5H15a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h6.8"></path></symbol>
-  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="16.5" rx="2"></rect><path d="M9 4.5V3h6v1.5M8.5 10h7M8.5 13.5h7M8.5 17h4"></path></symbol>
-  <symbol id="i-listcheck" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10M3.8 5.8l1.2 1.2 2.2-2.4M3.8 11.8l1.2 1.2 2.2-2.4M3.8 17.8l1.2 1.2 2.2-2.4"></path></symbol>
-  <symbol id="i-parecer" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v5h5M8.5 11h7M8.5 14h7M8.5 17h3.5"></path></symbol>
-  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4.2L19.4 8.8a2.2 2.2 0 0 0 0-3.1l-1.1-1.1a2.2 2.2 0 0 0-3.1 0L4 15.8z"></path><path d="M13.5 6.5l4 4"></path></symbol>
-  <symbol id="i-review" viewBox="0 0 24 24"><path d="M11 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"></path><path d="M8 13l2.5 2.5L20 6"></path></symbol>
-  <symbol id="i-signpost" viewBox="0 0 24 24"><path d="M12 3v18M5 6h11l3 3-3 3H5zM9 21h6"></path></symbol>
-  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z"></path><path d="M12 10v4.2M12 17v.3"></path></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"></circle><path d="M12 7.2V12l3.2 2"></path></symbol>
-  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M12 4.5a1 1 0 1 0 0 0"></path><path d="M5 7 2.6 13a2.5 2.5 0 0 0 4.8 0zM19 7l-2.4 6a2.5 2.5 0 0 0 4.8 0z"></path></symbol>
-  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5M8 7.5h8M8 11h6"></path></symbol>
-  <symbol id="i-word" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v5h5M8 12l1.4 5 1.6-4 1.6 4L14 12"></path></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.7 4.3 2.7 6.3 7 7-4.3.7-6.3 2.7-7 7-.7-4.3-2.7-6.3-7-7 4.3-.7 6.3-2.7 7-7z"></path><path d="M19 16c.3 1.6 1 2.3 2.6 2.6-1.6.3-2.3 1-2.6 2.6-.3-1.6-1-2.3-2.6-2.6 1.6-.3 2.3-1 2.6-2.6z"></path></symbol>
-  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9.5L5 20v-4H4z"></path><path d="M8 9.5h8M8 12.5h5"></path></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.2c0 4.4-3.1 8.2-7.5 9.8-4.4-1.6-7.5-5.4-7.5-9.8V6z"></path><path d="M8.8 12.2l2.2 2.2 4.4-4.6"></path></symbol>
-  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"></rect><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"></path></symbol>
-  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z"></path></symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15.5" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></symbol>
-  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"></rect><circle cx="9" cy="10" r="1.7"></circle><path d="M21 16l-5-5-8.5 8.5"></path></symbol>
-  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5 20c.9-3.6 3.6-5.6 7-5.6s6.1 2 7 5.6"></path></symbol>
-  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.2 6.8v.1"></path></symbol>
-  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M4.2 20l1.1-3.9A8.6 8.6 0 1 1 8.4 19z"></path><path d="M9.2 8.1c.3-.5.6-.5.9-.5h.6c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.6.7c-.1.1-.2.4 0 .6.4.7 1 1.4 1.6 1.9.6.5 1.2.8 1.7 1 .2.1.5 0 .6-.1l.7-.8c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6 0 .5-.2 1.2-.7 1.6-.6.5-1.4.8-2.3.6-1.4-.3-2.9-1.1-4.2-2.3-1.2-1.1-2.2-2.6-2.6-3.9-.3-.9-.1-2.3.5-2.9z" fill="currentColor" stroke="none"></path></symbol>
-  <symbol id="hrt" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.5-9.3-9.2C1.5 8 3.6 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.6 0 5.7 3.5 4.5 6.8-1.8 4.7-9.3 9.2-9.3 9.2z"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol><symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h11"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-analyze" viewBox="0 0 24 24"><path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5M13 3v5h5v2.5M8 12h4M8 16h2"/><circle cx="16.5" cy="16.5" r="3.2"/><path d="M18.9 18.9 21 21"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.3 19.5c.6-3.1 2.9-5 5.7-5s5.1 1.9 5.7 5"/><circle cx="17.2" cy="9" r="2.4"/><path d="M16.4 14.4c2.3.2 3.9 1.9 4.4 4.3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5M8.5 12.5h7M8.5 16h7"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="5.5" r="2.2"/><circle cx="18" cy="18.5" r="2.2"/><path d="M8.2 5.5H15a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h6.8"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 4.5V3h6v1.5M8.5 10h7M8.5 13.5h7M8.5 17h4"/></symbol>
+  <symbol id="i-listcheck" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10M3.8 5.8l1.2 1.2 2.2-2.4M3.8 11.8l1.2 1.2 2.2-2.4M3.8 17.8l1.2 1.2 2.2-2.4"/></symbol>
+  <symbol id="i-parecer" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5M8.5 11h7M8.5 14h7M8.5 17h3.5"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4.2L19.4 8.8a2.2 2.2 0 0 0 0-3.1l-1.1-1.1a2.2 2.2 0 0 0-3.1 0L4 15.8z"/><path d="M13.5 6.5l4 4"/></symbol>
+  <symbol id="i-review" viewBox="0 0 24 24"><path d="M11 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/><path d="M8 13l2.5 2.5L20 6"/></symbol>
+  <symbol id="i-signpost" viewBox="0 0 24 24"><path d="M12 3v18M5 6h11l3 3-3 3H5zM9 21h6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 21 19.5H3z"/><path d="M12 10v4.2M12 17v.3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M12 7.2V12l3.2 2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M12 4.5a1 1 0 1 0 0 0"/><path d="M5 7 2.6 13a2.5 2.5 0 0 0 4.8 0zM19 7l-2.4 6a2.5 2.5 0 0 0 4.8 0z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5M8 7.5h8M8 11h6"/></symbol>
+  <symbol id="i-word" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5M8 12l1.4 5 1.6-4 1.6 4L14 12"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.7 4.3 2.7 6.3 7 7-4.3.7-6.3 2.7-7 7-.7-4.3-2.7-6.3-7-7 4.3-.7 6.3-2.7 7-7z"/><path d="M19 16c.3 1.6 1 2.3 2.6 2.6-1.6.3-2.3 1-2.6 2.6-.3-1.6-1-2.3-2.6-2.6 1.6-.3 2.3-1 2.6-2.6z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9.5L5 20v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.2c0 4.4-3.1 8.2-7.5 9.8-4.4-1.6-7.5-5.4-7.5-9.8V6z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15.5" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.7"/><path d="M21 16l-5-5-8.5 8.5"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.6"/><path d="M5 20c.9-3.6 3.6-5.6 7-5.6s6.1 2 7 5.6"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8v.1"/></symbol>
+  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M4.2 20l1.1-3.9A8.6 8.6 0 1 1 8.4 19z"/><path d="M9.2 8.1c.3-.5.6-.5.9-.5h.6c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.6.7c-.1.1-.2.4 0 .6.4.7 1 1.4 1.6 1.9.6.5 1.2.8 1.7 1 .2.1.5 0 .6-.1l.7-.8c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6 0 .5-.2 1.2-.7 1.6-.6.5-1.4.8-2.3.6-1.4-.3-2.9-1.1-4.2-2.3-1.2-1.1-2.2-2.6-2.6-3.9-.3-.9-.1-2.3.5-2.9z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="hrt" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.5-9.3-9.2C1.5 8 3.6 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.6 0 5.7 3.5 4.5 6.8-1.8 4.7-9.3 9.2-9.3 9.2z"/></symbol>
   <symbol id="compass" viewBox="0 0 200 200">
-    <circle style="fill:none;stroke:var(--ring);stroke-width:.9;opacity:.8" cx="100" cy="100" r="95"></circle>
-    <circle style="fill:none;stroke:var(--ring);stroke-width:.6;opacity:.4" cx="100" cy="100" r="85"></circle>
-    <path style="stroke:var(--ring);stroke-width:1.2;opacity:.65" d="M100.0 13.0L100.0 7.0M122.52 15.96L124.07 10.17M143.5 24.66L146.5 19.46M161.52 38.48L165.76 34.24M175.34 56.5L180.54 53.5M184.04 77.48L189.83 75.93M187.0 100.0L193.0 100.0M184.04 122.52L189.83 124.07M175.34 143.5L180.54 146.5M161.52 161.52L165.76 165.76M143.5 175.34L146.5 180.54M122.52 184.04L124.07 189.83M100.0 187.0L100.0 193.0M77.48 184.04L75.93 189.83M56.5 175.34L53.5 180.54M38.48 161.52L34.24 165.76M24.66 143.5L19.46 146.5M15.96 122.52L10.17 124.07M13.0 100.0L7.0 100.0M15.96 77.48L10.17 75.93M24.66 56.5L19.46 53.5M38.48 38.48L34.24 34.24M56.5 24.66L53.5 19.46M77.48 15.96L75.93 10.17"></path>
-    <path style="fill:var(--d,var(--c1))" d="M100 100L122.2 46.41 116.55 52.73ZM100 100L122.2 46.41 121.72 54.88ZM100 100L153.59 77.8 145.12 78.28ZM100 100L153.59 77.8 147.27 83.45ZM100 100L153.59 122.2 147.27 116.55ZM100 100L153.59 122.2 145.12 121.72ZM100 100L122.2 153.59 121.72 145.12ZM100 100L122.2 153.59 116.55 147.27ZM100 100L77.8 153.59 83.45 147.27ZM100 100L77.8 153.59 78.28 145.12ZM100 100L46.41 122.2 54.88 121.72ZM100 100L46.41 122.2 52.73 116.55ZM100 100L46.41 77.8 52.73 83.45ZM100 100L46.41 77.8 54.88 78.28ZM100 100L77.8 46.41 78.28 54.88ZM100 100L77.8 46.41 83.45 52.73Z"></path>
-    <path style="fill:var(--c1)" d="M100 100L100.0 4.0 93.0 18.4ZM100 100L150.91 49.09 139.46 52.91ZM100 100L196.0 100.0 181.6 93.0ZM100 100L150.91 150.91 147.09 139.46ZM100 100L100.0 196.0 107.0 181.6ZM100 100L49.09 150.91 60.54 147.09ZM100 100L4.0 100.0 18.4 107.0ZM100 100L49.09 49.09 52.91 60.54Z"></path>
-    <path style="fill:var(--c2)" d="M100 100L100.0 4.0 107.0 18.4ZM100 100L150.91 49.09 147.09 60.54ZM100 100L196.0 100.0 181.6 107.0ZM100 100L150.91 150.91 139.46 147.09ZM100 100L100.0 196.0 93.0 181.6ZM100 100L49.09 150.91 52.91 139.46ZM100 100L4.0 100.0 18.4 93.0ZM100 100L49.09 49.09 60.54 52.91Z"></path>
-    <circle style="fill:none;stroke:var(--ring);stroke-width:4.5" cx="100" cy="100" r="17"></circle>
-    <circle style="fill:var(--c2)" cx="100" cy="100" r="8.5"></circle>
-    <circle style="fill:var(--c1)" cx="100" cy="100" r="4"></circle>
+    <circle style="fill:none;stroke:var(--ring);stroke-width:.9;opacity:.8" cx="100" cy="100" r="95"/>
+    <circle style="fill:none;stroke:var(--ring);stroke-width:.6;opacity:.4" cx="100" cy="100" r="85"/>
+    <path style="stroke:var(--ring);stroke-width:1.2;opacity:.65" d="M100.0 13.0L100.0 7.0M122.52 15.96L124.07 10.17M143.5 24.66L146.5 19.46M161.52 38.48L165.76 34.24M175.34 56.5L180.54 53.5M184.04 77.48L189.83 75.93M187.0 100.0L193.0 100.0M184.04 122.52L189.83 124.07M175.34 143.5L180.54 146.5M161.52 161.52L165.76 165.76M143.5 175.34L146.5 180.54M122.52 184.04L124.07 189.83M100.0 187.0L100.0 193.0M77.48 184.04L75.93 189.83M56.5 175.34L53.5 180.54M38.48 161.52L34.24 165.76M24.66 143.5L19.46 146.5M15.96 122.52L10.17 124.07M13.0 100.0L7.0 100.0M15.96 77.48L10.17 75.93M24.66 56.5L19.46 53.5M38.48 38.48L34.24 34.24M56.5 24.66L53.5 19.46M77.48 15.96L75.93 10.17"/>
+    <path style="fill:var(--d,var(--c1))" d="M100 100L122.2 46.41 116.55 52.73ZM100 100L122.2 46.41 121.72 54.88ZM100 100L153.59 77.8 145.12 78.28ZM100 100L153.59 77.8 147.27 83.45ZM100 100L153.59 122.2 147.27 116.55ZM100 100L153.59 122.2 145.12 121.72ZM100 100L122.2 153.59 121.72 145.12ZM100 100L122.2 153.59 116.55 147.27ZM100 100L77.8 153.59 83.45 147.27ZM100 100L77.8 153.59 78.28 145.12ZM100 100L46.41 122.2 54.88 121.72ZM100 100L46.41 122.2 52.73 116.55ZM100 100L46.41 77.8 52.73 83.45ZM100 100L46.41 77.8 54.88 78.28ZM100 100L77.8 46.41 78.28 54.88ZM100 100L77.8 46.41 83.45 52.73Z"/>
+    <path style="fill:var(--c1)" d="M100 100L100.0 4.0 93.0 18.4ZM100 100L150.91 49.09 139.46 52.91ZM100 100L196.0 100.0 181.6 93.0ZM100 100L150.91 150.91 147.09 139.46ZM100 100L100.0 196.0 107.0 181.6ZM100 100L49.09 150.91 60.54 147.09ZM100 100L4.0 100.0 18.4 107.0ZM100 100L49.09 49.09 52.91 60.54Z"/>
+    <path style="fill:var(--c2)" d="M100 100L100.0 4.0 107.0 18.4ZM100 100L150.91 49.09 147.09 60.54ZM100 100L196.0 100.0 181.6 107.0ZM100 100L150.91 150.91 139.46 147.09ZM100 100L100.0 196.0 93.0 181.6ZM100 100L49.09 150.91 52.91 139.46ZM100 100L4.0 100.0 18.4 93.0ZM100 100L49.09 49.09 60.54 52.91Z"/>
+    <circle style="fill:none;stroke:var(--ring);stroke-width:4.5" cx="100" cy="100" r="17"/>
+    <circle style="fill:var(--c2)" cx="100" cy="100" r="8.5"/>
+    <circle style="fill:var(--c1)" cx="100" cy="100" r="4"/>
   </symbol>
 </svg>
 
 <header class="hdr" id="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="https://metodojornadacontratual.com.br/#inicio" aria-label="Arquivo Contratual — início">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/ac-emblem.webp" width="512" height="512" alt="" decoding="async">
+    <a class="brand" href="#inicio" aria-label="Arquivo Contratual — início">
+      <img src="assets/ac-emblem.webp" width="512" height="512" alt="" decoding="async">
       <span>Arquivo<br>Contratual</span>
     </a>
     <nav class="nav" aria-label="Seções da página">
-      <a href="https://metodojornadacontratual.com.br/#metodo" data-ch="2">Método</a>
-      <a href="https://metodojornadacontratual.com.br/#etapas" data-ch="3">Módulos</a>
-      <a href="https://metodojornadacontratual.com.br/#ferramentas" data-ch="4">Ferramentas</a>
-      <a href="https://metodojornadacontratual.com.br/#laboratorio" data-ch="5">Laboratório</a>
-      <a href="https://metodojornadacontratual.com.br/#resultados" data-ch="6">Resultados</a>
-      <a href="https://metodojornadacontratual.com.br/#oferta" data-ch="7">Oferta</a>
+      <a href="#metodo" data-ch="2">Método</a>
+      <a href="#etapas" data-ch="3">Módulos</a>
+      <a href="#ferramentas" data-ch="4">Ferramentas</a>
+      <a href="#laboratorio" data-ch="5">Laboratório</a>
+      <a href="#resultados" data-ch="6">Resultados</a>
+      <a href="#oferta" data-ch="7">Oferta</a>
     </nav>
     <button class="chapter" id="chBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="chMenu">
       <span class="chapter-num" aria-hidden="true"><span class="now" id="chNow">1</span>/7</span>
       <span class="chapter-label" id="chLabel">Início</span>
-      <svg class="ico" aria-hidden="true"><use href="#i-menu"></use></svg>
+      <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
       <span class="sr-only">Abrir índice da página</span>
     </button>
-    <a class="btn btn-gold btn-sm" href="https://metodojornadacontratual.com.br/#oferta">acessar agora</a>
+    <a class="btn btn-gold btn-sm" href="#oferta">Quero acessar</a>
   </div>
 </header>
 
-<div class="chmenu" id="chMenu" hidden="">
+<div class="chmenu" id="chMenu" hidden>
   <ol>
-    <li><a href="https://metodojornadacontratual.com.br/#inicio" data-ch="1" class="is-on"><span class="n">1</span><strong>Início</strong><small>Por que uns cobram R$ 5.000 e outros R$ 500</small></a></li>
-    <li><a href="https://metodojornadacontratual.com.br/#metodo" data-ch="2"><span class="n">2</span><strong>O método</strong><small>Base jurídica e as seis etapas da atuação</small></a></li>
-    <li><a href="https://metodojornadacontratual.com.br/#etapas" data-ch="3"><span class="n">3</span><strong>8 módulos</strong><small>Cada camada do trabalho que o cliente contrata</small></a></li>
-    <li><a href="https://metodojornadacontratual.com.br/#ferramentas" data-ch="4"><span class="n">4</span><strong>Ferramentas</strong><small>O trabalho invisível, documentado</small></a></li>
-    <li><a href="https://metodojornadacontratual.com.br/#laboratorio" data-ch="5"><span class="n">5</span><strong>Laboratório</strong><small>Operações de mercado para construir repertório</small></a></li>
-    <li><a href="https://metodojornadacontratual.com.br/#resultados" data-ch="6"><span class="n">6</span><strong>Resultados</strong><small>O que dizem os alunos</small></a></li>
-    <li><a href="https://metodojornadacontratual.com.br/#oferta" data-ch="7"><span class="n">7</span><strong>Toda a entrega</strong><small>Oferta, garantia e dúvidas</small></a></li>
+    <li><a href="#inicio" data-ch="1"><span class="n">1</span><strong>Início</strong><small>Por que uns cobram R$ 5.000 e outros R$ 500</small></a></li>
+    <li><a href="#metodo" data-ch="2"><span class="n">2</span><strong>O método</strong><small>Base jurídica e as seis etapas da atuação</small></a></li>
+    <li><a href="#etapas" data-ch="3"><span class="n">3</span><strong>8 módulos</strong><small>Cada camada do trabalho que o cliente contrata</small></a></li>
+    <li><a href="#ferramentas" data-ch="4"><span class="n">4</span><strong>Ferramentas</strong><small>O trabalho invisível, documentado</small></a></li>
+    <li><a href="#laboratorio" data-ch="5"><span class="n">5</span><strong>Laboratório</strong><small>Operações de mercado para construir repertório</small></a></li>
+    <li><a href="#resultados" data-ch="6"><span class="n">6</span><strong>Resultados</strong><small>O que dizem os alunos</small></a></li>
+    <li><a href="#oferta" data-ch="7"><span class="n">7</span><strong>Toda a entrega</strong><small>Oferta, garantia e dúvidas</small></a></li>
   </ol>
   <div class="chmenu-foot">
-    <a class="btn btn-gold" href="https://metodojornadacontratual.com.br/#oferta">Quero acessar agora</a>
-    <a class="icon-btn" data-whats="" href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg class="ico"><use href="#i-whats"></use></svg></a>
+    <a class="btn btn-gold" href="#oferta">Quero acessar agora</a>
+    <a class="icon-btn" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg class="ico"><use href="#i-whats"/></svg></a>
   </div>
 </div>
 
@@ -897,26 +916,26 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
 <!-- 1/7 · HERO -->
 <section class="hero" id="inicio" data-ch="1" data-label="Início" aria-labelledby="t-hero">
-  <div class="hero-media" aria-hidden="true"><img src="./Método Jornada Contratual _ Arquivo Contratual_files/hero-man.webp" width="1200" height="1140" alt="" fetchpriority="high" decoding="async"></div>
-  <svg class="compass hero-compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"></use></svg>
+  <div class="hero-media" aria-hidden="true"><img src="assets/hero-man.webp" width="1200" height="1140" alt="" fetchpriority="high" decoding="async"></div>
+  <svg class="compass hero-compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
   <div class="wrap hero-in">
     <div class="hero-copy hero-seq">
       <h1 class="h1" id="t-hero"><b>Advocacia contratual,</b> do zero ao contrato assinado.</h1>
       <p class="hero-claim">MÉTODO, REPERTÓRIO JURÍDICO, MODELOS E IA.</p>
       <p class="hero-lead">Aprenda a atuar em demandas contratuais de diferentes setores: analisar negócios, avaliar riscos, orientar decisões e estruturar contratos com técnica e estratégia.</p>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="https://metodojornadacontratual.com.br/#oferta">Quero atuar como especialista <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-        <a class="btn btn-line" href="https://metodojornadacontratual.com.br/#metodo">Conhecer o curso</a>
+        <a class="btn btn-gold" href="#oferta">Quero COMEÇAR AGORA <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="#metodo">Conhecer o curso</a>
       </div>
       <ul class="hero-notes">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>8 módulos de formação jurídica</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>24 coleções contratuais</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>IA treinada para contratos</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>Documentos para cada etapa de trabalho</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>8 módulos de formação jurídica</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>24 coleções contratuais</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>IA treinada no método</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Ferramentas para cada etapa</li>
       </ul>
     </div>
   </div>
-  <a class="hero-scroll" href="https://metodojornadacontratual.com.br/#desafio">Deslize para ver mais <svg class="ico" aria-hidden="true"><use href="#i-down"></use></svg></a>
+  <a class="hero-scroll" href="#desafio">Deslize para ver mais <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
 </section>
 
 <!-- Seção 2 · OPORTUNIDADES: por que uns cobram R$ 5.000 e outros R$ 500 -->
@@ -1078,34 +1097,34 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="op-i-casa" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"></path></symbol>
-  <symbol id="op-i-empresa" viewBox="0 0 24 24"><path d="M5 20.5v-16h9v16M14 9.5h5v11M3 20.5h18M8 8h3M8 11.5h3M8 15h3M16 13h1.5M16 16.5h1.5"></path></symbol>
-  <symbol id="op-i-socio" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.3 19.5c.6-3.1 2.9-5 5.7-5s5.1 1.9 5.7 5M18 7.5v6M15 10.5h6"></path></symbol>
-  <symbol id="op-i-marca" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12.5" rx="2"></rect><path d="M9 20.5h6M12 16.5v4"></path><circle cx="12" cy="10.2" r="3.6"></circle><path d="M11 12V8.5h1.3a1.05 1.05 0 0 1 0 2.1H11m1.3 0 1.1 1.4"></path></symbol>
-  <symbol id="op-i-obra" viewBox="0 0 24 24"><path d="M6 21V4h13M6 7.5 9.5 4M17 4v4.5M15.5 8.5h3v3h-3zM3 21h18M12.5 21v-6h6.5v6"></path></symbol>
-  <symbol id="op-i-servico" viewBox="0 0 24 24"><rect x="3.5" y="7" width="17" height="12.5" rx="2"></rect><path d="M9 7V5.2A1.2 1.2 0 0 1 10.2 4h3.6A1.2 1.2 0 0 1 15 5.2V7M3.5 12.5h17M11 12.5v1.8h2v-1.8"></path></symbol>
-  <symbol id="op-i-loja" viewBox="0 0 24 24"><path d="M4 9.5 5.5 4h13L20 9.5M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0M5.5 12v8.5h13V12M10 20.5v-5h4v5"></path></symbol>
-  <symbol id="op-i-fazenda" viewBox="0 0 24 24"><path d="M2.5 20.5c3.5-4.2 8-6 18.5-6M2.5 16.8c4-3.2 8.5-4.6 12.5-4.6M7 20.5c2.2-2.6 5-3.9 9-4.1"></path><circle cx="17.5" cy="6.6" r="2.6"></circle><path d="M17.5 9.2v2.6"></path></symbol>
-  <symbol id="op-i-parceria" viewBox="0 0 24 24"><path d="M12 21v-8M12 13c0-4 3-6.5 7.5-6.5 0 4-3 6.5-7.5 6.5zM12 15.5c0-3-2.4-5.2-6-5.2 0 3.1 2.4 5.2 6 5.2zM7 21h10"></path></symbol>
-  <symbol id="op-i-caixas" viewBox="0 0 24 24"><path d="M12 3.5 19 7v8.5L12 19l-7-3.5V7zM5 7l7 3.5L19 7M12 10.5V19M8.5 5.2l7 3.5"></path></symbol>
-  <symbol id="op-i-caminhao" viewBox="0 0 24 24"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3.2v3.3h-7"></path><circle cx="6.5" cy="17.8" r="1.8"></circle><circle cx="17" cy="17.8" r="1.8"></circle></symbol>
-  <symbol id="op-i-credito" viewBox="0 0 24 24"><ellipse cx="9" cy="6.8" rx="5.5" ry="2.3"></ellipse><path d="M3.5 6.8v4c0 1.3 2.5 2.3 5.5 2.3s5.5-1 5.5-2.3v-4M3.5 10.8v4c0 1.3 2.5 2.3 5.5 2.3.9 0 1.8-.1 2.5-.3"></path><circle cx="17" cy="15.5" r="4.3"></circle><path d="M18.3 13.9h-1.8a.9.9 0 0 0 0 1.8h1a.9.9 0 0 1 0 1.8h-1.8M17 13v.9M17 17.5v.9"></path></symbol>
-  <symbol id="op-i-olho" viewBox="0 0 24 24"><path d="M3 12s3.3-6 9-6c1.6 0 3 .4 4.2 1M21 12s-3.3 6-9 6c-1.6 0-3-.4-4.2-1M9.9 14.1a3 3 0 0 1 4.2-4.2M4 4l16 16"></path></symbol>
-  <symbol id="op-i-sai" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.3 19.5c.6-3.1 2.9-5 5.7-5 1.4 0 2.6.4 3.6 1.2M15 15.5h6M18.5 13l2.5 2.5-2.5 2.5"></path></symbol>
-  <symbol id="op-i-ia" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9.5 9.5h5v5h-5zM9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"></path></symbol>
-  <symbol id="op-i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"></path></symbol>
+  <symbol id="op-i-casa" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"/></symbol>
+  <symbol id="op-i-empresa" viewBox="0 0 24 24"><path d="M5 20.5v-16h9v16M14 9.5h5v11M3 20.5h18M8 8h3M8 11.5h3M8 15h3M16 13h1.5M16 16.5h1.5"/></symbol>
+  <symbol id="op-i-socio" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.3 19.5c.6-3.1 2.9-5 5.7-5s5.1 1.9 5.7 5M18 7.5v6M15 10.5h6"/></symbol>
+  <symbol id="op-i-marca" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12.5" rx="2"/><path d="M9 20.5h6M12 16.5v4"/><circle cx="12" cy="10.2" r="3.6"/><path d="M11 12V8.5h1.3a1.05 1.05 0 0 1 0 2.1H11m1.3 0 1.1 1.4"/></symbol>
+  <symbol id="op-i-obra" viewBox="0 0 24 24"><path d="M6 21V4h13M6 7.5 9.5 4M17 4v4.5M15.5 8.5h3v3h-3zM3 21h18M12.5 21v-6h6.5v6"/></symbol>
+  <symbol id="op-i-servico" viewBox="0 0 24 24"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5.2A1.2 1.2 0 0 1 10.2 4h3.6A1.2 1.2 0 0 1 15 5.2V7M3.5 12.5h17M11 12.5v1.8h2v-1.8"/></symbol>
+  <symbol id="op-i-loja" viewBox="0 0 24 24"><path d="M4 9.5 5.5 4h13L20 9.5M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0M5.5 12v8.5h13V12M10 20.5v-5h4v5"/></symbol>
+  <symbol id="op-i-fazenda" viewBox="0 0 24 24"><path d="M2.5 20.5c3.5-4.2 8-6 18.5-6M2.5 16.8c4-3.2 8.5-4.6 12.5-4.6M7 20.5c2.2-2.6 5-3.9 9-4.1"/><circle cx="17.5" cy="6.6" r="2.6"/><path d="M17.5 9.2v2.6"/></symbol>
+  <symbol id="op-i-parceria" viewBox="0 0 24 24"><path d="M12 21v-8M12 13c0-4 3-6.5 7.5-6.5 0 4-3 6.5-7.5 6.5zM12 15.5c0-3-2.4-5.2-6-5.2 0 3.1 2.4 5.2 6 5.2zM7 21h10"/></symbol>
+  <symbol id="op-i-caixas" viewBox="0 0 24 24"><path d="M12 3.5 19 7v8.5L12 19l-7-3.5V7zM5 7l7 3.5L19 7M12 10.5V19M8.5 5.2l7 3.5"/></symbol>
+  <symbol id="op-i-caminhao" viewBox="0 0 24 24"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3.2v3.3h-7"/><circle cx="6.5" cy="17.8" r="1.8"/><circle cx="17" cy="17.8" r="1.8"/></symbol>
+  <symbol id="op-i-credito" viewBox="0 0 24 24"><ellipse cx="9" cy="6.8" rx="5.5" ry="2.3"/><path d="M3.5 6.8v4c0 1.3 2.5 2.3 5.5 2.3s5.5-1 5.5-2.3v-4M3.5 10.8v4c0 1.3 2.5 2.3 5.5 2.3.9 0 1.8-.1 2.5-.3"/><circle cx="17" cy="15.5" r="4.3"/><path d="M18.3 13.9h-1.8a.9.9 0 0 0 0 1.8h1a.9.9 0 0 1 0 1.8h-1.8M17 13v.9M17 17.5v.9"/></symbol>
+  <symbol id="op-i-olho" viewBox="0 0 24 24"><path d="M3 12s3.3-6 9-6c1.6 0 3 .4 4.2 1M21 12s-3.3 6-9 6c-1.6 0-3-.4-4.2-1M9.9 14.1a3 3 0 0 1 4.2-4.2M4 4l16 16"/></symbol>
+  <symbol id="op-i-sai" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.3 19.5c.6-3.1 2.9-5 5.7-5 1.4 0 2.6.4 3.6 1.2M15 15.5h6M18.5 13l2.5 2.5-2.5 2.5"/></symbol>
+  <symbol id="op-i-ia" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9.5 9.5h5v5h-5zM9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="op-i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
 </svg>
 
 <div class="wrap">
-  <div class="metodo-marca rv in">
+  <div class="metodo-marca rv">
     <span class="lb-rule" aria-hidden="true"></span>
-    <img src="./Método Jornada Contratual _ Arquivo Contratual_files/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
+    <img src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
     <span class="lb-rule" aria-hidden="true"></span>
   </div>
-  <p class="metodo-marca-sub rv in">POR UMA ADVOCACIA MAIS ESTRATÉGICA, EFICIENTE E VALORIZADA</p>
-  <h2 class="h2 op-h2 rv in" id="t-desafio"><b>Por que alguns advogados cobram <em>R$&nbsp;5.000 ou mais</em> por um contrato</b> e outros não passam de <s>R$&nbsp;500</s>?</h2>
+  <p class="metodo-marca-sub rv">POR UMA ADVOCACIA MAIS ESTRATÉGICA, EFICIENTE E VALORIZADA</p>
+  <h2 class="h2 op-h2 rv" id="t-desafio"><b>Por que alguns advogados cobram <em>R$&nbsp;5.000 ou mais</em> por um contrato</b> e outros não passam de <s>R$&nbsp;500</s>?</h2>
 
-  <div class="op-intro rv in">
+  <div class="op-intro rv">
     <p class="op-lead"><b>A resposta não está no documento.</b> Está nas oportunidades de negócio e nas camadas de atuação que vêm antes dele — e que a maioria dos advogados nunca aprendeu a enxergar, cobrar ou explicar ao cliente.</p>
     <div>
       <p>A redação é só a parte final de um trabalho maior: a formalização consciente de um negócio que precisa ser viável e seguro para quem está colocando dinheiro e patrimônio nele.</p>
@@ -1118,41 +1137,41 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="op-teia-head">
       <div>
         <span class="op-tag">Neste momento, perto de você</span>
-        <h3><b>Negócios acontecem todos os dias ao seu redor.</b> Todos eles precisam de contrato.</h3>
+        <h3><b>Negócios acontecem todos os dias.</b> Todos eles passam por um contrato.</h3>
       </div>
       <p>Imóveis, empresas, fazendas, marcas, obras, crédito. Cada operação movimenta dinheiro e patrimônio — e cada setor tem a sua lógica, os seus riscos e as suas práticas de mercado. Repare no que cada uma exige antes da primeira cláusula.</p>
     </div>
 
     <div class="op-mapa">
-      <svg class="op-linhas" aria-hidden="true" viewBox="0 0 937.9375 764.609375"><path d="M331.5 158.7L423.9 309.0" class="l-base" style="stroke-dasharray: 176.497; stroke-dashoffset: 176.497; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;"></path><path d="M331.5 158.7L423.9 309.0" class="l-flux" style="animation-delay: 0s;"></path><circle cx="331.47783531730533" cy="158.696328125" r="3" class="l-pt"></circle><path d="M469.0 158.7L469.0 296.3" class="l-base" style="stroke-dasharray: 137.608; stroke-dashoffset: 137.608; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.27s;"></path><path d="M469.0 158.7L469.0 296.3" class="l-flux" style="animation-delay: -0.37s;"></path><circle cx="468.96875" cy="158.696328125" r="3" class="l-pt"></circle><path d="M615.7 143.7L514.0 309.0" class="l-base" style="stroke-dasharray: 194.105; stroke-dashoffset: 194.105; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.34s;"></path><path d="M615.7 143.7L514.0 309.0" class="l-flux" style="animation-delay: -0.74s;"></path><circle cx="615.6827712159426" cy="143.696328125" r="3" class="l-pt"></circle><path d="M755.1 263.3L548.4 349.3" class="l-base" style="stroke-dasharray: 223.922; stroke-dashoffset: 223.922; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.41s;"></path><path d="M755.1 263.3L548.4 349.3" class="l-flux" style="animation-delay: -1.11s;"></path><circle cx="755.1437500000001" cy="263.32643487205974" r="3" class="l-pt"></circle><path d="M755.1 382.3L555.0 382.3" class="l-base" style="stroke-dasharray: 200.175; stroke-dashoffset: 200.175; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.48s;"></path><path d="M755.1 382.3L555.0 382.3" class="l-flux" style="animation-delay: -1.48s;"></path><circle cx="755.1437500000001" cy="382.3046875" r="3" class="l-pt"></circle><path d="M755.1 501.3L548.4 415.3" class="l-base" style="stroke-dasharray: 223.922; stroke-dashoffset: 223.922; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.55s;"></path><path d="M755.1 501.3L548.4 415.3" class="l-flux" style="animation-delay: -1.85s;"></path><circle cx="755.1437500000001" cy="501.2829401279404" r="3" class="l-pt"></circle><path d="M610.8 612.9L514.0 455.6" class="l-base" style="stroke-dasharray: 184.714; stroke-dashoffset: 184.714; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.62s;"></path><path d="M610.8 612.9L514.0 455.6" class="l-flux" style="animation-delay: -2.22s;"></path><circle cx="610.763781064877" cy="612.913046875" r="3" class="l-pt"></circle><path d="M469.0 612.9L469.0 468.3" class="l-base" style="stroke-dasharray: 144.608; stroke-dashoffset: 144.608; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.69s;"></path><path d="M469.0 612.9L469.0 468.3" class="l-flux" style="animation-delay: -2.59s;"></path><circle cx="468.96875" cy="612.913046875" r="3" class="l-pt"></circle><path d="M327.2 612.9L423.9 455.6" class="l-base" style="stroke-dasharray: 184.714; stroke-dashoffset: 184.714; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.76s;"></path><path d="M327.2 612.9L423.9 455.6" class="l-flux" style="animation-delay: -2.96s;"></path><circle cx="327.17371893512296" cy="612.913046875" r="3" class="l-pt"></circle><path d="M182.8 501.3L389.6 415.3" class="l-base" style="stroke-dasharray: 223.922; stroke-dashoffset: 223.922; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.83s;"></path><path d="M182.8 501.3L389.6 415.3" class="l-flux" style="animation-delay: -3.33s;"></path><circle cx="182.79375" cy="501.2829401279404" r="3" class="l-pt"></circle><path d="M182.8 382.3L383.0 382.3" class="l-base" style="stroke-dasharray: 200.175; stroke-dashoffset: 200.175; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.9s;"></path><path d="M182.8 382.3L383.0 382.3" class="l-flux" style="animation-delay: -3.7s;"></path><circle cx="182.79375" cy="382.3046875" r="3" class="l-pt"></circle><path d="M182.8 263.3L389.6 349.3" class="l-base" style="stroke-dasharray: 223.922; stroke-dashoffset: 223.922; transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.97s;"></path><path d="M182.8 263.3L389.6 349.3" class="l-flux" style="animation-delay: -4.07s;"></path><circle cx="182.79375" cy="263.32643487205974" r="3" class="l-pt"></circle></svg>
+      <svg class="op-linhas" aria-hidden="true"></svg>
       <div class="op-hub">
         <svg class="compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"></use></svg>
         <div><b>Você</b><span>Advogado</span><em class="op-hub-m">Todos estes negócios acontecem ao redor do seu escritório. Quantos chegam até você?</em></div>
       </div>
       <ul class="op-nos" aria-label="Exemplos de operações que precisam de um advogado contratual">
-        <li class="op-no" style="--x: 29.9%; --y: 9.9%; --d: 0.25s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-casa"></use></svg></span><small>Imobiliário</small></div>
+        <li class="op-no" style="--x:29.9%;--y:9.9%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-casa"/></svg></span><small>Imobiliário</small></div>
           <b>Comprar ou vender um imóvel</b><p>Matrícula e ônus, certidões do vendedor, risco de fraude à execução, forma de pagamento.</p></li>
-        <li class="op-no" style="--x: 50%; --y: 9.9%; --d: 0.32s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-empresa"></use></svg></span><small>Societário</small></div>
+        <li class="op-no" style="--x:50%;--y:9.9%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-empresa"/></svg></span><small>Societário</small></div>
           <b>Comprar ou vender uma empresa</b><p>Due diligence, passivos ocultos, preço com parcela variável, declarações e garantias.</p></li>
-        <li class="op-no" style="--x: 70.1%; --y: 9.9%; --d: 0.39s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-socio"></use></svg></span><small>Societário</small></div>
+        <li class="op-no" style="--x:70.1%;--y:9.9%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-socio"/></svg></span><small>Societário</small></div>
           <b>Receber um novo sócio</b><p>Valor de entrada, acordo de sócios, vesting, regras de saída e de desempate.</p></li>
-        <li class="op-no" style="--x: 90%; --y: 29.6%; --d: 0.46s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-loja"></use></svg></span><small>Imobiliário</small></div>
+        <li class="op-no" style="--x:90%;--y:29.6%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-loja"/></svg></span><small>Imobiliário</small></div>
           <b>Alugar um imóvel comercial</b><p>Direito à renovação, garantias, benfeitorias, obras de adaptação e reajuste.</p></li>
-        <li class="op-no" style="--x: 90%; --y: 50%; --d: 0.53s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-fazenda"></use></svg></span><small>Agronegócio</small></div>
+        <li class="op-no" style="--x:90%;--y:50%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-fazenda"/></svg></span><small>Agronegócio</small></div>
           <b>Arrendar uma fazenda</b><p>Estatuto da Terra, prazos mínimos, preço, preferência e benfeitorias.</p></li>
-        <li class="op-no" style="--x: 90%; --y: 70.4%; --d: 0.60s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-parceria"></use></svg></span><small>Agronegócio</small></div>
+        <li class="op-no" style="--x:90%;--y:70.4%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-parceria"/></svg></span><small>Agronegócio</small></div>
           <b>Firmar parceria agrícola ou pecuária</b><p>Partilha de frutos e riscos, limites legais de percentual, prestação de contas.</p></li>
-        <li class="op-no" style="--x: 70.1%; --y: 90.1%; --d: 0.67s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-caixas"></use></svg></span><small>Empresarial</small></div>
+        <li class="op-no" style="--x:70.1%;--y:90.1%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-caixas"/></svg></span><small>Empresarial</small></div>
           <b>Fornecer produtos para empresas</b><p>Volumes, exclusividade, padrão de qualidade, aceite, reajuste e multas.</p></li>
-        <li class="op-no" style="--x: 50%; --y: 90.1%; --d: 0.74s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-caminhao"></use></svg></span><small>Comercial</small></div>
+        <li class="op-no" style="--x:50%;--y:90.1%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-caminhao"/></svg></span><small>Comercial</small></div>
           <b>Distribuir ou representar produtos</b><p>Representação ou distribuição, território, metas e indenização na rescisão.</p></li>
-        <li class="op-no" style="--x: 29.9%; --y: 90.1%; --d: 0.81s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-credito"></use></svg></span><small>Crédito</small></div>
+        <li class="op-no" style="--x:29.9%;--y:90.1%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-credito"/></svg></span><small>Crédito</small></div>
           <b>Emprestar dinheiro com garantias</b><p>Alienação fiduciária, CPR, aval e fiança, caminho da execução.</p></li>
-        <li class="op-no" style="--x: 10%; --y: 70.4%; --d: 0.88s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-servico"></use></svg></span><small>Empresarial</small></div>
+        <li class="op-no" style="--x:10%;--y:70.4%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-servico"/></svg></span><small>Empresarial</small></div>
           <b>Contratar serviços para a empresa</b><p>Escopo e níveis de serviço, risco trabalhista, LGPD, limite de responsabilidade.</p></li>
-        <li class="op-no" style="--x: 10%; --y: 50%; --d: 0.95s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-obra"></use></svg></span><small>Construção</small></div>
+        <li class="op-no" style="--x:10%;--y:50%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-obra"/></svg></span><small>Construção</small></div>
           <b>Construir um empreendimento</b><p>Empreitada, cronograma e medições, incorporação, patrimônio de afetação.</p></li>
-        <li class="op-no" style="--x: 10%; --y: 29.6%; --d: 1.02s;"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-marca"></use></svg></span><small>Propriedade intelectual</small></div>
+        <li class="op-no" style="--x:10%;--y:29.6%"><div class="op-no-top"><span class="op-ic"><svg class="ico"><use href="#op-i-marca"/></svg></span><small>Propriedade intelectual</small></div>
           <b>Licenciar uma marca ou tecnologia</b><p>Registro no INPI, royalties, território, exclusividade e controle de uso.</p></li>
       </ul>
     </div>
@@ -1170,13 +1189,13 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <p>Não é falta de mercado nem de diploma. É falta de repertório jurídico: conhecer setores, práticas de mercado e estruturas contratuais o suficiente para reconhecer a oportunidade, falar a língua do cliente e conduzir a operação.</p>
     </div>
     <ol class="op-bar rv">
-      <li><span class="op-ic"><svg class="ico"><use href="#op-i-olho"></use></svg></span><small>Você não é visto</small>
+      <li><span class="op-ic"><svg class="ico"><use href="#op-i-olho"/></svg></span><small>Você não é visto</small>
         <h4>Sem repertório, não há o que mostrar.</h4>
         <p>Sem profundidade, você não produz conteúdo que demonstre autoridade, não é encontrado e não é lembrado. O negócio acontece — e o cliente procura quem ele já reconhece como especialista.</p></li>
-      <li><span class="op-ic"><svg class="ico"><use href="#op-i-sai"></use></svg></span><small>Você não converte</small>
+      <li><span class="op-ic"><svg class="ico"><use href="#op-i-sai"/></svg></span><small>Você não converte</small>
         <h4>Quando o cliente chega, a atuação rasa aparece.</h4>
         <p>Perguntas genéricas, proposta genérica, nenhum risco que ele ainda não tivesse visto. Sem perceber diferença, o cliente compara preço — e escolhe o menor.</p></li>
-      <li><span class="op-ic"><svg class="ico"><use href="#op-i-ia"></use></svg></span><small>Você é substituível</small>
+      <li><span class="op-ic"><svg class="ico"><use href="#op-i-ia"/></svg></span><small>Você é substituível</small>
         <h4>Se o seu trabalho é preencher modelo, uma IA faz em segundos.</h4>
         <p>E o cliente já sabe disso. O que nenhuma ferramenta entrega sozinha é a leitura da operação, a orientação da decisão e a responsabilidade técnica por ela.</p></li>
     </ol>
@@ -1188,20 +1207,20 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <h4>Quem enxerga só a minuta</h4>
       <span class="op-preco"><small>até</small>R$ 500</span>
       <ul>
-        <li><svg class="ico"><use href="#op-i-x"></use></svg>Começa pelo modelo e adapta nomes e valores</li>
-        <li><svg class="ico"><use href="#op-i-x"></use></svg>Entrega um documento e cobra por ele</li>
-        <li><svg class="ico"><use href="#op-i-x"></use></svg>É comparado a um modelo da internet — e a uma IA</li>
-        <li><svg class="ico"><use href="#op-i-x"></use></svg>Espera a demanda chegar e disputa preço</li>
+        <li><svg class="ico"><use href="#op-i-x"/></svg>Começa pelo modelo e adapta nomes e valores</li>
+        <li><svg class="ico"><use href="#op-i-x"/></svg>Entrega um documento e cobra por ele</li>
+        <li><svg class="ico"><use href="#op-i-x"/></svg>É comparado a um modelo da internet — e a uma IA</li>
+        <li><svg class="ico"><use href="#op-i-x"/></svg>Espera a demanda chegar e disputa preço</li>
       </ul>
     </div>
     <div class="b">
       <h4>Quem enxerga a operação</h4>
       <span class="op-preco">R$ 5.000 ou mais</span>
       <ul>
-        <li><svg class="ico"><use href="#i-check"></use></svg>Começa pelo negócio, pelos fatos e pelos riscos</li>
-        <li><svg class="ico"><use href="#i-check"></use></svg>Conduz a decisão do cliente e cobra por cada camada de atuação</li>
-        <li><svg class="ico"><use href="#i-check"></use></svg>É procurado pelo que sabe, não pelo preço que cobra</li>
-        <li><svg class="ico"><use href="#i-check"></use></svg>Reconhece oportunidades onde outros veem um papel</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Começa pelo negócio, pelos fatos e pelos riscos</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Conduz a decisão do cliente e cobra por cada camada de atuação</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>É procurado pelo que sabe, não pelo preço que cobra</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Reconhece oportunidades onde outros veem um papel</li>
       </ul>
     </div>
   </div>
@@ -1214,8 +1233,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <p><b>É exatamente essa base que o Método Jornada Contratual entrega.</b></p>
     </blockquote>
     <div class="op-acoes">
-      <a class="btn btn-gold" href="https://metodojornadacontratual.com.br/#oferta">Quero parar de perder oportunidades <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      <a class="op-link" href="https://metodojornadacontratual.com.br/#metodo">Veja como o método funciona <svg class="ico" aria-hidden="true"><use href="#i-down"></use></svg></a>
+      <a class="btn btn-gold" href="#oferta">Quero construir meu repertório <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      <a class="op-link" href="#metodo">Veja como o método funciona <svg class="ico" aria-hidden="true"><use href="#i-down"></use></svg></a>
     </div>
   </div>
 </div>
@@ -1266,31 +1285,31 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
 <!-- Seção 3 · COMO O MÉTODO RESOLVE -->
 <section class="sec sec-stone metodo with-bleed" id="metodo" data-ch="2" data-label="Método" aria-labelledby="t-metodo">
-  <svg class="compass compass-light" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"></use></svg>
+  <svg class="compass compass-light" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
   <div class="wrap wrap-a">
     <div class="bleed covers-bleed" aria-label="Materiais que acompanham o método">
     <div class="covers">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-ponto-zero.webp" width="424" height="600" alt="Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-conectam.webp" width="424" height="600" alt="Contratos que se Conectam" loading="lazy" decoding="async">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-atendimento.webp" width="424" height="600" alt="Guia Prático de Atendimento ao Cliente" loading="lazy" decoding="async">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-diligencias.webp" width="424" height="600" alt="Manual de Diligências Pré-Contratuais" loading="lazy" decoding="async">
-      <svg class="covers-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"></use></svg>
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-parecer.webp" width="424" height="600" alt="Parecer Jurídico como ferramenta estratégica" loading="lazy" decoding="async">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-estruturacao.webp" width="424" height="600" alt="Estruturação e Redação Contratual" loading="lazy" decoding="async">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-revisao.webp" width="424" height="600" alt="Técnicas para Revisão Contratual" loading="lazy" decoding="async">
-      <img src="./Método Jornada Contratual _ Arquivo Contratual_files/capa-assinatura.webp" width="424" height="600" alt="Apresentação e Assinatura de Contratos" loading="lazy" decoding="async">
+      <img src="assets/capa-ponto-zero.webp" width="424" height="600" alt="Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async">
+      <img src="assets/capa-conectam.webp" width="424" height="600" alt="Contratos que se Conectam" loading="lazy" decoding="async">
+      <img src="assets/capa-atendimento.webp" width="424" height="600" alt="Guia Prático de Atendimento ao Cliente" loading="lazy" decoding="async">
+      <img src="assets/capa-diligencias.webp" width="424" height="600" alt="Manual de Diligências Pré-Contratuais" loading="lazy" decoding="async">
+      <svg class="covers-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
+      <img src="assets/capa-parecer.webp" width="424" height="600" alt="Parecer Jurídico como ferramenta estratégica" loading="lazy" decoding="async">
+      <img src="assets/capa-estruturacao.webp" width="424" height="600" alt="Estruturação e Redação Contratual" loading="lazy" decoding="async">
+      <img src="assets/capa-revisao.webp" width="424" height="600" alt="Técnicas para Revisão Contratual" loading="lazy" decoding="async">
+      <img src="assets/capa-assinatura.webp" width="424" height="600" alt="Apresentação e Assinatura de Contratos" loading="lazy" decoding="async">
     </div>
     </div>
     <div class="col">
       <div class="rv">
         <span class="eyebrow">Base jurídica · onde o repertório começa</span>
-        <h2 class="h2" id="t-metodo"><b>Tenha domínio da atuação contratual,</b> para qualquer negócio que você precise formalizar.</h2>
+        <h2 class="h2" id="t-metodo"><b>Domine a atuação contratual,</b> para qualquer negócio que você precise formalizar.</h2>
         <p class="lead">Direito contratual não é um bloco único. Uma promessa de compra e venda de imóvel rural, uma parceria agrícola e uma cessão de direitos autorais partem do mesmo Código Civil e terminam em legislações especiais, exigências e práticas de mercado completamente diferentes. Enxergar essa diferença antes de redigir é o que separa o contrato que se sustenta do que apenas existe — e o advogado que é procurado pelo que sabe daquele que é comparado pelo preço.</p>
       </div>
       <ul class="pillars rv">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-scale"></use></svg><div><strong>Código Civil e legislação especial</strong><span>Além das regras gerais que valem para todo contrato, você estuda as normas específicas que incidem sobre cada operação — e que mudam o que pode ser pactuado, exigido e formalizado.</span></div></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-parecer"></use></svg><div><strong>Jurisprudências e prática de mercado</strong><span>Você aprende a interpretar as decisões dos tribunais e os usos de cada setor, e a transformar isso em cláusula — com mais estratégia e menos exposição a risco.</span></div></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-listcheck"></use></svg><div><strong>Exemplos e exercícios aplicados</strong><span>Casos para treinar a análise durante o curso e chegar à próxima demanda com o raciocínio já praticado — não diante do cliente.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg><div><strong>Código Civil e legislação especial</strong><span>Além das regras gerais que valem para todo contrato, você estuda as normas específicas que incidem sobre cada operação — e que mudam o que pode ser pactuado, exigido e formalizado.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-parecer"/></svg><div><strong>Jurisprudências e prática de mercado</strong><span>Você aprende a interpretar as decisões dos tribunais e os usos de cada setor, e a transformar isso em cláusula — com mais estratégia e menos exposição a risco.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-listcheck"/></svg><div><strong>Exemplos e exercícios aplicados</strong><span>Casos para treinar a análise durante o curso e chegar à próxima demanda com o raciocínio já praticado — não diante do cliente.</span></div></li>
       </ul>
     </div>
   </div>
@@ -1312,9 +1331,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </ol>
       <svg class="jornada-loop" viewBox="0 0 1200 86" role="img" aria-label="Uma etapa pode ser retomada quando uma premissa relevante muda">
         <defs>
-          <marker id="jl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></marker>
+          <marker id="jl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
         </defs>
-        <path d="M900 4 C900 58 580 70 508 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 7" stroke-linecap="round" opacity=".75" marker-end="url(#jl-arrow)"></path>
+        <path d="M900 4 C900 58 580 70 508 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 7" stroke-linecap="round" opacity=".75" marker-end="url(#jl-arrow)"/>
       </svg>
       <p class="jornada-note">Voltar uma etapa quando uma premissa relevante muda.</p>
     </div>
@@ -1331,7 +1350,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">O MÉTODO JORNADA CONTRATUAL</span>
-      <h2 class="h2" id="t-etapas"><b>São oito módulos de conteúdo</b> para guiar uma atuação estratégica e profissional</h2>
+      <h2 class="h2" id="t-etapas"><b>Oito módulos de conteúdo</b> para guiar uma atuação estratégica e profissional</h2>
       <p class="lead">Oito módulos que conectam fundamento jurídico, método e prática profissional. Cada um corresponde a uma parte do trabalho que vem antes, durante e depois da redação — a parte que a maioria dos advogados não executa, ou executa sem conseguir mostrar. Selecione um módulo para ver o que ele muda na sua atuação.</p>
     </div>
 
@@ -1348,14 +1367,14 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </div>
 
       <div class="stage-view" id="stageView">
-        <figure class="sv-photo"><img id="svMock" src="./Método Jornada Contratual _ Arquivo Contratual_files/miolo-1.webp" width="900" height="600" alt="Trecho do material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async"></figure>
+        <figure class="sv-photo"><img id="svMock" src="assets/miolo-1.webp" width="900" height="600" alt="Trecho do material do módulo 01: Ponto Zero — Fundamentos Essenciais do Direito Contratual" loading="lazy" decoding="async"></figure>
         <div class="sv-main">
-        <svg class="compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"></use></svg>
+        <svg class="compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
         <div class="sv-top">
           <span class="sv-count" id="svCount" aria-live="polite">Módulo 01 de 08</span>
           <div class="sv-nav">
-            <button type="button" id="svPrev" aria-label="Módulo anterior"><svg class="ico"><use href="#i-arrow-l"></use></svg></button>
-            <button type="button" id="svNext" aria-label="Próximo módulo"><svg class="ico"><use href="#i-arrow"></use></svg></button>
+            <button type="button" id="svPrev" aria-label="Módulo anterior"><svg class="ico"><use href="#i-arrow-l"/></svg></button>
+            <button type="button" id="svNext" aria-label="Próximo módulo"><svg class="ico"><use href="#i-arrow"/></svg></button>
           </div>
         </div>
 
@@ -1407,7 +1426,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
     <div class="etapas-foot rv">
       <p class="kicker">Cada módulo é uma camada de atuação que você aprende a executar — e a cobrar.</p>
-      <a class="btn btn-gold" href="https://metodojornadacontratual.com.br/#oferta">Quero começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      <a class="btn btn-gold" href="#oferta">Quero começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -1418,12 +1437,12 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="tools-grid">
       <div class="tools-photo rv" id="toolsCar">
         <div class="tc-stage">
-        <img class="tc-slide is-on" src="./Método Jornada Contratual _ Arquivo Contratual_files/ferramenta-1.webp" width="1000" height="987" alt="Ficha Estratégica de Atendimento" loading="lazy" decoding="async">
-        <img class="tc-slide" src="./Método Jornada Contratual _ Arquivo Contratual_files/ferramenta-2.webp" width="1000" height="987" alt="Checklist de Diligências Pré-Contratuais" loading="lazy" decoding="async">
-        <img class="tc-slide" src="./Método Jornada Contratual _ Arquivo Contratual_files/ferramenta-3.webp" width="1000" height="987" alt="Modelo de Parecer Jurídico" loading="lazy" decoding="async">
-        <img class="tc-slide" src="./Método Jornada Contratual _ Arquivo Contratual_files/ferramenta-4.webp" width="1000" height="987" alt="Guia de Estruturação e Redação Contratual" loading="lazy" decoding="async">
-        <img class="tc-slide" src="./Método Jornada Contratual _ Arquivo Contratual_files/ferramenta-5.webp" width="1000" height="987" alt="Checklist de Revisão Contratual" loading="lazy" decoding="async">
-        <img class="tc-slide" src="./Método Jornada Contratual _ Arquivo Contratual_files/ferramenta-6.webp" width="1000" height="987" alt="Checklist de Entrega e Formalização" loading="lazy" decoding="async">
+        <img class="tc-slide is-on" src="assets/ferramenta-1.webp" width="1000" height="987" alt="Ficha Estratégica de Atendimento" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-2.webp" width="1000" height="987" alt="Checklist de Diligências Pré-Contratuais" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-3.webp" width="1000" height="987" alt="Modelo de Parecer Jurídico" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-4.webp" width="1000" height="987" alt="Guia de Estruturação e Redação Contratual" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-5.webp" width="1000" height="987" alt="Checklist de Revisão Contratual" loading="lazy" decoding="async">
+        <img class="tc-slide" src="assets/ferramenta-6.webp" width="1000" height="987" alt="Checklist de Entrega e Formalização" loading="lazy" decoding="async">
         </div>
         <div class="formats" aria-label="Formatos disponíveis"><span>PDF</span><span>DOCX</span></div>
         <div class="tc-dots" role="tablist" aria-label="Ferramentas do método">
@@ -1442,12 +1461,12 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
           <p class="lead">Da primeira conversa à conferência do contrato final, as ferramentas da Jornada registram análises, verificações e decisões. O trabalho que antes ficava invisível passa a ter forma de entrega — e sustenta a sua proposta de honorários.</p>
         </div>
         <ul class="tool-list rv">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-route"></use></svg><strong>Roteiros e documentos de contratação</strong><span>Organize as etapas do serviço e use a proposta e o contrato de honorários para registrar escopo, entregas e condições.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-users"></use></svg><strong>Ficha estratégica de atendimento</strong><span>Registre objetivos, participantes, documentos, pendências e limites da demanda desde a primeira conversa.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-clip"></use></svg><strong>Checklist de diligências pré-contratuais</strong><span>Planeje verificações e reúna evidências sobre partes, bens, garantias e condições da operação.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-parecer"></use></svg><strong>Modelo de parecer jurídico</strong><span>Apresente premissas, riscos, alternativas e recomendações de forma útil à decisão do cliente.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-pen"></use></svg><strong>Estrutura-base de redação contratual</strong><span>Organize obrigações, etapas de pagamento, responsabilidades e encerramento antes de escrever as cláusulas.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-listcheck"></use></svg><strong>Checklist de estruturação e revisão</strong><span>Confira se texto, anexos e decisões são coerentes e se o contrato funciona nos cenários previstos.</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg><strong>Roteiros e documentos de contratação</strong><span>Organize as etapas do serviço e use a proposta e o contrato de honorários para registrar escopo, entregas e condições.</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><strong>Ficha estratégica de atendimento</strong><span>Registre objetivos, participantes, documentos, pendências e limites da demanda desde a primeira conversa.</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><strong>Checklist de diligências pré-contratuais</strong><span>Planeje verificações e reúna evidências sobre partes, bens, garantias e condições da operação.</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-parecer"/></svg><strong>Modelo de parecer jurídico</strong><span>Apresente premissas, riscos, alternativas e recomendações de forma útil à decisão do cliente.</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><strong>Estrutura-base de redação contratual</strong><span>Organize obrigações, etapas de pagamento, responsabilidades e encerramento antes de escrever as cláusulas.</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-listcheck"/></svg><strong>Checklist de estruturação e revisão</strong><span>Confira se texto, anexos e decisões são coerentes e se o contrato funciona nos cenários previstos.</span></li>
         </ul>
         <p class="tools-close rv"><b>Apresente ao cliente o trabalho que ele está contratando.</b> Use as ferramentas para definir escopo, justificar honorários e demonstrar quais análises, decisões e documentos fazem parte da entrega. É assim que o preço deixa de ser a única coisa a comparar.</p>
       </div>
@@ -1456,7 +1475,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="assist rv" id="assistente">
       <figure class="assist-media">
         <div class="ai-chat">
-          <div class="ai-head"><img src="./Método Jornada Contratual _ Arquivo Contratual_files/ac-emblem.webp" width="512" height="512" alt="" loading="lazy" decoding="async"><div><strong>Assistente de IA do curso</strong><span>Treinado nos materiais do método</span></div></div>
+          <div class="ai-head"><img src="assets/ac-emblem.webp" width="512" height="512" alt="" loading="lazy" decoding="async"><div><strong>JARVIS - Assistente de IA da Jornada</strong><span>Treinado nos materiais do método</span></div></div>
           <div class="ai-thread">
             <p class="ai-q">Quais diligências eu preciso fazer antes de redigir uma promessa de compra e venda de imóvel rural?</p>
             <div class="ai-a">
@@ -1475,12 +1494,12 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <figcaption class="ai-cap">Exemplo de consulta ao Assistente Virtual da Jornada.</figcaption>
       </figure>
       <div class="assist-body">
-        <span class="eyebrow">use a tecnologia a seu favor</span>
-        <h2 class="h2"><b>Uma IA treinada em contratos</b> para te auxiliar 24H</h2>
+        <span class="eyebrow">Assistente Virtual da Jornada</span>
+        <h2 class="h2"><b>Uma IA treinada</b> nos materiais do método</h2>
         <ul class="assist-facts">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-spark"></use></svg>Treinada com os materiais e a metodologia do Arquivo Contratual para apoiar consultas e a aplicação do conteúdo.</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"></use></svg>Disponível 24 horas por dia para auxiliar sua rotina contratual.</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Suporte humano pelo WhatsApp para dúvidas sobre acesso, materiais e utilização da plataforma.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Treinada com os materiais e a metodologia do Arquivo Contratual para apoiar consultas e a aplicação do conteúdo.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Disponível 24 horas por dia para auxiliar sua rotina contratual.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Suporte humano pelo WhatsApp para dúvidas sobre acesso, materiais e utilização da plataforma.</li>
         </ul>
         <p class="assist-note">A IA é uma ferramenta de apoio e não substitui a análise jurídica do profissional responsável pela demanda.</p>
       </div>
@@ -1490,7 +1509,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
 <!-- 5/7 · LABORATÓRIO -->
 <section class="sec sec-stone with-bleed" id="laboratorio" data-ch="5" data-label="Laboratório" aria-labelledby="t-lab">
-  <div class="bleed bleed-top"><img src="./Método Jornada Contratual _ Arquivo Contratual_files/laboratorio.webp" width="652" height="736" alt="Laboratório de Contratos exibido em monitor, tablet e celular, com manual de utilização e modelos editáveis" loading="lazy" decoding="async"></div>
+  <div class="bleed bleed-top"><img src="assets/laboratorio.webp" width="652" height="736" alt="Laboratório de Contratos exibido em monitor, tablet e celular, com manual de utilização e modelos editáveis" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="col">
       <div class="rv">
@@ -1499,9 +1518,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <p class="lead">Cada coleção reúne manual e modelo de uma operação de mercado — as mesmas que acontecem todos os dias ao redor do seu escritório. É esse repertório que permite produzir conteúdo com profundidade, ser encontrado por quem precisa, conversar com o cliente na língua do negócio dele e reconhecer serviços que você pode oferecer. São 24 coleções previstas, com 14 já disponíveis.</p>
       </div>
       <ul class="lab-contains rv">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-book"></use></svg><strong>Fundamentação para entender a operação</strong><span>Estude os fundamentos jurídicos, as práticas do setor e as decisões que orientam cláusulas, responsabilidades e riscos.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-word"></use></svg><strong>Modelo editável para aplicar o raciocínio</strong><span>Adapte o instrumento às decisões e aos documentos de cada caso, com apoio do manual para compreender suas cláusulas.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-spark"></use></svg><strong>Repertório para se posicionar</strong><span>Use o conhecimento das operações para criar conteúdo, fortalecer seu posicionamento, ampliar sua rede de contatos e identificar oportunidades de captação de clientes.</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg><strong>Fundamentação para entender a operação</strong><span>Estude os fundamentos jurídicos, as práticas do setor e as decisões que orientam cláusulas, responsabilidades e riscos.</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-word"/></svg><strong>Modelo editável para aplicar o raciocínio</strong><span>Adapte o instrumento às decisões e aos documentos de cada caso, com apoio do manual para compreender suas cláusulas.</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><strong>Repertório para se posicionar</strong><span>Use o conhecimento das operações para criar conteúdo, fortalecer seu posicionamento, ampliar sua rede de contatos e identificar oportunidades de captação de clientes.</span></li>
       </ul>
     </div>
 
@@ -1510,7 +1529,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <div>
           <h3>14 coleções disponíveis. Alunos sugerem as próximas 10.</h3>
           <p>O Laboratório prevê 24 coleções: 14 já liberadas e <b>10 a produzir com sugestões dos alunos</b>.</p>
-          <span class="open-tag"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg>Você indica os próximos contratos</span>
+          <span class="open-tag"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>Você indica os próximos contratos</span>
         </div>
         <div class="meter" aria-label="14 de 24 coleções liberadas">
           <div class="meter-row"><span>Coleções liberadas</span><span><strong id="meterNum">14</strong> de 24</span></div>
@@ -1529,37 +1548,37 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </div>
 
       <ul class="board" id="boardGrid">
-        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Promessa de compra e venda</b><small>Imobiliário</small></div></li>
-        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Corretagem imobiliária</b><small>Imobiliário</small></div></li>
-        <li class="slot" data-s="agro"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Arrendamento rural</b><small>Agronegócio</small></div></li>
-        <li class="slot" data-s="agro"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Parceria pecuária</b><small>Agronegócio</small></div></li>
-        <li class="slot" data-s="obra"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Empreitada civil</b><small>Construção civil</small></div></li>
-        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Locação comercial</b><small>Imobiliário</small></div></li>
-        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Locação residencial</b><small>Imobiliário</small></div></li>
-        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Sublocação</b><small>Imobiliário</small></div></li>
-        <li class="slot" data-s="serv"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Facilities</b><small>Serviços</small></div></li>
-        <li class="slot" data-s="pi"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Cessão de uso de imagem</b><small>Propriedade intelectual</small></div></li>
-        <li class="slot" data-s="serv"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Design de interiores</b><small>Serviços</small></div></li>
-        <li class="slot" data-s="com"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Cessão de crédito</b><small>Comercial</small></div></li>
-        <li class="slot" data-s="pi"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Cessão de direitos autorais</b><small>Propriedade intelectual</small></div></li>
-        <li class="slot" data-s="com"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg><div><b>Representação comercial</b><small>Comercial</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
-        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Promessa de compra e venda</b><small>Imobiliário</small></div></li>
+        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Corretagem imobiliária</b><small>Imobiliário</small></div></li>
+        <li class="slot" data-s="agro"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Arrendamento rural</b><small>Agronegócio</small></div></li>
+        <li class="slot" data-s="agro"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Parceria pecuária</b><small>Agronegócio</small></div></li>
+        <li class="slot" data-s="obra"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Empreitada civil</b><small>Construção civil</small></div></li>
+        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Locação comercial</b><small>Imobiliário</small></div></li>
+        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Locação residencial</b><small>Imobiliário</small></div></li>
+        <li class="slot" data-s="imob"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Sublocação</b><small>Imobiliário</small></div></li>
+        <li class="slot" data-s="serv"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Facilities</b><small>Serviços</small></div></li>
+        <li class="slot" data-s="pi"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Cessão de uso de imagem</b><small>Propriedade intelectual</small></div></li>
+        <li class="slot" data-s="serv"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Design de interiores</b><small>Serviços</small></div></li>
+        <li class="slot" data-s="com"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Cessão de crédito</b><small>Comercial</small></div></li>
+        <li class="slot" data-s="pi"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Cessão de direitos autorais</b><small>Propriedade intelectual</small></div></li>
+        <li class="slot" data-s="com"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Representação comercial</b><small>Comercial</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
+        <li class="slot soon"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><div><b>Próxima coleção</b><small>Alunos sugerem o contrato</small></div></li>
       </ul>
 
-      <p class="board-open"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg><span><b>As 10 próximas coleções recebem sugestões dos alunos.</b> Dentro da plataforma, indique operações que chegam ao seu escritório e contratos que gostaria de estudar. As indicações orientam a ordem de produção. As novas coleções entram no seu acesso sem custo adicional, durante o período contratado.</span></p>
+      <p class="board-open"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg><span><b>As 10 próximas coleções recebem sugestões dos alunos.</b> Dentro da plataforma, indique operações que chegam ao seu escritório e contratos que gostaria de estudar. As indicações orientam a ordem de produção. As novas coleções entram no seu acesso sem custo adicional, durante o período contratado.</span></p>
 
       <div class="board-note">
         <p><b>O Laboratório amplia seu repertório. O método amplia sua capacidade de análise.</b> Aplique as etapas a contratos de diferentes nichos, inclusive aos que ainda não estão nas coleções, e investigue as particularidades de cada operação.</p>
-        <a class="btn btn-gold" href="https://metodojornadacontratual.com.br/#oferta">Quero aumentar meu repertório jurídico <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn-gold" href="#oferta">Quero estudar essas operações <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
@@ -1570,22 +1589,22 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <div class="wrap">
     <div class="proof-head rv">
       <div class="sec-head">
-        <span class="eyebrow">Pare de perder tempo, Doutor(a)</span>
-        <h2 class="h2" id="t-res"><b>A cada hora que se passa,</b> seus colegas estão um passo à sua frente</h2>
-        <p class="lead">Relatos espontâneos sobre a profundidade dos materiais, a organização do trabalho e a segurança para atender as demandas.</p>
+        <span class="eyebrow">Quem já entrou, percebeu</span>
+        <h2 class="h2" id="t-res"><b>Como os alunos descrevem</b> a experiência com a Jornada</h2>
+        <p class="lead">Relatos espontâneos sobre a profundidade dos materiais, a organização do trabalho e a segurança para atender as primeiras demandas.</p>
       </div>
     </div>
 
     <div class="prints-feature rv">
       <button type="button" class="prints-shot js-prints" aria-label="Ampliar os prints originais">
-        <img src="./Método Jornada Contratual _ Arquivo Contratual_files/depoimentos-prints.webp" width="847" height="1024" alt="Prints de mensagens de alunos elogiando o Método Jornada Contratual" loading="lazy" decoding="async">
-        <span class="prints-zoom"><svg class="ico" aria-hidden="true"><use href="#i-image"></use></svg>Ampliar</span>
+        <img src="assets/depoimentos-prints.webp" width="847" height="1024" alt="Prints de mensagens de alunos elogiando o Método Jornada Contratual" loading="lazy" decoding="async">
+        <span class="prints-zoom"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Ampliar</span>
       </button>
       <div class="prints-copy">
         <span class="eyebrow">Prints originais</span>
         <h3>Leia as mensagens de quem acessou os materiais.</h3>
         <p>Mensagens recebidas no Instagram, no WhatsApp e no direct. Amplie os prints para conferir os relatos em seu contexto original.</p>
-        <button type="button" class="btn btn-line js-prints">Ver os prints em tamanho real <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+        <button type="button" class="btn btn-line js-prints">Ver os prints em tamanho real <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
       </div>
     </div>
 
@@ -1593,60 +1612,60 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
     <div class="proof">
       <figure class="msg msg-ig">
-        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-ig"></use></svg>Comentários no Instagram</figcaption>
-        <div class="cmt"><img class="av" src="./Método Jornada Contratual _ Arquivo Contratual_files/av-mimi.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">mimi_prado <svg class="hrt" aria-hidden="true"><use href="#hrt"></use></svg></span><span class="txt">Conteúdo muito completo e aprofundado, recomendo demais 👏👏</span><span class="act">Responder</span></div>
-        <div class="cmt"><img class="av" src="./Método Jornada Contratual _ Arquivo Contratual_files/av-farias.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">fariashenriqueleal <svg class="hrt" aria-hidden="true"><use href="#hrt"></use></svg></span><span class="txt">Muito bom!! Recomendo para todos os advogados!</span><span class="act">Responder</span></div>
-        <div class="cmt"><img class="av" src="./Método Jornada Contratual _ Arquivo Contratual_files/av-rafael.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">adv.rafaelpastorin <svg class="hrt" aria-hidden="true"><use href="#hrt"></use></svg></span><span class="txt">Para quem quer elevar o nível.</span><span class="act">Responder</span></div>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>Comentários no Instagram</figcaption>
+        <div class="cmt"><img class="av" src="assets/av-mimi.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">mimi_prado <svg class="hrt" aria-hidden="true"><use href="#hrt"/></svg></span><span class="txt">Conteúdo muito completo e aprofundado, recomendo demais 👏👏</span><span class="act">Responder</span></div>
+        <div class="cmt"><img class="av" src="assets/av-farias.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">fariashenriqueleal <svg class="hrt" aria-hidden="true"><use href="#hrt"/></svg></span><span class="txt">Muito bom!! Recomendo para todos os advogados!</span><span class="act">Responder</span></div>
+        <div class="cmt"><img class="av" src="assets/av-rafael.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">adv.rafaelpastorin <svg class="hrt" aria-hidden="true"><use href="#hrt"/></svg></span><span class="txt">Para quem quer elevar o nível.</span><span class="act">Responder</span></div>
       </figure>
 
       <figure class="msg msg-light">
-        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Mensagem direta</figcaption>
-        <div class="bub-row"><img class="av" src="./Método Jornada Contratual _ Arquivo Contratual_files/av-est.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Excelente. Não é um conteúdo raso. Muito robusto.</span><span class="bub">Minha área preferida é a de Contratos.</span><span class="bub">Estou sempre estudando.</span></div></div>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-est.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Excelente. Não é um conteúdo raso. Muito robusto.</span><span class="bub">Minha área preferida é a de Contratos.</span><span class="bub">Estou sempre estudando.</span></div></div>
       </figure>
 
       <figure class="msg msg-wd">
-        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-whats"></use></svg>WhatsApp</figcaption>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp</figcaption>
         <span class="bub">Gabriel, localizei aqui. De fato, o material é excelente, me ajudou muito a ganhar tempo na implementação desse serviço de forma escalável. Me ajudou a organizar o conhecimento que eu já tinha, me deu novos insights e acelerou meu processo interno de trabalho.<span class="t">10:50</span></span>
         <span class="bub bub-out">Que bom. O objetivo é exatamente esse.</span>
       </figure>
 
       <figure class="msg msg-light">
-        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Mensagem direta · Hoje 11:46</figcaption>
-        <div class="bub-row"><img class="av" src="./Método Jornada Contratual _ Arquivo Contratual_files/av-ola.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Olá, boa tarde 😊 Passando para dizer que estou amando a jornada contratual, é muito completa, o assunto é bem aprofundado, estou gostando muito. Sou recém-aprovada na OAB e escolhi seguir a advocacia contratual, e o seu curso está me dando uma excelente base para começar. Vale muito mais que o preço que foi pago! Parabéns e obrigada 🙌🙌</span></div></div>
-        <span class="react" aria-label="Reagiu com coração"><svg class="hrt"><use href="#hrt"></use></svg></span>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta · Hoje 11:46</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-ola.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Olá, boa tarde 😊 Passando para dizer que estou amando a jornada contratual, é muito completa, o assunto é bem aprofundado, estou gostando muito. Sou recém-aprovada na OAB e escolhi seguir a advocacia contratual, e o seu curso está me dando uma excelente base para começar. Vale muito mais que o preço que foi pago! Parabéns e obrigada 🙌🙌</span></div></div>
+        <span class="react" aria-label="Reagiu com coração"><svg class="hrt"><use href="#hrt"/></svg></span>
       </figure>
 
       <figure class="msg msg-wa">
-        <div class="wa-bar" aria-hidden="true"><span class="av av-g"><svg class="ico"><use href="#i-person"></use></svg></span><i></i></div>
-        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-whats"></use></svg>WhatsApp</figcaption>
+        <div class="wa-bar" aria-hidden="true"><span class="av av-g"><svg class="ico"><use href="#i-person"/></svg></span><i></i></div>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp</figcaption>
         <span class="day">Ontem</span>
         <span class="bub bub-in">Boa noite! Acabei de analisar o material de representação comercial. O PDF anexo está excelente! Apresenta informações relevantes de forma clara e de fácil compreensão. Parabéns pelo conteúdo!</span>
       </figure>
 
       <figure class="msg msg-light">
-        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Mensagem direta</figcaption>
-        <div class="bub-row"><img class="av" src="./Método Jornada Contratual _ Arquivo Contratual_files/av-dm1.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Tenho dó de quem chega depois</span><span class="bub">Vou atender um já essa semana.</span><span class="bub">Revisão de contrato social.</span></div></div>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-dm1.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Tenho dó de quem chega depois</span><span class="bub">Vou atender um já essa semana.</span><span class="bub">Revisão de contrato social.</span></div></div>
       </figure>
 
       <figure class="msg msg-light">
-        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Mensagem direta</figcaption>
-        <div class="bub-row"><img class="av" src="./Método Jornada Contratual _ Arquivo Contratual_files/av-ans.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub" style="font-size:1.12rem">Ansiosa pelos próximos contratos!</span></div></div>
-        <span class="react" aria-label="Reagiu com coração"><svg class="hrt"><use href="#hrt"></use></svg></span>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-ans.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub" style="font-size:1.12rem">Ansiosa pelos próximos contratos!</span></div></div>
+        <span class="react" aria-label="Reagiu com coração"><svg class="hrt"><use href="#hrt"/></svg></span>
       </figure>
     </div>
 
     <div class="proof-foot rv">
       <p><span class="gold-rule" aria-hidden="true"></span>Relatos sobre estudo, organização e aplicação dos materiais.</p>
-      <button class="link-btn js-prints" type="button" id="openPrints"><svg class="ico" aria-hidden="true"><use href="#i-image"></use></svg>Ver os prints originais</button>
+      <button class="link-btn js-prints" type="button" id="openPrints"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Ver os prints originais</button>
     </div>
   </div>
 </section>
 
 <!-- Autor -->
 <section class="sec dark autor" id="autor" data-ch="6" data-label="Resultados" aria-labelledby="t-autor">
-  <img class="pena" src="./Método Jornada Contratual _ Arquivo Contratual_files/pena.webp" width="493" height="732" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  <img class="pena" src="assets/pena.webp" width="493" height="732" alt="" aria-hidden="true" loading="lazy" decoding="async">
   <div class="wrap autor-grid">
-    <div class="autor-photo px rv"><img src="./Método Jornada Contratual _ Arquivo Contratual_files/gabriel.webp" width="427" height="547" alt="Gabriel, criador do Arquivo Contratual e do Método Jornada Contratual" loading="lazy" decoding="async"></div>
+    <div class="autor-photo px rv"><img src="assets/gabriel.webp" width="427" height="547" alt="Gabriel, criador do Arquivo Contratual e do Método Jornada Contratual" loading="lazy" decoding="async"></div>
     <div class="autor-body rv">
       <span class="eyebrow">Quem criou tudo isso</span>
       <h2 class="h2" id="t-autor"><b>Eu sou o Gabriel</b></h2>
@@ -1665,36 +1684,36 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
 <!-- 7/7 · OFERTA -->
 <section class="sec sec-stone oferta" id="oferta" data-ch="7" data-label="Oferta" aria-labelledby="t-oferta">
-  <svg class="compass compass-light" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"></use></svg>
+  <svg class="compass compass-light" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
   <div class="wrap">
     <div class="offer">
       <div class="offer-head rv">
-        <span class="eyebrow">comece agora</span>
-        <h2 class="h2" id="t-oferta"><b>Em uma semana você estará pronto(a)</b> para se posicionar e atuar com negócios de alto valor</h2>
-        <p class="lead">Atender operações de diferentes setores, reconhecer oportunidades, conduzir a demanda do atendimento à assinatura e dimensionar seus honorários pelo escopo e pela complexidade real do trabalho — não pelo preço de uma minuta.</p>
+        <span class="eyebrow">Toda a entrega</span>
+        <h2 class="h2" id="t-oferta"><b>Repertório e método</b> para atuar com negócios de alto valor</h2>
+        <p class="lead">Uma formação completa para atender operações de diferentes setores: reconhecer oportunidades, conduzir a demanda do atendimento à assinatura e dimensionar seus honorários pelo escopo e pela complexidade real do trabalho — não pelo preço de uma minuta.</p>
       </div>
 
       <div class="recap rv">
-        <div class="recap-hd"><span>Tudo o que você recebe</span><span>Valor</span></div>
+        <div class="recap-hd"><span>O que você recebe</span><span>Valor</span></div>
         <ul class="recap-list">
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>Método Jornada Contratual — 8 módulos de formação jurídica</strong><span class="rd">Uma formação completa que aborda desde os fundamentos do direito contratual até cada etapa do trabalho: atendimento e honorários, diligências, parecer, estruturação e redação, revisão e entrega.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Método Jornada Contratual &mdash; 8 módulos de formação jurídica</strong><span class="rd">O processo de trabalho em seis etapas e os fundamentos jurídicos de cada uma: atendimento e honorários, diligências, parecer, estruturação e redação, revisão e entrega.</span></div></div>
             <div class="rvl"><s>R$ 997,90</s></div>
           </li>
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>Laboratório de Contratos com 24 coleções contratuais</strong><span class="rd">Cada contrato acompanha um manual prático fundamentado com legislação aplicável, cláusulas essenciais e riscos — o repertório que permite conversar com o cliente sobre o negócio dele e se posicionar como especialista.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Laboratório de Contratos com 24 coleções contratuais</strong><span class="rd">Cada contrato acompanha um manual prático fundamentado com legislação aplicável, cláusulas essenciais e riscos — o repertório que permite conversar com o cliente sobre o negócio dele.</span></div></div>
             <div class="rvl"><s>R$ 997,90</s></div>
           </li>
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>Questionários, checklists e documentos prontos para a atuação contratual</strong><span class="rd">Ferramentas para facilidar a sua rotina e tornar visível — e cobrável — o trabalho que acontece antes do contrato. Editáveis em PDF e DOCX, prontos para utilizar.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Questionários, checklists e documentos prontos para a atuação contratual</strong><span class="rd">Tornam visível — e cobrável — o trabalho que acontece antes do contrato. Editáveis em PDF, Canva e DOCX, prontos para apresentar ao cliente.</span></div></div>
             <div class="rvl"><s>R$ 297,90</s></div>
           </li>
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>Uma inteligência artificial treinada para contratos</strong><span class="rd">Treinada com o método para te auxiliar 24 horas por dia nas demandas mais simples às mais complexas.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Uma inteligência artificial treinada para contratos</strong><span class="rd">Consulta aos materiais do método a qualquer hora, para localizar orientações e apoiar a aplicação do conteúdo na demanda que está na sua mesa.</span></div></div>
             <div class="rvl"><s>R$ 147,90</s></div>
           </li>
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>2 anos de acesso, atualizações e suporte pelo WhatsApp</strong><span class="rd">Tempo para aplicar em demandas reais, com as novas coleções liberadas durante o período e atendimento humano para dúvidas de acesso e uso.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>2 anos de acesso, atualizações e suporte pelo WhatsApp</strong><span class="rd">Tempo para aplicar em demandas reais, com as novas coleções liberadas durante o período e atendimento humano para dúvidas de acesso e uso.</span></div></div>
             <div class="rvl"><em>Incluído</em></div>
           </li>
         </ul>
@@ -1707,24 +1726,24 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <p class="offer-turn rv">Mas o acesso a tudo isso, hoje, não custa esse valor.</p>
 
       <aside class="ticket rv" aria-labelledby="t-price">
-        <p class="price-lbl" id="t-price"><span class="was-ok">Acesso completo · 2 anos</span><span class="was">De <s>R$ 2.441,60</s></span>Hoje o acesso custa</p>
-        <p class="price" aria-label="12 parcelas de 50 reais e 60 centavos"><span class="cur">12 x R$</span><span class="val">50,60</span></p>
+        <p class="price-lbl" id="t-price"><span class="was-ok">Acesso completo &middot; 2 anos</span>Hoje o acesso custa</p>
+        <p class="price" aria-label="12 parcelas de 50 reais e 59 centavos"><span class="cur">12 x R$</span><span class="val">50,59</span></p>
         <p class="inst">ou <b>R$ 497,90 à vista</b></p>
-        <p class="permes">São <b>R$ 0,68 por dia</b> ao longo dos 2 anos de acesso. Menos que um café.</p>
+        <p class="permes">R$ 20,75 por mês ao longo dos <b>2 anos de acesso</b>.</p>
         <!-- Para exibir as bandeiras oficiais, troque os itens abaixo pelos SVG das marcas. -->
         <ul class="pay" aria-label="Formas de pagamento e segurança">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-lock"></use></svg>Checkout seguro da Hubla</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg>Cartão em até 12x</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"></use></svg>Acesso imediato</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Checkout seguro da Hubla</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Cartão em até 12x</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
         </ul>
-        <a class="btn btn-gold btn-block" data-checkout="" href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero cobrar como especialista <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero cobrar pelo trabalho inteiro <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <ul class="ticket-meta">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"></use></svg>Liberação logo após a confirmação do pagamento</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>7 dias para desistir e receber o valor de volta</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Liberação logo após a confirmação do pagamento</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>7 dias para desistir e receber o valor de volta</li>
         </ul>
         <figure class="tquote">
           <blockquote>Vale muito mais que o preço que foi pago.</blockquote>
-          <figcaption>Aluna da Jornada · mensagem recebida no direct</figcaption>
+          <figcaption>Aluna da Jornada &middot; mensagem recebida no direct</figcaption>
         </figure>
       </aside>
 
@@ -1733,29 +1752,20 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <p class="pb-lead">Esta página começou com uma pergunta: por que alguns advogados cobram R$&nbsp;5.000 ou mais por um contrato e outros não passam de R$&nbsp;500?</p>
         <p>A diferença entre as duas respostas é exatamente o conteúdo deste curso. Uma única demanda conduzida pelo método — com a diligência cobrada em separado e o honorário dimensionado pela complexidade da operação — pode devolver o valor do acesso muitas vezes.</p>
         <p>E o acesso não vale por uma demanda. <b>São dois anos, aplicados em todas as que chegarem.</b></p>
-        <div class="roi">
-          <label for="roi-range">Faça a conta: quanto você cobraria a mais por <u>uma</u> demanda conduzida pelas seis etapas?</label>
-          <div class="roi-row"><input type="range" id="roi-range" min="500" max="5000" step="250" value="1500" aria-describedby="roi-fine"><output id="roi-out" for="roi-range">R$ 1.500</output></div>
-          <div class="roi-res">
-            <div><span>O acesso se paga</span><strong id="roi-x">3,0x</strong><span>em uma única demanda</span></div>
-            <div><span>Se acontecer uma vez por trimestre</span><strong id="roi-y">R$ 12.000</strong><span>a mais em 2 anos de acesso</span></div>
-          </div>
-          <p class="roi-fine" id="roi-fine">Simulação ilustrativa, não é promessa de resultado. Honorários dependem da sua aplicação, da sua captação e dos parâmetros éticos da advocacia.</p>
-        </div>
       </div>
     </div>
 
     <div class="guarantee rv" id="garantia">
       <svg class="seal" viewBox="0 0 160 160" role="img" aria-label="Selo de 7 dias">
         <defs>
-          <lineargradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A566"></stop><stop offset=".5" stop-color="#8E6B32"></stop><stop offset="1" stop-color="#B99658"></stop></lineargradient>
-          <path id="sp" d="M22 80a58 58 0 0 1 116 0"></path>
-          <path id="sp2" d="M138 80a58 58 0 0 1-116 0"></path>
+          <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A566"/><stop offset=".5" stop-color="#8E6B32"/><stop offset="1" stop-color="#B99658"/></linearGradient>
+          <path id="sp" d="M22 80a58 58 0 0 1 116 0"/>
+          <path id="sp2" d="M138 80a58 58 0 0 1-116 0"/>
         </defs>
-        <circle cx="80" cy="80" r="76" fill="none" stroke="url(#sg)" stroke-width="2"></circle>
-        <circle cx="80" cy="80" r="44" fill="none" stroke="rgba(198,163,103,.45)" stroke-width="1"></circle>
-        <text font-size="8.6" font-weight="600" letter-spacing="1.5" fill="#D5B071" text-anchor="middle"><textpath href="#sp" startOffset="50%">DIREITO DE ARREPENDIMENTO</textpath></text>
-        <text font-size="7.8" font-weight="600" letter-spacing="1.6" fill="rgba(213,176,113,.7)" text-anchor="middle"><textpath href="#sp2" startOffset="50%">ARQUIVO CONTRATUAL</textpath></text>
+        <circle cx="80" cy="80" r="76" fill="none" stroke="url(#sg)" stroke-width="2"/>
+        <circle cx="80" cy="80" r="44" fill="none" stroke="rgba(198,163,103,.45)" stroke-width="1"/>
+        <text font-size="8.6" font-weight="600" letter-spacing="1.5" fill="#D5B071" text-anchor="middle"><textPath href="#sp" startOffset="50%">DIREITO DE ARREPENDIMENTO</textPath></text>
+        <text font-size="7.8" font-weight="600" letter-spacing="1.6" fill="rgba(213,176,113,.7)" text-anchor="middle"><textPath href="#sp2" startOffset="50%">ARQUIVO CONTRATUAL</textPath></text>
         <text x="80" y="88" text-anchor="middle" font-size="44" font-weight="800" fill="url(#sg)" letter-spacing="-2">7</text>
         <text x="80" y="106" text-anchor="middle" font-size="11" font-weight="600" fill="#E9E3D6" letter-spacing="3">DIAS</text>
       </svg>
@@ -1774,11 +1784,10 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <span class="eyebrow">Dúvidas frequentes</span>
       <h2 class="h2" id="t-faq"><b>Antes de</b> entrar</h2>
       <p>Confira o formato do curso, os materiais incluídos e as condições de acesso. Para outras dúvidas sobre a compra, fale com o atendimento.</p>
-      <a class="link-btn" data-whats="" href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-whats"></use></svg>Perguntar pelo WhatsApp</a>
+      <a class="link-btn" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>Perguntar pelo WhatsApp</a>
     </div>
     <div class="faq rv">
       <details><summary>O curso pode me ajudar a ganhar mais com contratos?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Esse é o objetivo. Quase toda operação que movimenta dinheiro e patrimônio passa por um contrato, e o advogado que entende a operação é remunerado por todo o trabalho que vem antes da redação. A Jornada constrói o repertório e o método para isso: analisar operações, definir entregas, estruturar a proposta de honorários e conduzir a demanda até a assinatura. Não há promessa de faturamento: o resultado depende da aplicação do conteúdo, da sua captação de clientes e das contratações realizadas, e os honorários seguem os parâmetros éticos da advocacia.</p></div></details>
-      <details><summary>Por que o investimento é R$ 497,90?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Porque a Jornada não é um pacote de modelos. São oito módulos de formação, quatorze coleções fundamentadas (com mais dez a caminho), as ferramentas de atuação, a IA e dois anos de acesso. Uma única demanda conduzida pelo método, com diligência e parecer apresentados como entregas, pode superar esse valor várias vezes. E você tem 7 dias para decidir com o material na mão.</p></div></details>
       <details><summary>Ainda não tenho clientes de contratos. Faz sentido para mim?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Faz. Sem repertório, não há o que mostrar — e o cliente não encontra quem não demonstra conhecimento. O estudo das operações do Laboratório dá base para produzir conteúdo com profundidade, conversar com empresários e produtores na língua do negócio deles e reconhecer demandas que já existem na sua rede. Quando o primeiro cliente chegar, você terá um processo de trabalho para atendê-lo do início ao fim.</p></div></details>
       <details><summary>Estou começando na advocacia. O curso serve para mim?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Sim. O primeiro módulo, Ponto Zero, organiza os fundamentos do direito contratual antes de entrar no método, e as ferramentas acompanham cada etapa do trabalho. Para quem já atua, os módulos e o Laboratório aprofundam a análise de operações e ampliam o repertório para setores que ainda não fazem parte da rotina.</p></div></details>
       <details><summary>O método serve para contratos que não estão no Laboratório?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Sim. Os oito módulos ensinam um processo de análise e condução da demanda que pode ser aplicado a diferentes tipos de contrato. As coleções aprofundam operações específicas; elas não delimitam o alcance do método. Em cada novo nicho, você deve investigar suas particularidades e as regras aplicáveis.</p></div></details>
@@ -1787,7 +1796,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <details><summary>Já utilizo IA e modelos. Por que estudar a Jornada?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Porque a minuta é justamente a parte que a IA já faz — e o cliente sabe disso. Uma minuta, gerada por IA ou adaptada de um modelo, precisa ser compatível com os fatos, os documentos e as condições da operação. A Jornada ensina o que nenhuma ferramenta entrega sozinha: investigar essas condições, orientar decisões e definir o que o contrato deve regular. As ferramentas apoiam esse trabalho; cabe ao profissional conferir sua adequação ao caso.</p></div></details>
       <details><summary>Como a IA e o atendimento pelo WhatsApp ajudam?<i aria-hidden="true"></i></summary><div class="faq-a"><p>A IA é treinada com os materiais da Jornada e fica disponível 24 horas por dia para apoiar consultas e estudo. As respostas precisam ser conferidas pelo profissional responsável pelo caso. O atendimento humano pelo WhatsApp ajuda com acesso, materiais e uso da plataforma.</p></div></details>
       <details><summary>Por quanto tempo terei acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>São dois anos de acesso ao curso, às ferramentas, à IA e às atualizações incluídas nesse período. Você pode retomar os materiais conforme surgirem dúvidas e demandas na sua rotina.</p></div></details>
-      <details><summary>Como funciona o pagamento e a liberação do acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>O pagamento é realizado pelo checkout da Hubla: R$ 497,90 à vista ou 12 parcelas de R$ 50,60. O acesso é liberado após a confirmação do pagamento, para começar pelos módulos e consultar os materiais já disponíveis.</p></div></details>
+      <details><summary>Como funciona o pagamento e a liberação do acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>O pagamento é realizado pelo checkout da Hubla: R$ 497,90 à vista ou 12 parcelas de R$ 50,59. O acesso é liberado após a confirmação do pagamento, para começar pelos módulos e consultar os materiais já disponíveis.</p></div></details>
       <details><summary>E se o conteúdo não atender às minhas expectativas?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Você entra, vê todo o material por dentro e decide com ele na mão. Se concluir que não é para o seu momento, basta avisar em até 7 dias contados da compra: o reembolso é integral e processado pela Hubla, sem que você precise justificar.</p></div></details>
     </div>
   </div>
@@ -1799,22 +1808,22 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="ccard ccard-dark rv">
       <h3>Quer saber se o curso faz sentido para o seu momento?</h3>
       <p>Fale com a equipe para tirar dúvidas sobre o conteúdo, as ferramentas e as coleções disponíveis. O atendimento ajuda você a conhecer a entrega antes de decidir.</p>
-      <a class="btn btn-wa" data-whats="" href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-whats"></use></svg>Falar com a equipe</a>
+      <a class="btn btn-wa" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>Falar com a equipe</a>
     </div>
   </div>
 </section>
 
 <!-- Fechamento -->
 <section class="final" data-ch="7" data-label="Oferta" aria-labelledby="t-final">
-  <div class="final-bg" aria-hidden="true"><img src="./Método Jornada Contratual _ Arquivo Contratual_files/final-bg.webp" width="1600" height="1244" alt="" loading="lazy" decoding="async"></div>
+  <div class="final-bg" aria-hidden="true"><img src="assets/final-bg.webp" width="1600" height="1244" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap rv">
-    <img class="final-logo" src="./Método Jornada Contratual _ Arquivo Contratual_files/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
+    <img class="final-logo" src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
     <h2 class="h2" id="t-final"><b>Os negócios continuam acontecendo.</b> A questão é quem vai conduzi-los.</h2>
     <p>Todos os dias, imóveis, empresas, fazendas e marcas mudam de mãos — e cada operação passa por um contrato. Com repertório jurídico e método, você deixa de disputar o preço da minuta e passa a ser procurado para conduzir o negócio. Sem eles, essas operações continuam passando — para outro advogado.</p>
-    <p class="final-price rv"><b>12x R$ 50,60</b> <i>ou R$ 497,90 à vista · 2 anos de acesso · 7 dias de garantia</i></p>
+    <p class="final-price rv"><b>12x R$ 50,59</b> <i>ou R$ 497,90 à vista &middot; 2 anos de acesso &middot; 7 dias de garantia</i></p>
     <div class="final-cta">
-      <a class="btn btn-gold" data-checkout="" href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-      <a class="btn btn-line" data-whats="" href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+      <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Quero cobrar pelo trabalho inteiro <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-line" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1822,23 +1831,23 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <a class="brand" href="https://metodojornadacontratual.com.br/#inicio" aria-label="Arquivo Contratual — voltar ao início"><img src="./Método Jornada Contratual _ Arquivo Contratual_files/ac-emblem.webp" width="512" height="512" alt="" loading="lazy" decoding="async"><span>Arquivo<br>Contratual</span></a>
+    <a class="brand" href="#inicio" aria-label="Arquivo Contratual — voltar ao início"><img src="assets/ac-emblem.webp" width="512" height="512" alt="" loading="lazy" decoding="async"><span>Arquivo<br>Contratual</span></a>
     <nav aria-label="Rodapé">
-      <a href="https://metodojornadacontratual.com.br/#metodo">Método</a>
-      <a href="https://metodojornadacontratual.com.br/#oferta">Oferta</a>
-      <a href="https://metodojornadacontratual.com.br/#duvidas">Dúvidas</a>
-      <a data-whats="" href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#metodo">Método</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
     <small>© <span id="yr">2026</span> Arquivo Contratual. Todos os direitos reservados.</small>
   </div>
 </footer>
 
-<a class="wa-float" data-whats="" href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-whats"></use></svg></a>
+<a class="wa-float" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg></a>
 
 
 <dialog class="prints" id="prints" aria-label="Prints originais dos depoimentos">
-  <div class="dlg-bar"><span>Prints originais recebidos por WhatsApp e Instagram</span><button type="button" id="closePrints" aria-label="Fechar"><svg class="ico"><use href="#i-close"></use></svg></button></div>
-  <img src="./Método Jornada Contratual _ Arquivo Contratual_files/depoimentos-prints.webp" width="847" height="1024" alt="Prints de mensagens de alunos elogiando o Método Jornada Contratual" loading="lazy" decoding="async">
+  <div class="dlg-bar"><span>Prints originais recebidos por WhatsApp e Instagram</span><button type="button" id="closePrints" aria-label="Fechar"><svg class="ico"><use href="#i-close"/></svg></button></div>
+  <img src="assets/depoimentos-prints.webp" width="847" height="1024" alt="Prints de mensagens de alunos elogiando o Método Jornada Contratual" loading="lazy" decoding="async">
 </dialog>
 
 <script>
@@ -2015,15 +2024,6 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     } else { tplay() }
   }
 
-  /* Calculadora de retorno */
-  var rr=$('#roi-range');
-  if(rr){
-    var ro=$('#roi-out'), rx=$('#roi-x'), ry=$('#roi-y'), CASH=497.90;
-    var brl0=function(v){return 'R$ '+v.toLocaleString('pt-BR',{maximumFractionDigits:0})};
-    var calc=function(){var v=+rr.value; ro.textContent=brl0(v); rx.textContent=(v/CASH).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'x'; ry.textContent=brl0(v*8);};
-    rr.addEventListener('input',calc); calc();
-  }
-
   /* Prints originais */
   var dlg=$('#prints');
   $$('.js-prints').forEach(function(b){b.addEventListener('click',function(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')})});
@@ -2031,6 +2031,5 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
 })();
 </script>
-
-
-</body></html>
+</body>
+</html>

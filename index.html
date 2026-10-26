@@ -10,8 +10,15 @@
   2. Onde fica cada parte: procure pelos comentários em caixa alta
      (1/7 · HERO, 2/7 · MÉTODO, 3/7 · MÓDULOS, 4/7 · FERRAMENTAS,
      5/7 · LABORATÓRIO, 6/7 · RESULTADOS, 7/7 · OFERTA, DÚVIDAS, etc.).
-  3. Preço: procure por "497,90" — aparece no cartão da oferta e no bloco de
+  3. Preço: procure por "147,00" — aparece no cartão da oferta e no bloco de
      dados estruturados (SEO), no fim do <head>.
+  3a. VAGAS DA BLACK FRIDAY: na faixa do topo (procure por id="bfBar") existe
+     um atributo chamado data-vendidas, comecando vazio. Coloque entre as
+     aspas o numero REAL de vendas que o painel da Hubla mostra (138, por
+     exemplo) e a faixa passa a exibir "restam 862 de 1.000". Vazio, ela
+     mostra apenas "primeiras 1.000 vagas". Ao chegar em 1.000 a faixa
+     desaparece sozinha e e hora de repor o preco de R$ 497,90 (item 3).
+     O numero nunca muda sozinho: ele e exatamente o que voce escrever ali.
   4. Links: procure por "pay.hub.la" (checkout), "wa.me" (WhatsApp) e
      "reclameaqui" (Reclame Aqui). Basta trocar o endereço entre aspas.
   5. Pixel e Clarity: bloco TRACKING no <head>. O ID do Pixel é 1024412929995875.
@@ -105,7 +112,7 @@ fbq('init','1024412929995875');fbq('track','PageView');
   --grad-text:linear-gradient(100deg,#C29C58 0%,#8B682C 38%,#D0AC68 66%,#79592660 100%);
   --wrap:1200px;
   --gut:clamp(20px,5vw,44px);
-  --hdr:76px;
+  --bar:76px;--bf:34px;--hdr:calc(var(--bar) + var(--bf));
   --sec:clamp(84px,10.5vw,144px);
   --font:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --ease:cubic-bezier(.2,.7,.2,1);
@@ -164,9 +171,52 @@ ul{margin:0;padding:0;list-style:none}
 .compass-light{--c1:#E9E8E4;--c2:#EFEEEA;--ring:rgba(155,118,53,.16);--d:rgba(155,118,53,.06)}
 
 /* ---------- Header ---------- */
+
+/* ============ BLACK FRIDAY ============ */
+html.bf-off{--bf:0px}
+html.bf-off .bfbar{display:none}
+.bfbar{position:relative;z-index:2;height:var(--bf);
+  background:linear-gradient(90deg,#08090C 0%,#15171D 48%,#08090C 100%);
+  box-shadow:inset 0 -1px 0 rgba(213,176,113,.34)}
+.bfbar-in{height:100%;display:flex;align-items:center;overflow:hidden;
+  text-decoration:none;color:#F2F0EB;line-height:1;white-space:nowrap}
+.bf-track{display:flex;align-items:center;width:max-content;will-change:transform;
+  animation:bfRun 48s linear infinite}
+.bfbar-in:hover .bf-track,.bfbar-in:focus-visible .bf-track{animation-play-state:paused}
+@keyframes bfRun{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.bf-grp{display:flex;align-items:center;flex:none}
+.bf-u{display:flex;align-items:center;gap:clamp(9px,1.1vw,13px);padding:0 clamp(11px,1.5vw,20px)}
+.bf-tag{font-size:.7rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+  background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bf-pct{flex:none;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze-lt)}
+.bfd{width:3px;height:3px;border-radius:50%;background:rgba(213,176,113,.55);flex:none}
+.bf-clock{flex:none;width:14px;height:14px;display:inline-flex}
+.bf-clock svg{width:100%;height:100%;display:block}
+.bf-clock .cf{fill:none;stroke:rgba(213,176,113,.72);stroke-width:2.1}
+.bf-clock .hh,.bf-clock .hm{stroke:var(--bronze-lt);stroke-width:2.1;stroke-linecap:round;transform-origin:12px 12px}
+.bf-clock .hm{animation:bfTick 2.6s linear infinite}
+.bf-clock .hh{opacity:.75;animation:bfTick 31.2s linear infinite;animation-delay:-9.4s}
+@keyframes bfTick{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.bf-clock .hh,.bf-clock .hm{animation:none}}
+@media (prefers-reduced-motion:reduce){.bf-track{animation:none}}
+
+.bf-chip{display:inline-flex;align-items:center;white-space:nowrap;gap:9px;margin-bottom:18px;padding:7px 15px;border-radius:999px;
+  border:1px solid rgba(213,176,113,.45);background:rgba(11,12,16,.42);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze-lt)}
+.bf-chip i{font-style:normal;font-weight:700;letter-spacing:.06em;color:#F2F0EB}
+.bf-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--bronze-lt);
+  box-shadow:0 0 0 4px rgba(213,176,113,.18);animation:bfPing 2.4s var(--ease) infinite}
+@keyframes bfPing{0%,100%{box-shadow:0 0 0 0 rgba(213,176,113,.45)}60%{box-shadow:0 0 0 8px rgba(213,176,113,0)}}
+
+.bf-badge{display:inline-block;margin-bottom:10px;padding:5px 12px;border-radius:999px;
+  background:var(--grad);color:#13141A;font-size:.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.price-lbl s{text-decoration-thickness:1.5px;text-decoration-color:rgba(155,118,53,.8);color:var(--muted)}
+
+@media (max-width:560px){ .bf-tag{font-size:.64rem;letter-spacing:.17em} .bf-pct{font-size:.66rem} .bf-clock{width:12px;height:12px} }
+
 .hdr{position:fixed;inset:0 0 auto 0;z-index:80;height:var(--hdr);color:#fff;transition:background-color .4s,color .4s,box-shadow .4s,backdrop-filter .4s}
 .hdr.is-solid{color:var(--ink);background:rgba(243,243,240,.86);-webkit-backdrop-filter:saturate(1.4) blur(16px);backdrop-filter:saturate(1.4) blur(16px);box-shadow:0 1px 0 var(--line)}
-.hdr-in{height:100%;display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
+.hdr-in{height:var(--bar);display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
 .brand img{width:46px;height:46px;border-radius:50%}
 .brand span{font-weight:800;font-size:1.02rem;line-height:.98;letter-spacing:-.03em;color:#fff;transition:color .4s}
@@ -552,6 +602,11 @@ img
   font-size:clamp(1.1rem,1rem + .5vw,1.34rem);line-height:1.4;letter-spacing:-.015em;color:var(--ink)}
 
 .ticket{margin:clamp(20px,2.6vw,28px) auto 0}
+.bf-limite{display:flex;align-items:flex-start;gap:9px;margin:14px 0 0;padding:11px 13px;border-radius:10px;
+  border:1px solid rgba(155,118,53,.26);background:rgba(155,118,53,.055);
+  font-size:.87rem;line-height:1.5;color:var(--ink-2)}
+.bf-limite .ico{flex:none;width:15px;height:15px;margin-top:2px;color:var(--bronze)}
+.bf-limite b{color:var(--bronze-dk);font-weight:700}
 .permes{margin:12px 0 0;font-size:.95rem;line-height:1.5;color:var(--ink-2)}
 .permes b{color:var(--bronze-dk);font-weight:700}
 .pay{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 22px;padding:0;list-style:none}
@@ -584,11 +639,6 @@ img
 
 .was-ok{display:block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze-dk);margin-bottom:6px}
 
-.tquote{margin:22px 0 0;padding:16px 0 0;border-top:1px solid var(--line)}
-.tquote blockquote{margin:0;font-size:1.02rem;line-height:1.5;font-weight:600;color:var(--ink)}
-.tquote blockquote::before{content:"\201C"}
-.tquote blockquote::after{content:"\201D"}
-.tquote figcaption{margin-top:7px;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .inst b{color:var(--ink)}
 .ticket-meta{display:grid;gap:9px;margin-top:20px;font-size:.88rem;color:var(--muted)}
 .ticket-meta li{display:flex;gap:10px;align-items:center}
@@ -735,7 +785,7 @@ dialog
   .bleed img{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 12%,#000 84%,transparent 100%);mask-composite:intersect}
 }
 @media (max-width:720px){
-  :root{--hdr:64px}
+  :root{--bar:64px;--bf:30px}
   .brand img{width:40px;height:40px}
   .brand span{font-size:.92rem}
   .hdr .btn-sm{display:none}
@@ -779,7 +829,7 @@ dialog
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Course","url":"https://metodojornadacontratual.com.br/","name":"Método Jornada Contratual","description":"Método em 8 módulos para conduzir demandas contratuais do atendimento à formalização, com ferramentas profissionais editáveis, Laboratório de Contratos e Assistente Virtual.","inLanguage":"pt-BR","provider":{"@type":"Organization","name":"Arquivo Contratual","url":"https://metodojornadacontratual.com.br/"},"offers":{"@type":"Offer","price":"497.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno","category":"Paid"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"P2Y"}}
+{"@context":"https://schema.org","@type":"Course","url":"https://metodojornadacontratual.com.br/","name":"Método Jornada Contratual","description":"Método em 8 módulos para conduzir demandas contratuais do atendimento à formalização, com ferramentas profissionais editáveis, Laboratório de Contratos e Assistente Virtual.","inLanguage":"pt-BR","provider":{"@type":"Organization","name":"Arquivo Contratual","url":"https://metodojornadacontratual.com.br/"},"offers":{"@type":"Offer","price":"147.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno","category":"Paid"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"P2Y"}}
 </script>
 </head>
 <body>
@@ -833,6 +883,19 @@ dialog
 </svg>
 
 <header class="hdr" id="hdr">
+  <!-- ======================= FAIXA BLACK FRIDAY =========================
+       VAGAS: o aviso dentro do cartao de preco mostra "primeiras 1.000 vagas".
+       Para exibir quantas restam, coloque em data-vendidas (abaixo) o numero
+       REAL de vendas do painel da Hubla — ex.: 138 — e o aviso passa a dizer
+       "restam 862 das 1.000 vagas". Vazio, fica o texto padrao. Ao chegar em
+       1.000, a faixa some sozinha e e hora de repor o preco de R$ 497,90.
+       O numero nunca muda sozinho: e exatamente o que voce escrever ali.
+       ------------------------------------------------------------------- -->
+  <div class="bfbar" id="bfBar" data-total="1000" data-vendidas="">
+    <a class="bfbar-in" href="#oferta" aria-label="Black Friday: 70% de desconto. Ver a oferta.">
+      <span class="bf-track"><span class="bf-grp"><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span></span><span class="bf-grp"><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span><span class="bf-u"><b class="bf-tag">Black Friday</b><i class="bfd"></i><b class="bf-pct">70% OFF</b><span class="bf-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cf" cx="12" cy="12" r="9.4"/><line class="hh" x1="12" y1="12" x2="12" y2="7.4"/><line class="hm" x1="12" y1="12" x2="12" y2="4.9"/></svg></span></span></span></span>
+    </a>
+  </div>
   <div class="wrap hdr-in">
     <a class="brand" href="#inicio" aria-label="Arquivo Contratual — início">
       <img src="assets/ac-emblem.webp" width="512" height="512" alt="" decoding="async">
@@ -879,6 +942,7 @@ dialog
   <svg class="compass hero-compass" viewBox="0 0 200 200" aria-hidden="true"><use href="#compass"/></svg>
   <div class="wrap hero-in">
     <div class="hero-copy hero-seq">
+      <span class="bf-chip">Black Friday <i>70% OFF</i></span>
       <h1 class="h1" id="t-hero"><b>Advocacia contratual,</b> do zero ao contrato assinado.</h1>
       <p class="hero-claim">MÉTODO, REPERTÓRIO JURÍDICO, MODELOS E IA.</p>
       <p class="hero-lead">Aprenda a atuar em demandas contratuais de diferentes setores: analisar negócios, avaliar riscos, orientar decisões e estruturar contratos com técnica e estratégia.</p>
@@ -1237,6 +1301,7 @@ dialog
   else{var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){liga();ob.disconnect()}})},{threshold:.28});ob.observe(teia)}
   var tmr; window.addEventListener('resize',function(){clearTimeout(tmr);tmr=setTimeout(desenha,120)});
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(desenha);
+
 })();
 </script>
 </section>
@@ -1607,24 +1672,23 @@ dialog
       <p class="offer-turn rv">Mas o acesso a tudo isso, hoje, não custa esse valor.</p>
 
       <aside class="ticket rv" aria-labelledby="t-price">
-        <p class="price-lbl" id="t-price"><span class="was-ok">Acesso completo &middot; 2 anos</span>Hoje o acesso custa</p>
-        <p class="price" aria-label="12 parcelas de 50 reais e 59 centavos"><span class="cur">12 x R$</span><span class="val">50,59</span></p>
-        <p class="inst">ou <b>R$ 497,90 à vista</b></p>
-        <p class="permes"><b>R$ 20,75 por mês</b> ao longo dos 2 anos de acesso.</p>
+        <p class="price-lbl" id="t-price"><span class="bf-badge">Black Friday &middot; 70% OFF</span><span class="was-ok">Acesso completo &middot; 2 anos</span>De <s>R$ 497,90</s> por</p>
+        <p class="price" aria-label="147 reais"><span class="cur">R$</span><span class="val">147,00</span></p>
+        <p class="inst">à vista ou <b>12x de R$ 14,94</b></p>
+        <p class="permes"><b>R$ 6,13 por mês</b> ao longo dos 2 anos de acesso.</p>
+        <p class="bf-limite"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span id="bfLimite">Condição válida para as <b>primeiras 1.000 vagas</b>. Depois disso, o acesso volta a R$&nbsp;497,90.</span></p>
         <!-- Para exibir as bandeiras oficiais, troque os itens abaixo pelos SVG das marcas. -->
         <ul class="pay" aria-label="Formas de pagamento e segurança">
           <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Checkout seguro da Hubla</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Cartão em até 12x</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
         </ul>
-        <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">garantir desconto agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <ul class="ticket-meta">
           <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Liberação logo após a confirmação do pagamento</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>7 dias para desistir e receber o valor de volta</li>
         </ul>
-        <figure class="tquote">
-          </figure>
-      </aside>
+              </aside>
 
       <div class="payback rv">
         <span class="pb-k">Em quanto tempo isso se paga</span>
@@ -1675,7 +1739,7 @@ dialog
       <details><summary>Já utilizo IA e modelos. Por que estudar a Jornada?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Porque a minuta é justamente a parte que a IA já faz — e o cliente sabe disso. Uma minuta, gerada por IA ou adaptada de um modelo, precisa ser compatível com os fatos, os documentos e as condições da operação. A Jornada ensina o que nenhuma ferramenta entrega sozinha: investigar essas condições, orientar decisões e definir o que o contrato deve regular. As ferramentas apoiam esse trabalho; cabe ao profissional conferir sua adequação ao caso.</p></div></details>
       <details><summary>Como a IA e o atendimento pelo WhatsApp ajudam?<i aria-hidden="true"></i></summary><div class="faq-a"><p>A IA é treinada com os materiais da Jornada e fica disponível 24 horas por dia para apoiar consultas e estudo. As respostas precisam ser conferidas pelo profissional responsável pelo caso. O atendimento humano pelo WhatsApp ajuda com acesso, materiais e uso da plataforma.</p></div></details>
       <details><summary>Por quanto tempo terei acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>São dois anos de acesso ao curso, às ferramentas, à IA e às atualizações incluídas nesse período. Você pode retomar os materiais conforme surgirem dúvidas e demandas na sua rotina.</p></div></details>
-      <details><summary>Como funciona o pagamento e a liberação do acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>O pagamento é realizado pelo checkout da Hubla: R$ 497,90 à vista ou 12 parcelas de R$ 50,59. O acesso é liberado após a confirmação do pagamento, para começar pelos módulos e consultar os materiais já disponíveis.</p></div></details>
+      <details><summary>Como funciona o pagamento e a liberação do acesso?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Durante a Black Friday, o pagamento é realizado pelo checkout da Hubla por R$ 147,00 à vista ou 12 parcelas de R$ 14,94. O acesso é liberado após a confirmação do pagamento, para começar pelos módulos e consultar os materiais já disponíveis.</p></div></details>
       <details><summary>E se o conteúdo não atender às minhas expectativas?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Você entra, vê todo o material por dentro e decide com ele na mão. Se concluir que não é para o seu momento, basta avisar em até 7 dias contados da compra: o reembolso é integral e processado pela Hubla, sem que você precise justificar.</p></div></details>
     </div>
   </div>
@@ -1699,7 +1763,7 @@ dialog
     <img class="final-logo" src="assets/metodo-logo.webp" width="852" height="282" alt="Método Jornada Contratual" loading="lazy" decoding="async">
     <h2 class="h2" id="t-final"><b>Os negócios continuam acontecendo.</b> A questão é quem vai conduzi-los.</h2>
     <p>Todos os dias, imóveis, empresas, fazendas e marcas mudam de mãos — e cada operação passa por um contrato. Com repertório jurídico e método, você deixa de disputar o preço da minuta e passa a ser procurado para conduzir o negócio. Sem eles, essas operações continuam passando — para outro advogado.</p>
-    <p class="final-price rv"><b>12x R$ 50,59</b> <i>ou R$ 497,90 à vista &middot; 2 anos de acesso &middot; 7 dias de garantia</i></p>
+    <p class="final-price rv"><b>R$ 147,00</b> <i>na Black Friday, 70% OFF &middot; ou 12x de R$ 14,94 &middot; primeiras 1.000 vagas &middot; 7 dias de garantia</i></p>
     <div class="final-cta">
       <a class="btn btn-gold" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="btn btn-line" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
@@ -1735,7 +1799,7 @@ dialog
     var q=new URLSearchParams(location.search), pass=new URLSearchParams();
     q.forEach(function(v,k){if(/^(utm_|fbclid|gclid|src|sck|xcod)/i.test(k))pass.set(k,v)});
     var url=CHECKOUT+(pass.toString()?'?'+pass.toString():'');
-    $$('[data-checkout]').forEach(function(a){a.href=url;a.addEventListener('click',function(){track('InitiateCheckout',{value:497.90,currency:'BRL',content_name:'Método Jornada Contratual'})})});
+    $$('[data-checkout]').forEach(function(a){a.href=url;a.addEventListener('click',function(){track('InitiateCheckout',{value:147.00,currency:'BRL',content_name:'Método Jornada Contratual'})})});
   }catch(e){}
   $$('[data-whats]').forEach(function(a){a.addEventListener('click',function(){track('Contact')})});
   var yr=$('#yr'); if(yr) yr.textContent=new Date().getFullYear();
@@ -1896,6 +1960,19 @@ dialog
       },{rootMargin:'700px 0px'}).observe(tcar);
     } else { tplay() }
   }
+
+  /* Faixa Black Friday — vagas restantes (número informado por você) */
+  (function(){
+    var bar=document.getElementById('bfBar'), alvo=document.getElementById('bfLimite');
+    if(!bar||!alvo) return;
+    var total=parseInt(bar.getAttribute('data-total'),10)||1000;
+    var bruto=(bar.getAttribute('data-vendidas')||'').trim();
+    if(!bruto) return;                       /* sem número real: texto fixo */
+    var vend=parseInt(bruto,10); if(isNaN(vend)||vend<0) return;
+    var resta=total-vend;
+    if(resta<=0){ document.documentElement.classList.add('bf-off'); return }
+    alvo.innerHTML='Restam <b>'+resta.toLocaleString('pt-BR')+' das '+total.toLocaleString('pt-BR')+' vagas</b>. Depois disso, o acesso volta a R$&nbsp;497,90.';
+  })();
 
 })();
 </script>

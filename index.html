@@ -139,7 +139,7 @@ ul{margin:0;padding:0;list-style:none}
 .eyebrow{display:inline-block;position:relative;font-size:.76rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-2);padding-bottom:15px;margin-bottom:clamp(22px,2.6vw,32px)}
 .eyebrow::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:calc(100% + 28px);background:linear-gradient(90deg,var(--bronze) 0%,rgba(142,107,50,.4) 100%)}
 .kicker{font-size:clamp(1.35rem,1.1rem + 1vw,1.9rem);font-weight:800;letter-spacing:-.035em;line-height:1.12;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
-
+.gold-rule{display:block;width:88px;height:2px;background:var(--grad);border-radius:2px}
 .dark .eyebrow,.hero .eyebrow{color:#C9CBD2}
 .dark .eyebrow::after{background:linear-gradient(90deg,var(--bronze-lt),rgba(198,163,103,.25))}
 .dark .lead{color:var(--on-night-2)}
@@ -301,6 +301,7 @@ main{overflow-x:clip}
 .with-bleed:hover .covers img:nth-child(3n+1){transform:translateY(-26px)}
 .with-bleed:hover .covers img:nth-child(3n+3){transform:translateY(26px)}
 
+
 /* ---------- Desafio ---------- */
 .desafio .h2{max-width:22ch}
 .desafio-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,96px);margin-top:clamp(40px,5vw,64px);align-items:start}
@@ -458,13 +459,17 @@ main{overflow-x:clip}
 .board-note p b{color:var(--ink)}
 
 /* ---------- Resultados ---------- */
-
+.proof-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
 .proof{columns:3 300px;column-gap:20px;margin-top:clamp(40px,5vw,60px)}
-
+.msg{break-inside:avoid;margin:0 0 20px;border-radius:20px;padding:18px;font-size:.95rem;line-height:1.45;box-shadow:0 24px 50px -34px rgba(14,16,21,.55)}
+.msg-src{display:flex;align-items:center;gap:8px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.msg-src .ico{width:15px;height:15px}
+.msg-ig{background:#15171C;color:#EDEDEF}
+.msg-ig .msg-src{color:#8C8F98}
 .cmt{display:grid;grid-template-columns:36px 1fr;gap:2px 12px;padding:8px 0}
 .cmt+.cmt{border-top:1px solid rgba(255,255,255,.06)}
-
-img
+.av{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.9rem;color:#fff;background:linear-gradient(135deg,#3A3A58,#1C1D2B)}
+img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.08)}
 .av-2{background:linear-gradient(135deg,#8E6B32,#4F3A18)}
 .av-3{background:linear-gradient(135deg,#4B5563,#1F2937)}
 .av-g{background:#D9D8D3;color:#6B6E76}
@@ -473,15 +478,37 @@ img
 .cmt .who .hrt{width:12px;height:12px;fill:#E4405F;stroke:none}
 .cmt .txt{grid-column:2}
 .cmt .act{grid-column:2;font-size:.76rem;color:#8C8F98;margin-top:2px}
-
+.msg-light{background:#fff}
+.bub{display:block;width:fit-content;max-width:92%;padding:10px 14px;border-radius:18px;background:#EFEFF1;margin:6px 0}
+.bub-row{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:end}
+.bub-row .av{width:32px;height:32px}
+.msg-wa{background:#F1EEE7;background-image:radial-gradient(rgba(14,16,21,.05) 1px,transparent 1px);background-size:14px 14px}
 .wa-bar{display:flex;align-items:center;gap:10px;margin:-18px -18px 14px;padding:12px 16px;background:#fff;border-radius:20px 20px 0 0;border-bottom:1px solid var(--line)}
-.wa-bar 
+.wa-bar .av{width:30px;height:30px}
 .wa-bar i{display:block;height:10px;width:120px;border-radius:6px;background:linear-gradient(90deg,#D9D8D3,#E8E7E3);filter:blur(1.5px)}
 .day{display:block;width:fit-content;margin:0 auto 10px;padding:4px 10px;border-radius:8px;background:#fff;font-size:.74rem;color:var(--muted)}
-
+.bub-in{background:#fff;border-radius:4px 16px 16px 16px;box-shadow:0 1px 0 rgba(14,16,21,.06)}
+.msg-wd{background:#101216;color:#E7E8EB}
+.msg-wd .msg-src{color:#8C8F98}
+.msg-wd .bub{background:#23262D}
+.bub-out{margin-left:auto;background:var(--grad) !important;color:#fff;border-radius:16px 4px 16px 16px}
+.bub .t{display:block;text-align:right;font-size:.7rem;opacity:.55;margin-top:2px}
+.react{display:inline-grid;place-items:center;width:30px;height:24px;border-radius:12px;background:#fff;box-shadow:0 2px 8px rgba(14,16,21,.15);margin:-6px 0 0 44px}
 .react .hrt{width:14px;height:14px;fill:#E4405F;stroke:none}
 /* Prints originais em destaque */
-
+.prints-feature{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:clamp(24px,3.4vw,52px);align-items:center;margin:clamp(30px,4vw,46px) 0 clamp(26px,3vw,36px);padding:clamp(22px,2.6vw,34px);border-radius:22px;background:var(--paper);border:1px solid var(--line);box-shadow:0 30px 60px -44px rgba(14,16,21,.5)}
+.prints-shot{position:relative;display:block;padding:0;border:0;border-radius:16px;overflow:hidden;background:#0B0C10;cursor:zoom-in;line-height:0;box-shadow:0 22px 44px -28px rgba(14,16,21,.7)}
+.prints-shot img{width:100%;height:auto;aspect-ratio:847/1024;display:block;transition:transform .7s var(--ease)}
+.prints-shot:hover img{transform:scale(1.02)}
+.prints-zoom{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(11,12,16,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.prints-zoom .ico{width:15px;height:15px}
+.prints-copy h3{margin:14px 0 0;font-size:clamp(1.35rem,1.1rem + .9vw,1.85rem);font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.prints-copy p{margin:12px 0 0;color:var(--ink-2);font-size:1.02rem;line-height:1.55}
+.prints-copy .btn{margin-top:22px}
+.proof-sub{margin:0 0 18px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.proof-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:clamp(20px,3vw,34px);padding-top:26px;border-top:1px solid var(--line)}
+.proof-foot p{margin:0;display:flex;align-items:center;gap:18px;font-size:1.08rem;color:var(--ink-2);line-height:1.4}
+.proof-foot .gold-rule{width:64px;flex:none}
 .link-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:8px 0;cursor:pointer;font-weight:600;color:var(--ink);border-bottom:1px solid var(--bronze);text-decoration:none}
 .link-btn .ico{width:18px;height:18px;color:var(--bronze)}
 
@@ -507,7 +534,14 @@ img
 .oferta .compass{position:absolute;width:520px;left:-200px;top:40px}
 .offer{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:clamp(36px,5vw,80px);align-items:start}
 
+
+
+
+
+
+
 .ticket{position:sticky;top:calc(var(--hdr) + 20px);background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(24px,3vw,36px);box-shadow:var(--shadow)}
+
 
 .ticket:hover 
 
@@ -582,7 +616,11 @@ img
   .recap-total b{font-size:1.3rem}
 }
 
+
+
 .was-ok{display:block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze-dk);margin-bottom:6px}
+
+
 
 .tquote{margin:22px 0 0;padding:16px 0 0;border-top:1px solid var(--line)}
 .tquote blockquote{margin:0;font-size:1.02rem;line-height:1.5;font-weight:600;color:var(--ink)}
@@ -662,9 +700,11 @@ img
 .wa-float .ico{width:26px;height:26px}
 .wa-float:hover{transform:translateY(-3px)}
 
-dialog
-dialog
-dialog
+dialog.prints{padding:0;border:0;border-radius:18px;max-width:min(92vw,720px);max-height:92svh;background:#0B0C10;box-shadow:0 60px 120px -40px rgba(0,0,0,.8)}
+dialog.prints::backdrop{background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fit:contain}
+.dlg-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;color:#C9CBD2;font-size:.85rem}
+.dlg-bar button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-night);background:#15171D;color:#fff;display:grid;place-items:center;cursor:pointer}
 
 /* ================= Responsive ================= */
 @media (min-width:981px) and (max-width:1220px){
@@ -756,16 +796,16 @@ dialog
   .board-wrap{padding:22px 18px}
   .chips{flex-wrap:wrap;gap:7px}
   .chip{padding:8px 13px;font-size:.82rem}
-  
-  
+  .prints-feature{grid-template-columns:1fr;gap:22px}
+  .prints-shot{max-width:420px;margin:0 auto}
   .contact-grid{grid-template-columns:1fr}
   .guarantee{grid-template-columns:1fr;text-align:left}
   .faq summary{font-size:1rem}
   .faq-a p{padding-right:0}
   .wa-float{display:none}
-    
+    .proof-foot p{font-size:1rem}
   .proof{columns:1;column-gap:0}
-  .proof 
+  .proof .msg{margin:0 0 14px}
 }
 @media (max-width:380px){
   .stage-btn{max-width:200px}
@@ -843,6 +883,7 @@ dialog
       <a href="#etapas" data-ch="3">Módulos</a>
       <a href="#ferramentas" data-ch="4">Ferramentas</a>
       <a href="#laboratorio" data-ch="5">Laboratório</a>
+      <a href="#resultados" data-ch="6">Resultados</a>
       <a href="#oferta" data-ch="7">Oferta</a>
     </nav>
     <button class="chapter" id="chBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="chMenu">
@@ -862,7 +903,7 @@ dialog
     <li><a href="#etapas" data-ch="3"><span class="n">3</span><strong>8 módulos</strong><small>Cada camada do trabalho que o cliente contrata</small></a></li>
     <li><a href="#ferramentas" data-ch="4"><span class="n">4</span><strong>Ferramentas</strong><small>O trabalho invisível, documentado</small></a></li>
     <li><a href="#laboratorio" data-ch="5"><span class="n">5</span><strong>Laboratório</strong><small>Operações de mercado para construir repertório</small></a></li>
-    <li><a href="#autor" data-ch="6"><span class="n">6</span><strong>Quem criou</strong><small>O autor do método</small></a></li>
+    <li><a href="#resultados" data-ch="6"><span class="n">6</span><strong>Resultados</strong><small>O que dizem os alunos</small></a></li>
     <li><a href="#oferta" data-ch="7"><span class="n">7</span><strong>Toda a entrega</strong><small>Oferta, garantia e dúvidas</small></a></li>
   </ol>
   <div class="chmenu-foot">
@@ -883,7 +924,7 @@ dialog
       <p class="hero-claim">MÉTODO, REPERTÓRIO JURÍDICO, MODELOS E IA.</p>
       <p class="hero-lead">Aprenda a atuar em demandas contratuais de diferentes setores: analisar negócios, avaliar riscos, orientar decisões e estruturar contratos com técnica e estratégia.</p>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="#oferta">Quero dominar contratos <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="#oferta">Quero atuar como especialista <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-line" href="#metodo">Conhecer o curso</a>
       </div>
       <ul class="hero-notes">
@@ -1192,7 +1233,7 @@ dialog
       <p><b>É exatamente essa base que o Método Jornada Contratual entrega.</b></p>
     </blockquote>
     <div class="op-acoes">
-      <a class="btn btn-gold" href="#oferta">Quero me destacar como contratualista <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      <a class="btn btn-gold" href="#oferta">Quero parar de perder oportunidades <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       <a class="op-link" href="#metodo">Veja como o método funciona <svg class="ico" aria-hidden="true"><use href="#i-down"></use></svg></a>
     </div>
   </div>
@@ -1240,6 +1281,7 @@ dialog
 })();
 </script>
 </section>
+
 
 <!-- Seção 3 · COMO O MÉTODO RESOLVE -->
 <section class="sec sec-stone metodo with-bleed" id="metodo" data-ch="2" data-label="Método" aria-labelledby="t-metodo">
@@ -1384,7 +1426,7 @@ dialog
 
     <div class="etapas-foot rv">
       <p class="kicker">Cada módulo é uma camada de atuação que você aprende a executar — e a cobrar.</p>
-      <a class="btn btn-gold" href="#oferta">Acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-gold" href="#oferta">Quero começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -1536,14 +1578,91 @@ dialog
 
       <div class="board-note">
         <p><b>O Laboratório amplia seu repertório. O método amplia sua capacidade de análise.</b> Aplique as etapas a contratos de diferentes nichos, inclusive aos que ainda não estão nas coleções, e investigue as particularidades de cada operação.</p>
-        <a class="btn btn-gold" href="#oferta">Acessar os contratos agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="#oferta">Quero aumentar meu repertório jurídico <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 6/7 · RESULTADOS -->
+<section class="sec sec-paper" id="resultados" data-ch="6" data-label="Resultados" aria-labelledby="t-res">
+  <div class="wrap">
+    <div class="proof-head rv">
+      <div class="sec-head">
+        <span class="eyebrow">Pare de perder tempo, Doutor(a)</span>
+        <h2 class="h2" id="t-res"><b>A cada hora que se passa,</b> seus colegas estão um passo à sua frente</h2>
+        <p class="lead">Relatos espontâneos sobre a profundidade dos materiais, a organização do trabalho e a segurança para atender as demandas.</p>
+      </div>
+    </div>
+
+    <div class="prints-feature rv">
+      <button type="button" class="prints-shot js-prints" aria-label="Ampliar os prints originais">
+        <img src="assets/depoimentos-prints.webp" width="847" height="1024" alt="Prints de mensagens de alunos elogiando o Método Jornada Contratual" loading="lazy" decoding="async">
+        <span class="prints-zoom"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Ampliar</span>
+      </button>
+      <div class="prints-copy">
+        <span class="eyebrow">Prints originais</span>
+        <h3>Leia as mensagens de quem acessou os materiais.</h3>
+        <p>Mensagens recebidas no Instagram, no WhatsApp e no direct. Amplie os prints para conferir os relatos em seu contexto original.</p>
+        <button type="button" class="btn btn-line js-prints">Ver os prints em tamanho real <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+
+    <p class="proof-sub">Transcrição das mensagens, para leitura mais confortável:</p>
+
+    <div class="proof">
+      <figure class="msg msg-ig">
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>Comentários no Instagram</figcaption>
+        <div class="cmt"><img class="av" src="assets/av-mimi.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">mimi_prado <svg class="hrt" aria-hidden="true"><use href="#hrt"/></svg></span><span class="txt">Conteúdo muito completo e aprofundado, recomendo demais 👏👏</span><span class="act">Responder</span></div>
+        <div class="cmt"><img class="av" src="assets/av-farias.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">fariashenriqueleal <svg class="hrt" aria-hidden="true"><use href="#hrt"/></svg></span><span class="txt">Muito bom!! Recomendo para todos os advogados!</span><span class="act">Responder</span></div>
+        <div class="cmt"><img class="av" src="assets/av-rafael.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><span class="who">adv.rafaelpastorin <svg class="hrt" aria-hidden="true"><use href="#hrt"/></svg></span><span class="txt">Para quem quer elevar o nível.</span><span class="act">Responder</span></div>
+      </figure>
+
+      <figure class="msg msg-light">
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-est.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Excelente. Não é um conteúdo raso. Muito robusto.</span><span class="bub">Minha área preferida é a de Contratos.</span><span class="bub">Estou sempre estudando.</span></div></div>
+      </figure>
+
+      <figure class="msg msg-wd">
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp</figcaption>
+        <span class="bub">Gabriel, localizei aqui. De fato, o material é excelente, me ajudou muito a ganhar tempo na implementação desse serviço de forma escalável. Me ajudou a organizar o conhecimento que eu já tinha, me deu novos insights e acelerou meu processo interno de trabalho.<span class="t">10:50</span></span>
+        <span class="bub bub-out">Que bom. O objetivo é exatamente esse.</span>
+      </figure>
+
+      <figure class="msg msg-light">
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta · Hoje 11:46</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-ola.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Olá, boa tarde 😊 Passando para dizer que estou amando a jornada contratual, é muito completa, o assunto é bem aprofundado, estou gostando muito. Sou recém-aprovada na OAB e escolhi seguir a advocacia contratual, e o seu curso está me dando uma excelente base para começar. Vale muito mais que o preço que foi pago! Parabéns e obrigada 🙌🙌</span></div></div>
+        <span class="react" aria-label="Reagiu com coração"><svg class="hrt"><use href="#hrt"/></svg></span>
+      </figure>
+
+      <figure class="msg msg-wa">
+        <div class="wa-bar" aria-hidden="true"><span class="av av-g"><svg class="ico"><use href="#i-person"/></svg></span><i></i></div>
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp</figcaption>
+        <span class="day">Ontem</span>
+        <span class="bub bub-in">Boa noite! Acabei de analisar o material de representação comercial. O PDF anexo está excelente! Apresenta informações relevantes de forma clara e de fácil compreensão. Parabéns pelo conteúdo!</span>
+      </figure>
+
+      <figure class="msg msg-light">
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-dm1.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub">Tenho dó de quem chega depois</span><span class="bub">Vou atender um já essa semana.</span><span class="bub">Revisão de contrato social.</span></div></div>
+      </figure>
+
+      <figure class="msg msg-light">
+        <figcaption class="msg-src"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Mensagem direta</figcaption>
+        <div class="bub-row"><img class="av" src="assets/av-ans.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><div><span class="bub" style="font-size:1.12rem">Ansiosa pelos próximos contratos!</span></div></div>
+        <span class="react" aria-label="Reagiu com coração"><svg class="hrt"><use href="#hrt"/></svg></span>
+      </figure>
+    </div>
+
+    <div class="proof-foot rv">
+      <p><span class="gold-rule" aria-hidden="true"></span>Relatos sobre estudo, organização e aplicação dos materiais.</p>
+      <button class="link-btn js-prints" type="button" id="openPrints"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Ver os prints originais</button>
+    </div>
+  </div>
+</section>
+
 <!-- Autor -->
-<section class="sec dark autor" id="autor" data-ch="6" data-label="Quem criou" aria-labelledby="t-autor">
+<section class="sec dark autor" id="autor" data-ch="6" data-label="Resultados" aria-labelledby="t-autor">
   <img class="pena" src="assets/pena.webp" width="493" height="732" alt="" aria-hidden="true" loading="lazy" decoding="async">
   <div class="wrap autor-grid">
     <div class="autor-photo px rv"><img src="assets/gabriel.webp" width="427" height="547" alt="Gabriel, criador do Arquivo Contratual e do Método Jornada Contratual" loading="lazy" decoding="async"></div>
@@ -1617,13 +1736,13 @@ dialog
           <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Cartão em até 12x</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
         </ul>
-        <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">acessar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold btn-block" data-checkout href="https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno">Começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <ul class="ticket-meta">
           <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Liberação logo após a confirmação do pagamento</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>7 dias para desistir e receber o valor de volta</li>
         </ul>
         <figure class="tquote">
-          </figure>
+        </figure>
       </aside>
 
       <div class="payback rv">
@@ -1722,6 +1841,12 @@ dialog
 </footer>
 
 <a class="wa-float" data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg></a>
+
+
+<dialog class="prints" id="prints" aria-label="Prints originais dos depoimentos">
+  <div class="dlg-bar"><span>Prints originais recebidos por WhatsApp e Instagram</span><button type="button" id="closePrints" aria-label="Fechar"><svg class="ico"><use href="#i-close"/></svg></button></div>
+  <img src="assets/depoimentos-prints.webp" width="847" height="1024" alt="Prints de mensagens de alunos elogiando o Método Jornada Contratual" loading="lazy" decoding="async">
+</dialog>
 
 <script>
 (function(){
@@ -1897,6 +2022,11 @@ dialog
     } else { tplay() }
   }
 
+  /* Prints originais */
+  var dlg=$('#prints');
+  $$('.js-prints').forEach(function(b){b.addEventListener('click',function(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')})});
+  $('#closePrints').addEventListener('click',function(){dlg.close?dlg.close():dlg.removeAttribute('open')});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
 })();
 </script>
 </body>

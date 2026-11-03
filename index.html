@@ -215,6 +215,8 @@ ul{margin:0;padding:0;list-style:none}
 .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)}
 .hero-copy{grid-column:2;max-width:640px}
 .hero .h1{color:#fff}
+.hero-vol{margin:12px 0 0;font-size:.95rem;letter-spacing:.01em;color:rgba(243,242,238,.7)}
+.hero-vol b{color:var(--bronze-lt);font-weight:700}
 .hero-claim{margin:clamp(20px,2.4vw,30px) 0 0;font-weight:800;font-size:clamp(1.55rem,1rem + 2.1vw,2.7rem);line-height:1.22;padding-block:.06em;letter-spacing:-.03em;word-spacing:.08em;text-transform:uppercase;background:var(--grad-text);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s ease-in-out infinite}
 @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .hero-lead{color:#C4C6CD;max-width:31em;font-size:clamp(1.05rem,.98rem + .35vw,1.25rem);line-height:1.55;margin:clamp(20px,2.2vw,28px) 0 0}
@@ -332,6 +334,13 @@ main{overflow-x:clip}
 .basis .ico{color:var(--bronze);width:26px;height:26px;margin-top:2px}
 
 /* ---------- Etapas ---------- */
+.est-sel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.2vw,16px);
+  margin:clamp(26px,3vw,38px) 0 0;padding:0;list-style:none}
+.est-sel li{padding:16px 16px 15px;border-radius:14px;border:1px solid var(--line);background:#fff;
+  box-shadow:0 18px 34px -30px rgba(14,16,21,.4)}
+.est-sel b{display:block;font-size:.93rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);line-height:1.2}
+.est-sel span{display:block;margin-top:5px;font-size:.78rem;line-height:1.35;color:var(--muted)}
+@media (max-width:860px){.est-sel{grid-template-columns:1fr 1fr}}
 .etapas{background:var(--stone)}
 .etapas-grid{display:grid;grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);gap:clamp(24px,3vw,40px);margin-top:clamp(40px,5vw,60px);align-items:start}
 .stage-list{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:12px}
@@ -922,7 +931,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="hero-copy hero-seq">
       <h1 class="h1" id="t-hero"><b>&ldquo;Nunca fiz esse tipo de contrato.&rdquo;</b></h1>
       <p class="hero-claim">A DEMANDA CHEGOU MESMO ASSIM.</p>
-      <p class="hero-lead">E é a sua assinatura que vai nele. Formação em direito contratual com 8 módulos, checklists de verificação e 14 coleções com manual fundamentado e modelo editável. <b>Tudo escrito</b> — para ser consultado na hora da demanda, não assistido em três meses e esquecido.</p>
+      <p class="hero-vol">8 manuais &middot; <b>787 páginas</b> &middot; tudo escrito</p>
+      <p class="hero-lead">E é a sua assinatura que vai nele. Formação em direito contratual com 8 módulos, checklists de verificação e 14 coleções com manual fundamentado e modelo editável. São <b>787 páginas escritas</b> — para consultar na hora da demanda, não para assistir em três meses e esquecer.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="#oferta">Quero começar agora <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-line" href="#metodo">Conhecer o curso</a>
@@ -931,7 +941,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>2 anos de acesso, sem prazo para terminar</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>14 coleções prontas (24 previstas)</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>IA treinada para contratos</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Conteúdo 100% escrito, sem aula gravada</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Referências conferidas até setembro de 2026</li>
       </ul>
     </div>
   </div>
@@ -1350,8 +1360,14 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">O MÉTODO JORNADA CONTRATUAL</span>
-      <h2 class="h2" id="t-etapas"><b>Oito módulos escritos,</b> na ordem em que o trabalho acontece</h2>
-      <p class="lead">Material escrito, não aula gravada: cada módulo é um texto que você lê, busca, grifa e releva quando precisar. Cada um cobre uma parte do trabalho que vem antes, durante e depois da redação. Selecione um módulo para ver o que ele muda na sua atuação.</p>
+      <h2 class="h2" id="t-etapas"><b>Oito manuais, 741 páginas,</b> na ordem em que o trabalho acontece</h2>
+      <p class="lead">Não é videoaula transcrita. Cada módulo é um manual completo — partes e capítulos numerados, quadros, <b>caso integrado</b>, exercícios com <b>respostas comentadas</b> e referências normativas ao final. De 80 a 107 páginas cada. Selecione um módulo para ver o que ele muda na sua atuação.</p>
+      <ul class="est-sel" aria-label="O que há dentro de cada manual">
+        <li><b>Partes e capítulos numerados</b><span>para achar o trecho em segundos</span></li>
+        <li><b>Quadros e fluxos</b><span>o raciocínio em forma de tabela</span></li>
+        <li><b>Caso integrado</b><span>uma operação real, do pedido à execução</span></li>
+        <li><b>Exercícios comentados</b><span>para testar antes de aplicar no cliente</span></li>
+      </ul>
     </div>
 
     <div class="etapas-grid">
@@ -1510,8 +1526,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <div>
         <div class="rv">
           <span class="eyebrow">Ferramentas profissionais</span>
-          <h2 class="h2" id="t-tools"><b>Questionários, checklists e documentos prontos</b> para facilitar a sua rotina</h2>
-          <p class="lead">Da primeira conversa à conferência do contrato final, as ferramentas da Jornada registram análises, verificações e decisões. O trabalho que antes ficava invisível passa a ter forma de entrega — e sustenta a sua proposta de honorários.</p>
+          <h2 class="h2" id="t-tools"><b>Mais 46 páginas de instrumentos</b> que você leva para a reunião</h2>
+          <p class="lead">Cinco instrumentos preenchíveis, fora dos manuais: ficha de atendimento, checklist de diligências, checklist de estruturação, checklist de revisão e o modelo de parecer. Não são resumos do conteúdo — são os formulários de trabalho. O que antes ficava invisível passa a ter forma de entrega — e sustenta a sua proposta de honorários.</p>
         </div>
         <ul class="tool-list rv">
           <li><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg><strong>Roteiros e documentos de contratação</strong><span>Organize as etapas do serviço e use a proposta e o contrato de honorários para registrar escopo, entregas e condições.</span></li>
@@ -1551,6 +1567,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <h2 class="h2"><b>Uma IA treinada em contratos</b> para te auxiliar 24H</h2>
         <ul class="assist-facts">
           <li><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Treinada com os materiais e a metodologia do Arquivo Contratual para apoiar consultas e a aplicação do conteúdo.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Três dos manuais trazem capítulos próprios sobre <b>uso de IA com supervisão</b> — na diligência, no parecer e na revisão.</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Disponível 24 horas por dia para auxiliar sua rotina contratual.</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Suporte humano pelo WhatsApp para dúvidas sobre acesso, materiais e utilização da plataforma.</li>
         </ul>
@@ -1750,15 +1767,15 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <div class="recap-hd"><span>Tudo o que você recebe</span><span>Valor</span></div>
         <ul class="recap-list">
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Método Jornada Contratual &mdash; 8 módulos de formação jurídica</strong><span class="rd">Uma formação completa que aborda desde os fundamentos do direito contratual até cada etapa do trabalho: atendimento e honorários, diligências, parecer, estruturação e redação, revisão e entrega.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Método Jornada Contratual &mdash; 8 manuais, 741 páginas</strong><span class="rd">Oito manuais escritos, de 80 a 107 páginas cada, com partes, capítulos numerados, quadros, caso integrado e exercícios comentados. Dos fundamentos do direito contratual a cada etapa do trabalho: atendimento, diligências, parecer, estruturação e redação, revisão e entrega.</span></div></div>
             <div class="rvl"><s>R$ 997,90</s></div>
           </li>
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Laboratório de Contratos com 24 coleções contratuais</strong><span class="rd">Cada contrato acompanha um manual prático fundamentado com legislação aplicável, cláusulas essenciais e riscos — a base que permite conversar com o cliente sobre o negócio dele e sustentar o que você escreveu como especialista.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Laboratório de Contratos com 24 coleções contratuais</strong><span class="rd">Cada operação acompanha um manual fundamentado com legislação aplicável, cláusulas essenciais e riscos — a base que permite conversar com o cliente sobre o negócio dele e sustentar o que você escreveu como especialista.</span></div></div>
             <div class="rvl"><s>R$ 997,90</s></div>
           </li>
           <li>
-            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Questionários, checklists e documentos prontos para a atuação contratual</strong><span class="rd">Ferramentas para facilitar a sua rotina e tornar visível — e cobrável — o trabalho que acontece antes do contrato. Editáveis em PDF e DOCX, prontos para utilizar.</span></div></div>
+            <div class="ri"><span class="ck"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Cinco instrumentos preenchíveis &mdash; 46 páginas</strong><span class="rd">Ficha estratégica de atendimento, checklist de diligências, checklist de estruturação e redação, checklist de revisão e modelo de parecer. Editáveis em PDF e DOCX, prontos para levar à reunião.</span></div></div>
             <div class="rvl"><s>R$ 297,90</s></div>
           </li>
           <li>
@@ -1799,9 +1816,9 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       </aside>
 
       <div class="payback rv">
-        <span class="pb-k">O que você leva</span>
-        <p class="pb-lead">São <b>dois anos</b> de acesso aos 8 módulos, às ferramentas, às coleções e à IA — com as atualizações do período.</p>
-        <p>Não é um curso para assistir uma vez e arquivar — aliás, não tem o que assistir: é tudo escrito. É material de consulta: a demanda chega, você abre o manual daquele contrato, roda o checklist e trabalha. Dois anos cobrem todas as demandas que aparecerem nesse tempo.</p>
+        <span class="pb-k">O tamanho do que você leva</span>
+        <p class="pb-lead">São <b>787 páginas escritas</b> — 8 manuais e 5 instrumentos — mais as 14 coleções e a IA, por <b>dois anos</b>.</p>
+        <p>São <b>787 páginas</b> por R$ 497,90: cerca de <b>63 centavos por página</b> — menos que um manual jurídico de prateleira, com a diferença de que estas páginas vêm com os formulários prontos. E não é material para assistir uma vez e arquivar — aliás, não tem o que assistir: é tudo escrito. É material de consulta: a demanda chega, você abre o manual daquele contrato, roda o checklist e trabalha. Dois anos cobrem todas as demandas que aparecerem nesse tempo.</p>
         <p><b>E se não for para você, são 7 dias para pedir o valor de volta.</b></p>
       </div>
     </div>
@@ -1839,7 +1856,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     </div>
     <div class="faq rv">
       <details><summary>Já fiz pós-graduação em contratos. Isso acrescenta?<i aria-hidden="true"></i></summary><div class="faq-a"><p>São coisas diferentes. A pós te deu teoria: princípios, institutos, classificação, jurisprudência. O que normalmente falta não é isso — é o passo a passo do trabalho. Qual pergunta fazer na primeira reunião, qual certidão pedir antes de redigir, o que a cláusula precisa resolver na prática, como revisar antes de mandar. Vários alunos chegam com pós feita e dizem que a diferença está justamente aí. Se você já tem a teoria firme, vai aproveitar ainda mais rápido.</p></div></details>
-      <details><summary>O ChatGPT não escreve o contrato de graça?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Escreve, e muita gente já usa — inclusive para uma primeira estrutura. O problema é o que ele não faz: não conhece os fatos do seu caso, não viu os documentos, não sabe o que não foi conferido, e não assume responsabilidade nenhuma pelo que escreveu. Quem assina é você. O que o curso dá é a camada que falta: o que perguntar antes, o que confirmar em documento e por que cada cláusula está ali — para você usar qualquer ferramenta com critério, em vez de aceitar o texto que ela devolveu. A IA incluída no acesso é treinada nos materiais do método, o que a deixa mais próxima do conteúdo que você estudou, mas a conferência continua sendo sua.</p></div></details>
+      <details><summary>O ChatGPT não escreve o contrato de graça?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Escreve, e muita gente já usa — inclusive para uma primeira estrutura. O problema é o que ele não faz: não conhece os fatos do seu caso, não viu os documentos, não sabe o que não foi conferido, e não assume responsabilidade nenhuma pelo que escreveu. Quem assina é você. O que o curso dá é a camada que falta: o que perguntar antes, o que confirmar em documento e por que cada cláusula está ali — para você usar qualquer ferramenta com critério, em vez de aceitar o texto que ela devolveu. Não por acaso, três dos manuais — Diligências, Parecer e Revisão — trazem capítulos específicos sobre uso de IA com supervisão: o que a ferramenta resolve, o que precisa ser conferido e como registrar essa conferência. A IA incluída no acesso é treinada nos materiais do método, mas a conferência continua sendo sua.</p></div></details>
       <details><summary>Chegou um contrato que não está nas 14 coleções. E agora?<i aria-hidden="true"></i></summary><div class="faq-a"><p>É para isso que existem os 8 módulos. O método é o mesmo em qualquer contrato: o que perguntar no atendimento, o que verificar antes de redigir, como montar a estrutura e como revisar. As coleções aceleram os tipos que já estão prontos; os módulos te dão o caminho para os que não estão. Você também pode indicar na plataforma qual contrato quer ver nas próximas coleções.</p></div></details>
       <details><summary>Os modelos são editáveis? Posso usar nos meus clientes?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Sim. Cada coleção vem com o modelo em formato editável, para você adaptar ao caso. E vem com o manual explicando a fundamentação de cada parte — para você saber o que pode mudar, o que não deve sair e o que precisa entrar dependendo da operação. É a diferença entre adaptar um modelo com segurança e preencher no escuro.</p></div></details>
       <details><summary>Quando saem as 10 coleções que faltam?<i aria-hidden="true"></i></summary><div class="faq-a"><p>Sendo direto com você: hoje são <b>14 coleções prontas e disponíveis</b> no momento em que você entra. As outras 10 estão em produção e saem ao longo do seu acesso, priorizadas pelos pedidos dos alunos na plataforma. Decida a compra pelas 14 que já existem e pelos 8 módulos — o resto é acréscimo, não é o que você está comprando.</p></div></details>

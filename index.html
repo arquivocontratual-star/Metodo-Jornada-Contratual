@@ -338,6 +338,67 @@ em{font-style:italic}
 .rodape a:hover{color:var(--ouro)}
 .rodape-leg{max-width:52rem;margin-top:18px;line-height:1.6}
 
+
+/* ── galeria "por dentro" ─────────────────────────────────── */
+.dentro{background:var(--marinho);color:var(--sobre-escuro);overflow:hidden}
+.dentro .d2{color:#fff}
+.dentro .lede{color:var(--sobre-escuro-2)}
+.dentro .nota{color:rgba(239,237,231,.5);border-top-color:rgba(239,237,231,.4)}
+.dentro .nota b{color:#fff}
+.carr{margin-top:clamp(34px,4vw,52px);display:flex;gap:clamp(14px,1.8vw,24px);
+  overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;
+  scrollbar-width:thin;scrollbar-color:rgba(220,188,94,.5) rgba(255,255,255,.08);
+  cursor:grab;-webkit-overflow-scrolling:touch}
+.carr.arrasta{cursor:grabbing;scroll-snap-type:none}
+.carr::-webkit-scrollbar{height:6px}
+.carr::-webkit-scrollbar-track{background:rgba(255,255,255,.08);border-radius:3px}
+.carr::-webkit-scrollbar-thumb{background:rgba(220,188,94,.5);border-radius:3px}
+.carr figure{flex:0 0 min(84vw,30rem);scroll-snap-align:center;margin:0}
+.carr img{width:100%;border-radius:4px;box-shadow:0 22px 44px -26px rgba(0,0,0,.85);
+  pointer-events:none;-webkit-user-drag:none;user-select:none}
+.carr figcaption{margin-top:11px;font-family:var(--sans);font-size:.8rem;line-height:1.45;
+  color:var(--sobre-escuro-2)}
+.carr figcaption b{display:block;color:#fff;font-weight:600;font-size:.86rem;margin-bottom:2px}
+.carr-dica{margin-top:4px;font-family:var(--sans);font-size:.78rem;color:rgba(239,237,231,.45)}
+
+/* ── laboratório ──────────────────────────────────────────── */
+.lab-cena{margin-top:clamp(34px,4vw,54px);border-radius:5px;overflow:hidden;
+  background:var(--papel-2);border:1px solid var(--linha-f)}
+.lab-cena img{width:100%}
+.setores{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+  gap:0;margin-top:clamp(34px,4vw,52px);border-top:1.5px solid var(--tinta)}
+.setor{padding:clamp(18px,2vw,24px) clamp(18px,2vw,24px) clamp(18px,2vw,24px) 0;
+  border-bottom:1px solid var(--linha-f)}
+.setor + .setor{border-left:1px solid var(--linha-f);padding-left:clamp(18px,2vw,24px)}
+@media (max-width:700px){.setor + .setor{border-left:0;padding-left:0}}
+.setor h4{font-family:var(--sans);font-size:.76rem;font-weight:600;color:var(--ouro);margin-bottom:10px}
+.setor ul{list-style:none}
+.setor li{font-size:.98rem;line-height:1.5;padding:3px 0;color:var(--tinta-2)}
+.lab-dentro{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px);
+  margin-top:clamp(32px,3.6vw,46px)}
+@media (max-width:760px){.lab-dentro{grid-template-columns:1fr}}
+.lab-dentro div{padding-top:14px;border-top:2px solid var(--tinta)}
+.lab-dentro b{display:block;font-size:1.04rem;font-weight:700;letter-spacing:-.018em;margin-bottom:5px}
+.lab-dentro p{font-size:.96rem;color:var(--tinta-2)}
+
+/* ── mockups dos instrumentos ─────────────────────────────── */
+.mock{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);
+  margin-top:clamp(30px,3.4vw,44px)}
+@media (max-width:860px){.mock{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.mock{grid-template-columns:1fr}}
+.mock figure{margin:0;background:var(--marinho-2);border-radius:4px;overflow:hidden}
+.mock img{width:100%}
+.mock figcaption{padding:13px 15px 15px;font-family:var(--sans);font-size:.82rem;line-height:1.4;
+  color:rgba(239,237,231,.62)}
+.mock figcaption b{display:block;color:#fff;font-weight:600;font-size:.9rem;margin-bottom:3px}
+
+/* ── área de membros ──────────────────────────────────────── */
+.membros{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:clamp(26px,4vw,60px);align-items:center;margin-top:clamp(34px,4vw,52px)}
+@media (max-width:860px){.membros{grid-template-columns:1fr}}
+.membros img{border-radius:5px;border:1px solid var(--linha-f)}
+.membros p{color:var(--tinta-2)}
+
 /* zap fixo */
 .zap{position:fixed;right:16px;bottom:16px;z-index:50;width:50px;height:50px;border-radius:50%;
   background:var(--tinta);color:var(--papel);display:grid;place-items:center;
@@ -524,40 +585,106 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,
       <img src="assets/capa-assinatura.webp" width="424" height="600" alt="Capa do Livro 8, Entrega e Formalização Contratual" loading="lazy" decoding="async">
     </div>
 
-    <div class="duo">
-      <div class="ap">
-        <h3 class="bloco-t">Cinco instrumentos preenchíveis</h3>
-        <ul class="lista">
-          <li><span>Ficha Estratégica de Atendimento</span><span>8 p.</span></li>
-          <li><span>Checklist de Diligências Pré-Contratuais</span><span>8 p.</span></li>
-          <li><span>Checklist de Estruturação e Redação</span><span>11 p.</span></li>
-          <li><span>Checklist de Revisão Contratual</span><span>11 p.</span></li>
-          <li><span>Manual do Parecer Jurídico</span><span>8 p.</span></li>
-        </ul>
-        <p class="lista-nota">Não são resumos do conteúdo. São os formulários de trabalho, em PDF e DOCX, para levar à reunião e usar na conferência final. Mais 46 páginas.</p>
-      </div>
-
-      <div class="ap">
-        <h3 class="bloco-t">Laboratório de Contratos</h3>
-        <ul class="lista cols-2">
-          <li>Promessa de compra e venda</li>
-          <li>Corretagem imobiliária</li>
-          <li>Arrendamento rural</li>
-          <li>Parceria pecuária</li>
-          <li>Empreitada civil</li>
-          <li>Locação comercial</li>
-          <li>Locação residencial</li>
-          <li>Sublocação</li>
-          <li>Facilities</li>
-          <li>Cessão de uso de imagem</li>
-          <li>Design de interiores</li>
-          <li>Cessão de crédito</li>
-          <li>Cessão de direitos autorais</li>
-          <li>Representação comercial</li>
-        </ul>
-        <p class="lista-nota">Cada coleção traz um <b>manual fundamentado</b> — a lei que incide, o que conferir antes, o que cada cláusula resolve — e o <b>modelo editável</b>. São 14 prontas hoje; outras 10 entram ao longo do acesso, pelos pedidos dos alunos.</p>
+    <div class="rail" style="margin-top:clamp(56px,6.5vw,92px)">
+      <p class="nota ap"><b>Fora dos manuais</b>Os formulários de trabalho, em PDF e DOCX.</p>
+      <div class="col">
+        <h3 class="d3 ap">Seis instrumentos preenchíveis, fora dos manuais</h3>
+        <p class="ap sub" style="margin-top:.7em">Não são resumos do conteúdo. São as fichas e checklists que você leva impressos para a reunião e usa na conferência final, com os campos prontos para preencher.</p>
       </div>
     </div>
+
+    <div class="mock ap">
+      <figure><img src="assets/ferramenta-1.webp" width="800" height="1000" alt="Ficha Estratégica de Atendimento" loading="lazy" decoding="async">
+        <figcaption><b>Ficha Estratégica de Atendimento</b>Objetivos, participantes, documentos e pendências da demanda, registrados na primeira conversa.</figcaption></figure>
+      <figure><img src="assets/ferramenta-2.webp" width="800" height="1000" alt="Checklist de Diligências Pré-Contratuais" loading="lazy" decoding="async">
+        <figcaption><b>Checklist de Diligências Pré-Contratuais</b>O que verificar antes de redigir, por tipo de bem e por classe de passivo.</figcaption></figure>
+      <figure><img src="assets/ferramenta-3.webp" width="800" height="1000" alt="Manual do Parecer Jurídico" loading="lazy" decoding="async">
+        <figcaption><b>Manual do Parecer Jurídico</b>A estrutura do parecer: premissas, riscos, alternativas e recomendação.</figcaption></figure>
+      <figure><img src="assets/ferramenta-4.webp" width="800" height="1000" alt="Checklist de Estruturação e Redação" loading="lazy" decoding="async">
+        <figcaption><b>Checklist de Estruturação e Redação</b>Obrigações, pagamentos, prazos e encerramento conferidos antes das cláusulas.</figcaption></figure>
+      <figure><img src="assets/ferramenta-5.webp" width="800" height="1000" alt="Checklist de Revisão Contratual" loading="lazy" decoding="async">
+        <figcaption><b>Checklist de Revisão Contratual</b>Coerência jurídica, econômica e operacional, com registro de achados.</figcaption></figure>
+      <figure><img src="assets/ferramenta-6.webp" width="800" height="1000" alt="Checklist de Entrega e Formalização" loading="lazy" decoding="async">
+        <figcaption><b>Checklist de Entrega e Formalização</b>Assinaturas, anexos, condições de eficácia e o dossiê de execução.</figcaption></figure>
+    </div>
+
+    <div class="membros ap">
+      <img src="assets/area-membros.webp" width="1100" height="973" alt="Área de membros do Método Jornada Contratual aberta no computador, com um checklist impresso ao lado" loading="lazy" decoding="async">
+      <div>
+        <h3 class="d3">Tudo numa área de membros, aberto desde o primeiro dia</h3>
+        <p style="margin-top:.7em">Os oito manuais, os instrumentos e as coleções ficam disponíveis de uma vez, sem liberação por semana e sem ordem obrigatória. Você baixa o que precisar, imprime o checklist da etapa e trabalha com ele ao lado — que é como o material foi feito para ser usado.</p>
+      </div>
+    </div>
+</section>
+
+<!-- ════════ POR DENTRO ════════ -->
+<section class="sec dentro" aria-labelledby="t-dentro">
+  <div class="env">
+    <div class="rail">
+      <p class="nota ap"><b>Antes de comprar</b>Veja a diagramação real dos oito manuais, não uma descrição dela.</p>
+      <div class="col">
+        <h2 class="d2 ap" id="t-dentro">Páginas de dentro dos oito manuais</h2>
+        <p class="lede ap" style="margin-top:.85em">É assim que o conteúdo se apresenta: texto diagramado, capítulos numerados, quadros, figuras e tabelas. Arraste para percorrer um trecho de cada livro.</p>
+      </div>
+    </div>
+    <div class="carr ap" id="carr" tabindex="0" role="region" aria-label="Galeria de páginas internas dos manuais">
+        <figure><img src="assets/miolo-1.webp" width="900" height="600" alt="Página interna do manual Ponto Zero" loading="lazy" decoding="async">
+          <figcaption><b>Livro 01 · Ponto Zero</b>O ciclo de vida contratual em cinco momentos, com a figura que abre a Parte I.</figcaption></figure>
+        <figure><img src="assets/miolo-2.webp" width="900" height="600" alt="Página interna do manual Contratos que Conectam" loading="lazy" decoding="async">
+          <figcaption><b>Livro 02 · Contratos que Conectam</b>As seis etapas da Jornada e o retorno quando uma premissa muda.</figcaption></figure>
+        <figure><img src="assets/miolo-3.webp" width="900" height="600" alt="Página interna do manual Guia Prático de Atendimento" loading="lazy" decoding="async">
+          <figcaption><b>Livro 03 · Guia Prático de Atendimento</b>Os três movimentos de pergunta na condução da entrevista.</figcaption></figure>
+        <figure><img src="assets/miolo-4.webp" width="900" height="600" alt="Página interna do manual Manual de Diligências" loading="lazy" decoding="async">
+          <figcaption><b>Livro 04 · Manual de Diligências</b>A matriz de evidências e a hierarquia prática das fontes.</figcaption></figure>
+        <figure><img src="assets/miolo-5.webp" width="900" height="600" alt="Página interna do manual Parecer Jurídico" loading="lazy" decoding="async">
+          <figcaption><b>Livro 05 · Parecer Jurídico</b>Capítulo 33: o método de questão, regra, aplicação e conclusão.</figcaption></figure>
+        <figure><img src="assets/miolo-6.webp" width="900" height="600" alt="Página interna do manual Estruturação e Redação" loading="lazy" decoding="async">
+          <figcaption><b>Livro 06 · Estruturação e Redação</b>Anatomia da obrigação e a reescrita de uma cláusula vaga.</figcaption></figure>
+        <figure><img src="assets/miolo-7.webp" width="900" height="600" alt="Página interna do manual Revisão Contratual" loading="lazy" decoding="async">
+          <figcaption><b>Livro 07 · Revisão Contratual</b>Registro de achados, gravidade e prioridade antes da assinatura.</figcaption></figure>
+        <figure><img src="assets/miolo-8.webp" width="900" height="600" alt="Página interna do manual Entrega e Formalização" loading="lazy" decoding="async">
+          <figcaption><b>Livro 08 · Entrega e Formalização</b>Plano de fechamento, ordem de assinatura e dossiê de execução.</figcaption></figure>
+    </div>
+    <p class="carr-dica">Arraste para o lado, ou use as setas do teclado.</p>
+  </div>
+</section>
+
+<!-- ════════ LABORATÓRIO ════════ -->
+<section class="sec" id="laboratorio" aria-labelledby="t-lab2">
+  <div class="env">
+    <div class="rail">
+      <p class="nota ap"><b>O que mais chega</b>“Alguém tem um modelo de…” é a pergunta mais repetida em grupo de advogado.</p>
+      <div class="col">
+        <p class="cap ap">Laboratório de Contratos</p>
+        <h2 class="d2 ap" id="t-lab2" style="margin-top:.35em">Um modelo editável que vem com a explicação de cada cláusula</h2>
+        <p class="lede ap" style="margin-top:.85em">Banco de modelo você já tem: está no Google, no grupo, no GPT. O que não existe por aí é o manual que vem junto — a lei que incide naquela operação, o que confirmar antes de redigir e o que cada cláusula resolve.</p>
+      </div>
+    </div>
+
+    <figure class="lab-cena ap">
+      <img src="assets/laboratorio.webp" width="652" height="736" alt="Laboratório de Contratos: manual de utilização do contrato, modelos editáveis e a lista de coleções por setor" loading="lazy" decoding="async">
+    </figure>
+
+    <div class="lab-dentro ap">
+      <div><b>Manual de fundamentação</b><p>A operação explicada: regime jurídico, legislação especial aplicável, o que verificar antes e os riscos típicos daquele negócio.</p></div>
+      <div><b>Modelo editável</b><p>O contrato em arquivo editável, para adaptar ao caso — sabendo o que pode sair, o que não deve e o que precisa entrar.</p></div>
+      <div><b>Cláusulas comentadas</b><p>Cada parte do texto ligada à decisão que ela resolve, para você defender o que escreveu se o cliente perguntar.</p></div>
+    </div>
+
+    <div class="setores ap">
+      <div class="setor"><h4>Imobiliário</h4><ul>
+        <li>Promessa de compra e venda</li><li>Corretagem imobiliária</li>
+        <li>Locação comercial</li><li>Locação residencial</li><li>Sublocação</li></ul></div>
+      <div class="setor"><h4>Agronegócio</h4><ul>
+        <li>Arrendamento rural</li><li>Parceria pecuária</li></ul>
+        <h4 style="margin-top:16px">Construção</h4><ul><li>Empreitada civil</li></ul></div>
+      <div class="setor"><h4>Empresarial e serviços</h4><ul>
+        <li>Representação comercial</li><li>Facilities</li><li>Design de interiores</li><li>Cessão de crédito</li></ul></div>
+      <div class="setor"><h4>Propriedade intelectual</h4><ul>
+        <li>Cessão de direitos autorais</li><li>Cessão de uso de imagem</li></ul>
+        <h4 style="margin-top:16px">Em produção</h4><ul><li>Outras 10 coleções, pelos pedidos dos alunos</li></ul></div>
+    </div>
+    <p class="lista-nota ap" style="margin-top:20px">São <b>14 coleções prontas e disponíveis no primeiro acesso</b>. As outras 10 entram ao longo do período, priorizadas pelo que os alunos indicam na plataforma.</p>
   </div>
 </section>
 
@@ -647,7 +774,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,
     <div class="of-g">
       <ul class="of-itens ap">
         <li><div><b>8 manuais · 741 páginas</b><span>Do fundamento do direito contratual à formalização, com caso integrado e exercícios comentados em cada um.</span></div></li>
-        <li><div><b>5 instrumentos · 46 páginas</b><span>Ficha de atendimento, três checklists e o modelo de parecer, em PDF e DOCX.</span></div></li>
+        <li><div><b>6 instrumentos preenchíveis</b><span>Ficha de atendimento, quatro checklists e o manual do parecer, em PDF e DOCX, para imprimir e levar à reunião.</span></div></li>
         <li><div><b>14 coleções contratuais</b><span>Manual fundamentado e modelo editável por operação. Outras 10 entram ao longo do acesso.</span></div></li>
         <li><div><b>Assistente treinado no método</b><span>Para consultar os materiais. Três dos manuais trazem capítulos sobre uso de IA com supervisão na diligência, no parecer e na revisão.</span></div></li>
         <li><div><b>Suporte pelo WhatsApp</b><span>Canal direto para dúvidas sobre acesso, materiais e utilização.</span></div></li>
@@ -782,6 +909,31 @@ document.querySelectorAll('[data-checkout]').forEach(function(el){
 "instructor":{"@type":"Person","name":"Gabriel Viana"}},
 "offers":{"@type":"Offer","price":"497.90","priceCurrency":"BRL","availability":"https://schema.org/InStock",
 "url":"https://pay.hub.la/Ck3CA3nxcWpoZ7jJePno","category":"Paid"}}
+</script>
+
+<script>
+/* arrastar o carrossel com o mouse, além do scroll nativo */
+(function(){
+  var c=document.getElementById('carr'); if(!c) return;
+  var baixo=false,x0=0,s0=0,moveu=false;
+  c.addEventListener('pointerdown',function(e){
+    if(e.pointerType==='touch') return;
+    baixo=true;moveu=false;x0=e.clientX;s0=c.scrollLeft;c.classList.add('arrasta');
+  });
+  c.addEventListener('pointermove',function(e){
+    if(!baixo) return; var d=e.clientX-x0;
+    if(Math.abs(d)>3){moveu=true;c.scrollLeft=s0-d;e.preventDefault();}
+  });
+  ['pointerup','pointerleave','pointercancel'].forEach(function(ev){
+    c.addEventListener(ev,function(){baixo=false;c.classList.remove('arrasta');});
+  });
+  c.addEventListener('keydown',function(e){
+    var p=c.querySelector('figure'); if(!p) return;
+    var passo=p.getBoundingClientRect().width+20;
+    if(e.key==='ArrowRight'){c.scrollBy({left:passo,behavior:'smooth'});e.preventDefault();}
+    if(e.key==='ArrowLeft'){c.scrollBy({left:-passo,behavior:'smooth'});e.preventDefault();}
+  });
+})();
 </script>
 </body>
 </html>

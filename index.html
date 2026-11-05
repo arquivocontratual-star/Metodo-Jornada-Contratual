@@ -922,7 +922,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     <div class="hero-copy hero-seq">
       <h1 class="h1" id="t-hero"><b>Advocacia contratual,</b> do zero ao contrato assinado.</h1>
       <p class="hero-claim">MÉTODO, REPERTÓRIO JURÍDICO, MODELOS E IA.</p>
-      <p class="hero-lead">Aprenda a atuar em demandas contratuais de diferentes setores: analisar negócios, avaliar riscos, orientar decisões, redigir e estruturar contratos com técnica e estratégia.</p>
+      <p class="hero-lead">Aprenda a atuar em demandas contratuais de diferentes setores: analisar negócios, avaliar riscos, orientar decisões e estruturar contratos com técnica e estratégia.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="#oferta">Quero atuar como especialista <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-line" href="#metodo">Conhecer o curso</a>
@@ -1000,9 +1000,10 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     </div>
     <div class="col">
       <div class="rv">
-        <span class="eyebrow">Base jurídica · onde o repertório começa</span>
-        <h2 class="h2" id="t-metodo"><b>Tenha domínio da atuação contratual,</b> para qualquer negócio que você precise formalizar.</h2>
-        <p class="lead">Direito contratual não é um bloco único. Uma promessa de compra e venda de imóvel rural, uma parceria agrícola e uma cessão de direitos autorais partem do mesmo Código Civil e terminam em legislações especiais, exigências e práticas de mercado completamente diferentes. Enxergar essa diferença antes de redigir é o que separa o contrato que se sustenta do que apenas existe — e o advogado que é procurado pelo que sabe daquele que é comparado pelo preço.</p>
+        <span class="eyebrow">O que não está pronto em lugar nenhum</span>
+        <h2 class="h2" id="t-metodo"><b>A inteligência artificial responde o que você perguntar.</b> O trabalho é saber o que perguntar.</h2>
+        <p class="lead">Peça a qualquer ferramenta uma minuta de permuta imobiliária com torna. Em segundos você tem o texto. Agora pergunte <b>o que precisa ser confirmado antes de alguém assinar aquilo</b>: a cadeia dominial, os poderes de quem comparece, a execução fiscal que pode contaminar o negócio, a construção que nunca foi averbada. A resposta só aparece para quem já sabe que essas perguntas existem.</p>
+        <p class="lead">E não, isso não está de graça na internet. Lá você encontra cada instituto explicado, isolado, espalhado em mil páginas. O que não existe em lugar nenhum é <b>a sequência</b>: o que verificar, em que ordem, com qual documento, em cada tipo de operação — com a fundamentação ao lado de cada item. É isso que está escrito aqui, e é por isso que um contrato nunca foi só um pedaço de papel.</p>
       </div>
       <ul class="pillars rv">
         <li><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg><div><strong>Código Civil e legislação especial</strong><span>Além das regras gerais que valem para todo contrato, você estuda as normas específicas que incidem sobre cada operação — e que mudam o que pode ser pactuado, exigido e formalizado.</span></div></li>
@@ -1390,6 +1391,75 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
   </div>
 </section>
 
+<!-- Guia gratuito -->
+<section class="sec dark guia" id="guia" data-ch="7" data-label="Oferta" aria-labelledby="t-guia">
+<style>
+.guia{position:relative}
+.guia-g{display:grid;grid-template-columns:minmax(0,19rem) minmax(0,1fr);
+  gap:clamp(28px,4.5vw,66px);align-items:start}
+@media (max-width:860px){.guia-g{grid-template-columns:1fr}}
+.guia-capa{position:relative;border-radius:14px;overflow:hidden;
+  box-shadow:0 40px 70px -40px rgba(0,0,0,.9),0 0 0 1px rgba(213,176,113,.2)}
+.guia-capa img{display:block;width:100%;height:auto}
+@media (max-width:860px){.guia-capa{max-width:17rem}}
+.guia h2{margin-top:.35em}
+.guia-lead{margin:clamp(16px,2vw,24px) 0 0;font-size:clamp(1.05rem,1rem + .35vw,1.2rem);
+  line-height:1.6;color:var(--on-night-2);max-width:48ch}
+.guia-lead b{color:#fff;font-weight:700}
+.camadas{counter-reset:cm;list-style:none;padding:0;margin:clamp(26px,3vw,36px) 0 0;
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(213,176,113,.17);
+  border:1px solid rgba(213,176,113,.17);border-radius:12px;overflow:hidden}
+@media (max-width:620px){.camadas{grid-template-columns:1fr}}
+.camadas li{counter-increment:cm;background:var(--night-2);padding:13px 16px;
+  display:flex;gap:11px;align-items:baseline;font-size:.95rem;color:var(--on-night-2)}
+.camadas li::before{content:counter(cm);flex:none;font-size:.72rem;font-weight:800;
+  letter-spacing:.04em;color:var(--bronze-lt);font-variant-numeric:tabular-nums}
+.guia-tem{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(22px,2.6vw,30px);padding:0;list-style:none}
+.guia-tem li{padding:7px 13px;border-radius:999px;border:1px solid rgba(213,176,113,.3);
+  font-size:.8rem;color:var(--on-night-2)}
+.guia-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:clamp(26px,3vw,36px)}
+.guia-nota{margin:14px 0 0;font-size:.85rem;line-height:1.55;color:rgba(243,242,238,.5);max-width:52ch}
+</style>
+  <div class="wrap guia-g">
+    <div class="guia-capa rv">
+      <img src="assets/capa-guia.webp" width="1339" height="1889" alt="Capa do guia gratuito A Estrutura Jurídica de um Contrato" loading="lazy" decoding="async">
+    </div>
+
+    <div class="rv">
+      <span class="eyebrow">Material gratuito</span>
+      <h2 class="h2" id="t-guia"><b>Leia 43 páginas minhas</b> antes de decidir qualquer coisa</h2>
+      <p class="guia-lead"><b>A Estrutura Jurídica de um Contrato</b> é um guia completo sobre as sete camadas que precisam ser examinadas antes de interpretar ou redigir um instrumento. Não é um resumo nem uma isca: é material inteiro, no mesmo padrão dos manuais do curso. <b>Sem cadastro e sem e-mail</b> — o arquivo abre direto.</p>
+
+      <ul class="camadas">
+        <li>Regra geral do Código Civil</li>
+        <li>Legislação especial do contrato ou do setor</li>
+        <li>Natureza das partes e da relação</li>
+        <li>Normas imperativas</li>
+        <li>Espaço disponível para negociação</li>
+        <li>Jurisprudência aplicável</li>
+        <li>Atos administrativos, registros e licenças</li>
+        <li>Como as sete camadas atuam juntas</li>
+      </ul>
+
+      <ul class="guia-tem">
+        <li>43 páginas</li>
+        <li>Figuras e fluxos</li>
+        <li>O que o advogado deve perguntar, camada por camada</li>
+        <li>Onde a IA pode ajudar</li>
+        <li>Roteiro de análise</li>
+        <li>Anexo com o mapa de consulta rápida</li>
+      </ul>
+
+      <div class="guia-cta">
+        <a class="btn btn-gold" href="assets/A-Estrutura-Juridica-de-um-Contrato.pdf" target="_blank" rel="noopener" download data-guia>Baixar o guia em PDF <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="assets/A-Estrutura-Juridica-de-um-Contrato.pdf" target="_blank" rel="noopener" data-guia>Ler agora no navegador</a>
+      </div>
+
+      <p class="guia-nota">Conteúdo conferido até 5 de novembro de 2026. O guia é gratuito e pode ser compartilhado com colegas, desde que o arquivo circule inteiro, sem alterações e sem cobrança.</p>
+    </div>
+  </div>
+</section>
+
 <!-- Dúvidas -->
 <section class="sec sec-paper" id="duvidas" data-ch="7" data-label="Oferta" aria-labelledby="t-faq">
   <div class="wrap faq-grid">
@@ -1476,6 +1546,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
     q.forEach(function(v,k){if(/^(utm_|fbclid|gclid|src|sck|xcod)/i.test(k))pass.set(k,v)});
     var url=CHECKOUT+(pass.toString()?'?'+pass.toString():'');
     $$('[data-checkout]').forEach(function(a){a.href=url;a.addEventListener('click',function(){track('InitiateCheckout',{value:497.90,currency:'BRL',content_name:'Método Jornada Contratual'})})});
+    $$('[data-guia]').forEach(function(a){a.addEventListener('click',function(){track('ViewContent',{content_name:'Guia gratuito — A Estrutura Jurídica de um Contrato',content_type:'pdf'})})});
   }catch(e){}
   $$('[data-whats]').forEach(function(a){a.addEventListener('click',function(){track('Contact')})});
   var yr=$('#yr'); if(yr) yr.textContent=new Date().getFullYear();

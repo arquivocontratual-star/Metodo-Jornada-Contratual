@@ -687,7 +687,10 @@ img.av{object-fit:cover;background:#E7E6E2;box-shadow:0 0 0 1px rgba(14,16,21,.0
 .final .h2{max-width:14ch;margin-inline:auto}
 .final p{color:#C9CBD2;max-width:34em;margin:24px auto 36px;font-size:1.1rem}
 .final-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.foot{background:#000;color:#9C9EA6;border-top:1px solid var(--line-night);padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:.86rem}
+.foot{background:#000;color:#9C9EA6;border-top:1px solid var(--line-night);padding:40px 0 calc(104px + env(safe-area-inset-bottom,0px));font-size:.86rem}
+.foot-cnpj{display:inline-block;margin-top:5px;font-variant-numeric:tabular-nums;opacity:.82}
+.foot-in > small{padding-right:72px}
+@media (max-width:760px){.foot-in > small{padding-right:0}}
 .foot-in{display:flex;flex-wrap:wrap;gap:22px 40px;align-items:center;justify-content:space-between}
 .foot .brand{margin:0}
 .foot .brand span{color:#fff}
@@ -1354,7 +1357,7 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
         <p class="permes"><b>R$ 20,75 por mês</b> ao longo dos 2 anos de acesso.</p>
         <!-- Para exibir as bandeiras oficiais, troque os itens abaixo pelos SVG das marcas. -->
         <ul class="pay" aria-label="Formas de pagamento e segurança">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Checkout seguro da Hubla</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Checkout seguro da Hubla &middot; CNPJ 46.197.574/0001-00</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Cartão em até 12x</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
         </ul>
@@ -1521,7 +1524,8 @@ dialog.prints img{width:100%;height:auto;max-height:calc(92svh - 64px);object-fi
       <a href="#duvidas">Dúvidas</a>
       <a data-whats href="https://wa.me/message/KL4QZZ5SGHRFL1" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
-    <small>© <span id="yr">2026</span> Arquivo Contratual. Todos os direitos reservados.</small>
+    <small>© <span id="yr">2026</span> Arquivo Contratual. Todos os direitos reservados.<br>
+      <span class="foot-cnpj">MEDRADO TREINAMENTOS LTDA &middot; CNPJ 46.197.574/0001-00</span></small>
   </div>
 </footer>
 
